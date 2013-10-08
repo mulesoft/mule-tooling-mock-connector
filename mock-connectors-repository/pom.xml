@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.mule.tooling</groupId>
+	<artifactId>mock-connectors-repository</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>eclipse-repository</packaging>
+
+	<properties>
+		<tycho.groupid>org.eclipse.tycho</tycho.groupid>
+		<tycho.version>0.16.0</tycho.version>
+		<tycho-extras.groupid>org.eclipse.tycho.extras</tycho-extras.groupid>
+		<tycho-extras.version>0.16.0</tycho-extras.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${tycho.groupid}</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>${tycho.groupid}</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<ignoreTychoRepositories>false</ignoreTychoRepositories>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>${tycho.groupid}</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<repositoryName>Tooling Mock Connectors Update Site</repositoryName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>mock-dynamic-connector</id>
+			<url>file:/${basedir}/../mock-dynamic-connector/target/update-site</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>mock-pojo-connector</id>
+			<url>file:/${basedir}/../mock-pojo-connector/target/update-site</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>mock-xml-connector</id>
+			<url>file:/${basedir}/../mock-xml-connector/target/update-site</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>studio-update-site</id>
+			<url>http://studio-nightly-update.s3.amazonaws.com</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+</project>
