@@ -1,0 +1,36 @@
+<!-- BEGIN_INCLUDE(mockdyn:create) -->
+    <mockdyn:create type="EverythingPojo" />
+<!-- END_INCLUDE(mockdyn:create) -->
+<!-- BEGIN_INCLUDE(mockdyn:querySingle) -->
+    <mockdyn:query-single query="dsql:select id from EverythingPojo" />
+<!-- END_INCLUDE(mockdyn:querySingle) -->
+<!-- BEGIN_INCLUDE(mockdyn:query) -->
+    <mockdyn:query query="dsql:select id from EverythingPojo" />
+<!-- END_INCLUDE(mockdyn:query) -->
+<!-- BEGIN_INCLUDE(mockdyn:get) -->
+    <mockdyn:get id="1" type="EverythingPojo" />
+<!-- END_INCLUDE(mockdyn:get) -->
+<!-- BEGIN_INCLUDE(mockdyn:get-client) -->
+    <mockdyn:get-client id="1"/>
+<!-- END_INCLUDE(mockdyn:get-client) -->
+<!-- BEGIN_INCLUDE(mockdyn:create-client) -->
+    <mockdyn:create-client>
+        <mockdyn:client>
+            <mockdyn:client key="1" value-ref="#[payload]"/>
+        </mockdyn:client>
+    </mockdyn:create-client>
+<!-- END_INCLUDE(mockdyn:create-client) -->
+<!-- BEGIN_INCLUDE(mockdyn:get-client-from-account) -->
+    <mockdyn:get-client-from-account>
+        <mockdyn:account>
+            <mockdyn:account key="1" value-ref="#[payload]"/>
+        </mockdyn:account>
+     </mockdyn:get-client-from-account>
+<!-- END_INCLUDE(mockdyn:get-client-from-account) -->
+<!-- BEGIN_INCLUDE(mockdyn:create-and-get-client) -->
+    <mockdyn:create-and-get-client/>
+<!-- END_INCLUDE(mockdyn:create-and-get-client) -->
+<!-- BEGIN_INCLUDE(mockdyn:get-employee) -->
+    <mockdyn:get-employee type="Employee" />
+<!-- END_INCLUDE(mockdyn:get-employee) -->
+

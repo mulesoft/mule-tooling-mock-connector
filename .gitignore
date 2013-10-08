@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+target
+.idea
+.project
+.classpath
+.DS_Store
+*.iml

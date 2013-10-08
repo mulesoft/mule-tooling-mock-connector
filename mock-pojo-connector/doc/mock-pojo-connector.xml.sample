@@ -1,0 +1,12 @@
+<!-- BEGIN_INCLUDE(mockpojo:create) -->
+    <mockpojo:create type="EverythingPojo" />
+<!-- END_INCLUDE(mockpojo:create) -->
+<!-- BEGIN_INCLUDE(mockpojo:querySingle) -->
+    <mockpojo:query-single query="dsql:select id from EverythingPojo" />
+<!-- END_INCLUDE(mockpojo:querySingle) -->
+<!-- BEGIN_INCLUDE(mockpojo:query) -->
+    <mockpojo:query query="dsql:select id from EverythingPojo" />
+<!-- END_INCLUDE(mockpojo:query) -->
+<!-- BEGIN_INCLUDE(mockpojo:get) -->
+    <mockpojo:get id="1" type="EverythingPojo" />
+<!-- END_INCLUDE(mockpojo:get) -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mule.modules</groupId>
+    <artifactId>mock-parent</artifactId>
+    <version>3.5.0-M2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mock-dynamic-connector</module>
+        <module>mock-pojo-connector</module>
+        <module>mock-xml-connector</module>
+    </modules>
+
+    <properties>
+        <mule.version>3.5.0-bighorn</mule.version>
+        <mule.devkit.version>3.5.0-bighorn</mule.devkit.version>
+        <junit.version>4.9</junit.version>
+        <mockito.version>1.8.2</mockito.version>
+        <jdk.version>1.6</jdk.version>
+        <devkit.studio.package.skip>false</devkit.studio.package.skip>
+    </properties>
+
+
+
+
+</project>
