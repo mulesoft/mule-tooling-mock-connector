@@ -15,6 +15,13 @@
 	</properties>
 
 	<build>
+		<extensions>
+			<extension>
+				<groupId>com.github.shyiko.servers-maven-extension</groupId>
+				<artifactId>servers-maven-extension</artifactId>
+				<version>1.2.0</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>${tycho.groupid}</groupId>
@@ -41,6 +48,68 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>amazon</id>
+			<properties>
+				<aws.key>${settings.servers.mulesoft-s3.username}</aws.key>
+				<aws.secret>${settings.servers.mulesoft-s3.password}</aws.secret>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<id>upload-expanded-update-site-to-s3</id>
+								<phase>install</phase>
+								<configuration>
+									<tasks>
+										<taskdef resource="org/mule/ant/tasks.properties"
+											classpathref="maven.plugin.classpath" />
+										<s3delete endpoint="s3.amazonaws.com" key="${aws.key}"
+											secret="${aws.secret}" bucket="tooling-mockconnectors" dir="" />
+										<s3upload endpoint="s3.amazonaws.com" key="${aws.key}"
+											secret="${aws.secret}" bucket="tooling-mockconnectors" dest=""
+											contentType="application/x-whatever">
+											<fileset dir="${basedir}/target/repository" />
+										</s3upload>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>org.mule</groupId>
+								<artifactId>s3-ant-tasks</artifactId>
+								<version>0.1-SNAPSHOT</version>
+							</dependency>
+							<dependency>
+								<groupId>org.apache.ant</groupId>
+								<artifactId>ant</artifactId>
+								<version>1.7.1</version>
+							</dependency>
+							<dependency>
+								<groupId>org.apache.ant</groupId>
+								<artifactId>ant-jsch</artifactId>
+								<version>1.7.1</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+			<activation>
+				<property>
+					<name>production</name>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
 
 	<repositories>
 		<repository>
