@@ -110,8 +110,29 @@
 			</activation>
 		</profile>
 	</profiles>
+	
+	<pluginRepositories>
+        <pluginRepository>
+            <id>mule-ee-releases</id>
+            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mule-ee-snapshots</id>
+            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 	<repositories>
+		<repository>
+            <id>mule-ee-releases</id>
+            <layout>default</layout>
+            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/</url>
+        </repository>
+        <repository>
+            <id>mule-ee-snapshots</id>
+            <layout>default</layout>
+            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
+		</repository>
 		<repository>
 			<id>mock-dynamic-connector</id>
 			<url>file:/${basedir}/../mock-dynamic-connector/target/update-site</url>
