@@ -11,6 +11,7 @@
     <modules>
         <module>mock-dynamic-connector</module>
         <module>mock-pojo-connector</module>
+        <module>mock-pojo-connector-3.4</module>
         <module>mock-xml-connector</module>
     </modules>
 

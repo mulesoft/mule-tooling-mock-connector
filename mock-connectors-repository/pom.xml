@@ -149,6 +149,11 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
+			<id>mock-pojo-connector-3.4</id>
+			<url>file:/${basedir}/../mock-pojo-connector-3.4/target/update-site</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
 			<id>studio-update-site</id>
 			<url>http://studio-nightly-update.s3.amazonaws.com</url>
 			<layout>p2</layout>

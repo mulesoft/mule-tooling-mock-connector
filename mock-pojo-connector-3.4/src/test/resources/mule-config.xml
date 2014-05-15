@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:mock="http://www.mulesoft.org/schema/mule/mockpojo"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/mockpojo http://www.mulesoft.org/schema/mule/mockpojo/current/mule-mockpojo.xsd">
+
+    <mock:config name="mock-connector" username="xxx" password="yyy"/>
+
+    <flow name="testQuery">
+        <mock:query config-ref="mock-connector" query="dsql:select Id from EverythingPojo"/>
+    </flow>
+
+</mule>
