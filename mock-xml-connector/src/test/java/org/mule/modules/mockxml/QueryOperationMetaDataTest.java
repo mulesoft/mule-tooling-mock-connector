@@ -55,7 +55,7 @@ public class QueryOperationMetaDataTest
         Result<MetaData> outputMetaData = query.getOutputMetaData(null);
         Assert.assertThat(outputMetaData.get().getPayload(), CoreMatchers.is(ListMetaDataModel.class));
         Assert.assertThat(((ListMetaDataModel) outputMetaData.get().getPayload()).getElementModel(), CoreMatchers.is(XmlMetaDataModel.class));
-        Assert.assertThat(((XmlMetaDataModel) ((ListMetaDataModel) outputMetaData.get().getPayload()).getElementModel()).getRootElement(), CoreMatchers.is("item"));
+        Assert.assertThat(((XmlMetaDataModel) ((ListMetaDataModel) outputMetaData.get().getPayload()).getElementModel()).getRootElement().getLocalPart(), CoreMatchers.is("item"));
     }
 
 
@@ -99,7 +99,7 @@ public class QueryOperationMetaDataTest
         Assert.assertThat(outputMetaData.get().getPayload(), CoreMatchers.is(XmlMetaDataModel.class));
 
         XmlMetaDataModel payload = (XmlMetaDataModel) outputMetaData.get().getPayload();
-        Assert.assertThat(payload.getRootElement(), CoreMatchers.is("items"));
+        Assert.assertThat(payload.getRootElement().getLocalPart(), CoreMatchers.is("items"));
 
     }
 

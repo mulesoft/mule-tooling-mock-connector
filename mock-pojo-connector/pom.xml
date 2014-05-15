@@ -165,7 +165,7 @@
         <dependency>
             <groupId>org.mule.common</groupId>
             <artifactId>mule-common</artifactId>
-            <version>3.5.0-M2-SNAPSHOT</version>
+            <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -211,7 +211,7 @@
         <dependency>
             <groupId>org.mule.tests</groupId>
             <artifactId>mule-tests-functional</artifactId>
-            <version>3.5.0-M1-SNAPSHOT</version>
+            <version>${mule.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

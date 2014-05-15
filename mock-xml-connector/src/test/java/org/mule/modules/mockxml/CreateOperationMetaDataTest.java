@@ -44,7 +44,7 @@ public class CreateOperationMetaDataTest
         Result<MetaData> outputMetaData = create.getInputMetaData();
 
         org.junit.Assert.assertThat((outputMetaData.get().getPayload()), CoreMatchers.is(XmlMetaDataModel.class));
-        org.junit.Assert.assertThat(((XmlMetaDataModel) (outputMetaData.get().getPayload())).getRootElement(), CoreMatchers.is("items"));
+        org.junit.Assert.assertThat(((XmlMetaDataModel) (outputMetaData.get().getPayload())).getRootElement().getLocalPart(), CoreMatchers.is("items"));
     }
 
 
