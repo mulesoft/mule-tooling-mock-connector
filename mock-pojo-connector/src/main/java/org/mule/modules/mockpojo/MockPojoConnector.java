@@ -13,6 +13,7 @@ import org.mule.api.annotations.MetaDataRetriever;
 import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.Query;
 import org.mule.api.annotations.ValidateConnection;
+import org.mule.api.annotations.display.Placement;
 import org.mule.api.annotations.param.ConnectionKey;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.MetaDataKeyParam;
@@ -147,6 +148,20 @@ public class MockPojoConnector
     public void create(@MetaDataKeyParam(affects = MetaDataKeyParamAffectsType.INPUT) String type, @Default("#[payload]") @Optional Object item)
     {
         this.queryResult.add(item);
+    }
+
+    /**
+     * Get items;
+     * <p/>
+     * {@sample.xml ../../../doc/mock-pojo-connector.xml.sample mockpojo:receiveListOfStringAsParameter}
+     *
+     * @param idInParam some id;
+     * @param idList some list of ids.
+     */
+    @Processor
+    public void receiveListOfStringAsParameter(@MetaDataKeyParam String idInParam, @Placement(group = "Group Name") @Optional List<String> idList)
+    {
+
     }
 
     /**
