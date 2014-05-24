@@ -11,6 +11,13 @@
             </mockpojo:id-list>
      </mockpojo:receiveListOfStringAsParameter>
 <!-- END_INCLUDE(mockpojo:receiveListOfStringAsParameter) -->
+<!-- BEGIN_INCLUDE(mockpojo:receiveRequiredListOfStringAsParameter) -->
+     <mockpojo:receiveRequiredListOfStringAsParameter idInParam="Action.Action">
+            <mockpojo:id-list>
+                <mockpojo:id>Description</mockpojo:id>
+            </mockpojo:id-list>
+     </mockpojo:receiveRequiredListOfStringAsParameter>
+<!-- END_INCLUDE(mockpojo:receiveRequiredListOfStringAsParameter) -->
 <!-- BEGIN_INCLUDE(mockpojo:query) -->
     <mockpojo:query query="dsql:select id from EverythingPojo" />
 <!-- END_INCLUDE(mockpojo:query) -->

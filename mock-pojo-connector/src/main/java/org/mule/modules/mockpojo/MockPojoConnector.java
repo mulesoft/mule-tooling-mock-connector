@@ -167,6 +167,20 @@ public class MockPojoConnector
     /**
      * Get items;
      * <p/>
+     * {@sample.xml ../../../doc/mock-pojo-connector.xml.sample mockpojo:receiveRequiredListOfStringAsParameter}
+     *
+     * @param idInParam some id;
+     * @param idList some list of ids.
+     */
+    @Processor
+    public void receiveRequiredListOfStringAsParameter(@MetaDataKeyParam String idInParam, @Placement(group = "Group Name") List<String> idList)
+    {
+
+    }
+
+    /**
+     * Get items;
+     * <p/>
      * {@sample.xml ../../../doc/mock-pojo-connector.xml.sample mockpojo:query}
      *
      * @param query The query.
