@@ -127,7 +127,7 @@ public class MockDynamicConnector {
     private DefinedMapMetaDataModel createUserModel() {
         return new DefaultMetaDataBuilder().
                 createDynamicObject("User")
-                .addSimpleField("Name", DataType.STRING)
+                .addSimpleField("Name", DataType.STRING).setDescription("The user name")
                 .addSimpleField("Last Name", DataType.STRING)
                 .addSimpleField("Age", DataType.INTEGER)
                 .addSimpleField("Debt", DataType.DECIMAL)
