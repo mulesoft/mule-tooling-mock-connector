@@ -29,6 +29,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
@@ -239,6 +240,20 @@ public class MockDynamicConnector {
     }
 
     /**
+     * Get client;
+     * <p/>
+     * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-labeled-object}
+     *
+     * @param id The id of the client to search
+     * @return the LabeledObject Result.
+     */
+    @Processor
+    @MetaDataStaticKey(type = "LabeledObject")
+    public Map<String, Object> getLabeledObject(String id) {
+        return Collections.emptyMap();
+    }
+
+    /**
       * Create client;
       * <p/>
       * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create-client}
@@ -347,6 +362,7 @@ public class MockDynamicConnector {
         list.add(new DefaultMetaDataKey("Client", "Client"));
         list.add(new DefaultMetaDataKey("Account", "Account"));
         list.add(new DefaultMetaDataKey("TypeWithNonSelectableFields", "TypeWithNonSelectableFields"));
+        list.add(new DefaultMetaDataKey("LabeledObject", "LabeledObject"));
         return list;
     }
 
@@ -367,6 +383,8 @@ public class MockDynamicConnector {
             return new DefaultMetaData(createEmployee());
         } else if (key.getId().equalsIgnoreCase("TypeWithNonSelectableFields")) {
             return new DefaultMetaData(createTypeWithNonSelectableFields());
+        }else if (key.getId().equalsIgnoreCase("LabeledObject")) {
+            return new DefaultMetaData(createLabeledObject());
         }
         throw new RuntimeException("Invalid key");
     }
@@ -403,6 +421,16 @@ public class MockDynamicConnector {
                 .addSimpleField("isDisfunctional", DataType.BOOLEAN)
                 .addSimpleField("numberOfPets", DataType.INTEGER)
                 .endDynamicObject()
+                .build();
+    }
+
+    private DefinedMapMetaDataModel createLabeledObject() {
+        return new DefaultMetaDataBuilder().createDynamicObject("Root").addList("LabeledObject")
+                .ofDynamicObject("LabeledObject")
+                .addSimpleField("Name_1", DataType.STRING).setLabel("Name")
+                .addSimpleField("1_bla", DataType.STRING).setLabel("Bla")
+                .endDynamicObject()
+                .endList()
                 .build();
     }
 }

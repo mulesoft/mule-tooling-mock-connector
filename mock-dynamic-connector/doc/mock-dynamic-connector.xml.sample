@@ -33,4 +33,7 @@
 <!-- BEGIN_INCLUDE(mockdyn:get-employee) -->
     <mockdyn:get-employee type="Employee" />
 <!-- END_INCLUDE(mockdyn:get-employee) -->
+<!-- BEGIN_INCLUDE(mockdyn:get-labeled-object) -->
+    <mockdyn:get-labeled-object id="Employee" />
+<!-- END_INCLUDE(mockdyn:get-labeled-object) -->
 
