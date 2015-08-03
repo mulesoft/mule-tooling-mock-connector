@@ -151,7 +151,6 @@ public class MockDynamicConnector {
     }
 
 
-
     private DefinedMapMetaDataModel createAccount() {
         return new DefaultMetaDataBuilder().
                 createDynamicObject("Account")
@@ -160,7 +159,7 @@ public class MockDynamicConnector {
                 .addSimpleField("State", DataType.STRING).build();
     }
 
-    private PojoMetaDataModel createEmployee(){
+    private PojoMetaDataModel createEmployee() {
         return new DefaultMetaDataBuilder().createPojo(Employee.class).build();
     }
 
@@ -201,7 +200,7 @@ public class MockDynamicConnector {
 
     /**
      * Create items;
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create}
      *
      * @param type The object type to create;
@@ -214,7 +213,7 @@ public class MockDynamicConnector {
 
     /**
      * Get items;
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:query}
      *
      * @param query The query.
@@ -227,7 +226,7 @@ public class MockDynamicConnector {
 
     /**
      * Get client;
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-client}
      *
      * @param id The id of the client to search
@@ -241,7 +240,7 @@ public class MockDynamicConnector {
 
     /**
      * Get client;
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-labeled-object}
      *
      * @param id The id of the client to search
@@ -254,63 +253,63 @@ public class MockDynamicConnector {
     }
 
     /**
-      * Create client;
-      * <p/>
-      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create-client}
-      *
-      * @param client The client to create
-      */
-     @Processor
-     public void createClient(@MetaDataStaticKey(type = "CLIENT")  @Default("#[payload]")  @Optional Map<String,Object> client) {
-         queryResult.add(client);
-     }
-
-    /**
-    * Create and Get client;
-    * <p/>
-    * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create-and-get-client}
-    *
-    * @param client The client to create and get
-    * @return a client
-    */
-   @Processor
-   @MetaDataStaticKey(type = "CLIENT")
-   public Map<String,Object> createAndGetClient(@MetaDataStaticKey(type = "CLIENT")  @Default("#[payload]")  @Optional Map<String,Object> client) {
-       return createClientObject();
-   }
-
-
-    /**
-    * Get Employee;
-    * <p/>
-    * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-employee}
-    *
-    * @param type a class name that inherits from Person, in this case for testing use org.mule.modules.mockdynamic.utils.Employee
-    * @return a client
-    */
+     * Create client;
+     * <p>
+     * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create-client}
+     *
+     * @param client The client to create
+     */
     @Processor
-    public Person getEmployee(@MetaDataKeyParam(affects = MetaDataKeyParamAffectsType.OUTPUT) String type){
+    public void createClient(@MetaDataStaticKey(type = "CLIENT") @Default("#[payload]") @Optional Map<String, Object> client) {
+        queryResult.add(client);
+    }
+
+    /**
+     * Create and Get client;
+     * <p>
+     * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:create-and-get-client}
+     *
+     * @param client The client to create and get
+     * @return a client
+     */
+    @Processor
+    @MetaDataStaticKey(type = "CLIENT")
+    public Map<String, Object> createAndGetClient(@MetaDataStaticKey(type = "CLIENT") @Default("#[payload]") @Optional Map<String, Object> client) {
+        return createClientObject();
+    }
+
+
+    /**
+     * Get Employee;
+     * <p>
+     * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-employee}
+     *
+     * @param type a class name that inherits from Person, in this case for testing use org.mule.modules.mockdynamic.utils.Employee
+     * @return a client
+     */
+    @Processor
+    public Person getEmployee(@MetaDataKeyParam(affects = MetaDataKeyParamAffectsType.OUTPUT) String type) {
         return createEmployeePerson();
     }
 
 
     /**
-    * Get items;
-    * <p/>
-    * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-client-from-account}
-    *
-    * @param account The account to retrieve the client associated to it
-    * @return a client
-    */
-   @Processor
-   @MetaDataStaticKey(type = "CLIENT")
-   public Map<String,Object> getClientFromAccount(@MetaDataStaticKey(type = "ACCOUNT")  @Default("#[payload]")  @Optional Map<String,Object> account) {
-       return createClientObject();
-   }
+     * Get items;
+     * <p>
+     * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get-client-from-account}
+     *
+     * @param account The account to retrieve the client associated to it
+     * @return a client
+     */
+    @Processor
+    @MetaDataStaticKey(type = "CLIENT")
+    public Map<String, Object> getClientFromAccount(@MetaDataStaticKey(type = "ACCOUNT") @Default("#[payload]") @Optional Map<String, Object> account) {
+        return createClientObject();
+    }
 
     /**
      * Get items;
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:querySingle}
      *
      * @param query The query.
@@ -332,7 +331,7 @@ public class MockDynamicConnector {
 
     /**
      * Get item.
-     * <p/>
+     * <p>
      * {@sample.xml ../../../doc/mock-dynamic-connector.xml.sample mockdyn:get}
      *
      * @param type the object type to retrieve.
@@ -383,7 +382,7 @@ public class MockDynamicConnector {
             return new DefaultMetaData(createEmployee());
         } else if (key.getId().equalsIgnoreCase("TypeWithNonSelectableFields")) {
             return new DefaultMetaData(createTypeWithNonSelectableFields());
-        }else if (key.getId().equalsIgnoreCase("LabeledObject")) {
+        } else if (key.getId().equalsIgnoreCase("LabeledObject")) {
             return new DefaultMetaData(createLabeledObject());
         }
         throw new RuntimeException("Invalid key");
@@ -412,7 +411,7 @@ public class MockDynamicConnector {
                 .addSimpleField("Age", DataType.NUMBER)
                 .addSimpleField("Male", DataType.BOOLEAN)
                 .addSimpleField("Photo", DataType.BYTE)
-                .addSimpleField("Category", DataType.ENUM)
+                .addEnumField("Category").setValues("Big", "Small", "Medium")
                 .addSimpleField("BirthDate", DataType.DATE)
                 .addSimpleField("ExpirationTime", DataType.DATE_TIME)
                 .endDynamicObject()
