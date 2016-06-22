@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.mule.extensions</groupId>
+        <artifactId>mule-extensions-parent</artifactId>
+        <version>4.0-SNAPSHOT</version>
+    </parent>
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
-    <version>3.5.0-M2-SNAPSHOT</version>
+    <name>Mock Extensions Parent</name>
     <packaging>pom</packaging>
-
     <modules>
-        <module>mock-dynamic-connector</module>
-        <module>mock-pojo-connector</module>
-        <module>mock-pojo-connector-3.4</module>
-        <module>mock-xml-connector</module>
+        <module>basic-extension</module>
+        <module>extension-with-text-property</module>
+        <module>extension-with-password-property</module>
+        <module>extension-with-mimetype</module>
+        <module>extension-with-pojo</module>
+        <module>extension-with-interfaces</module>
+        <module>extension-with-map</module>
+        <module>extension-with-map-of-string-pojo</module>
+        <module>extension-with-string-list</module>
+        <module>extension-with-map-list</module>
+        <module>extension-with-map-of-string-list</module>
+        <module>extension-with-map-of-string-list-of-pojo</module>
+        <module>extension-with-pojo-list</module>
+        <module>extension-with-pojo-list-with-list-field</module>
+        <module>extension-with-pooling-profile-cached</module>
+        <module>extension-with-pooling-profile-pooled</module>
+        <module>extension-with-only-sources</module>
+        <module>extension-with-operations-and-sources</module>
+        <module>extension-with-multiple-config</module>
+        <module>extension-with-multiple-providers</module>
+        <module>extension-with-operations-by-config</module>
     </modules>
-
-    <properties>
-        <mule.version>3.5.0</mule.version>
-        <mule.devkit.version>3.5.0</mule.devkit.version>
-        <junit.version>4.9</junit.version>
-        <mockito.version>1.8.2</mockito.version>
-        <jdk.version>1.6</jdk.version>
-        <devkit.studio.package.skip>false</devkit.studio.package.skip>
-    </properties>
-
-
-
-
 </project>
