@@ -5,23 +5,21 @@ import org.mule.runtime.api.connection.ConnectionHandlingStrategy;
 import org.mule.runtime.api.connection.ConnectionHandlingStrategyFactory;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
-import org.mule.runtime.extension.api.annotation.Alias;
 import org.mule.runtime.extension.api.annotation.Parameter;
 
 /**
- * Another Connection Provider description
+ * Connection Provider description
  */
-@Alias("another-provider")
-public class AnotherConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
+public class BasicConnectionProvider implements ConnectionProvider<BaseConfig, DummyConnection> {
 
 	/**
 	 * Provider parameter description
 	 */
 	@Parameter
-	private String anotherProviderParameter;
+	private String providerParameter;
 
 	@Override
-	public DummyConnection connect(BasicExtensionConfig config) throws ConnectionException {
+	public DummyConnection connect(BaseConfig config) throws ConnectionException {
 		return null;
 	}
 
@@ -32,7 +30,7 @@ public class AnotherConnectionProvider implements ConnectionProvider<BasicExtens
 
 	@Override
 	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<BasicExtensionConfig, DummyConnection> factory) {
+			ConnectionHandlingStrategyFactory<BaseConfig, DummyConnection> factory) {
 		return factory.none();
 	}
 
@@ -40,4 +38,12 @@ public class AnotherConnectionProvider implements ConnectionProvider<BasicExtens
 	public ConnectionValidationResult validate(DummyConnection connection) {
 		return null;
 	}
+
+		public String getProviderParameter() {
+			return providerParameter;
+		}
+
+		public void setProviderParameter(String providerParameter) {
+			this.providerParameter = providerParameter;
+		}
 }

@@ -11,8 +11,8 @@ import org.mule.runtime.extension.api.annotation.Parameter;
 /**
  * Another Connection Provider description
  */
-@Alias("another-provider")
-public class AnotherConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
+@Alias("foo-provider")
+public class FooConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
 
 	/**
 	 * Provider parameter description

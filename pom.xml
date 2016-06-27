@@ -35,6 +35,7 @@
         <module>extension-with-multiple-config</module>
         <module>extension-with-multiple-providers</module>
         <module>extension-with-operations-by-config</module>
+        <module>extension-with-providers-by-config</module>
     </modules>
 
     <distributionManagement>

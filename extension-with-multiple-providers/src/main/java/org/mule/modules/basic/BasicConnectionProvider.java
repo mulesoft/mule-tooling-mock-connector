@@ -6,7 +6,6 @@ import org.mule.runtime.api.connection.ConnectionHandlingStrategyFactory;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
 import org.mule.runtime.extension.api.annotation.Parameter;
-import org.mule.runtime.extension.api.annotation.param.display.Text;
 
 /**
  * Connection Provider description
@@ -17,7 +16,6 @@ public class BasicConnectionProvider implements ConnectionProvider<BasicExtensio
 	 * Provider parameter description
 	 */
 	@Parameter
-	@Text
 	private String providerParameter;
 
 	@Override
