@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>basic-extension</module>
+        <module>extension-with-no-providers</module>
         <module>extension-with-text-property</module>
         <module>extension-with-password-property</module>
         <module>extension-with-mimetype</module>
@@ -36,6 +37,7 @@
         <module>extension-with-multiple-providers</module>
         <module>extension-with-operations-by-config</module>
         <module>extension-with-providers-by-config</module>
+        <module>extension-with-operations-and-sources-by-config</module>
     </modules>
 
     <distributionManagement>
