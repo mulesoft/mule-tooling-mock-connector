@@ -12,7 +12,7 @@ import org.mule.runtime.extension.api.annotation.Parameter;
 /**
  * Connection Provider description
  */
-public class BasicConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
+public class BasicConnectionProvider implements ConnectionProvider<DummyConnection> {
 
 	/**
 	 * Complex Pojo At Provider description
@@ -27,7 +27,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BasicExtensio
 	private Ingredient ingredientAtConfig;
 
 	@Override
-	public DummyConnection connect(BasicExtensionConfig config) throws ConnectionException {
+	public DummyConnection connect() throws ConnectionException {
 		return null;
 	}
 
@@ -38,7 +38,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BasicExtensio
 
 	@Override
 	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<BasicExtensionConfig, DummyConnection> factory) {
+			ConnectionHandlingStrategyFactory<DummyConnection> factory) {
 		return factory.none();
 	}
 

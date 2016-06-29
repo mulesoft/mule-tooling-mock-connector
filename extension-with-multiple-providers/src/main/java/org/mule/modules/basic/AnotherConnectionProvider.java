@@ -12,7 +12,7 @@ import org.mule.runtime.extension.api.annotation.Parameter;
  * Another Connection Provider description
  */
 @Alias("another-provider")
-public class AnotherConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
+public class AnotherConnectionProvider implements ConnectionProvider<DummyConnection> {
 
 	/**
 	 * Provider parameter description
@@ -21,7 +21,7 @@ public class AnotherConnectionProvider implements ConnectionProvider<BasicExtens
 	private String anotherProviderParameter;
 
 	@Override
-	public DummyConnection connect(BasicExtensionConfig config) throws ConnectionException {
+	public DummyConnection connect() throws ConnectionException {
 		return null;
 	}
 
@@ -32,7 +32,7 @@ public class AnotherConnectionProvider implements ConnectionProvider<BasicExtens
 
 	@Override
 	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<BasicExtensionConfig, DummyConnection> factory) {
+			ConnectionHandlingStrategyFactory<DummyConnection> factory) {
 		return factory.none();
 	}
 

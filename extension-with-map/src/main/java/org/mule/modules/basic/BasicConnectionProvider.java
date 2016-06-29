@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Connection Provider description
  */
-public class BasicConnectionProvider implements ConnectionProvider<BasicExtensionConfig, DummyConnection> {
+public class BasicConnectionProvider implements ConnectionProvider<DummyConnection> {
 
 	/**
 	 * Provider parameter description
@@ -21,7 +21,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BasicExtensio
 	private Map<String,Object> mapParameter;
 
 	@Override
-	public DummyConnection connect(BasicExtensionConfig config) throws ConnectionException {
+	public DummyConnection connect() throws ConnectionException {
 		return null;
 	}
 
@@ -32,7 +32,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BasicExtensio
 
 	@Override
 	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<BasicExtensionConfig, DummyConnection> factory) {
+			ConnectionHandlingStrategyFactory<DummyConnection> factory) {
 		return factory.none();
 	}
 

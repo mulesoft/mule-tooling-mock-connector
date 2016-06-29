@@ -9,7 +9,7 @@ import org.mule.runtime.extension.api.annotation.Alias;
 import org.mule.runtime.extension.api.annotation.Parameter;
 
 @Alias("source-connection")
-public class SourceConnectionProvider implements ConnectionProvider<SourceBasicExtensionConfig,DummyConnection>
+public class SourceConnectionProvider implements ConnectionProvider<DummyConnection>
 {
 
     /**
@@ -19,13 +19,13 @@ public class SourceConnectionProvider implements ConnectionProvider<SourceBasicE
     private String sourceProviderParameter;
 
     @Override
-    public DummyConnection connect(SourceBasicExtensionConfig sourceBasicExtensionConfig) throws ConnectionException
+    public DummyConnection connect() throws ConnectionException
     {
         return null;
     }
 
     @Override
-    public void disconnect(DummyConnection dummyConnection)
+    public void disconnect(DummyConnection connection)
     {
 
     }
@@ -37,7 +37,7 @@ public class SourceConnectionProvider implements ConnectionProvider<SourceBasicE
     }
 
     @Override
-    public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(ConnectionHandlingStrategyFactory<SourceBasicExtensionConfig, DummyConnection> connectionHandlingStrategyFactory)
+    public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(ConnectionHandlingStrategyFactory<DummyConnection> connectionHandlingStrategyFactory)
     {
         return connectionHandlingStrategyFactory.none();
     }

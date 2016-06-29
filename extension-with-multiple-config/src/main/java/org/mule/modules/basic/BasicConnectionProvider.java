@@ -10,7 +10,7 @@ import org.mule.runtime.extension.api.annotation.Parameter;
 /**
  * Connection Provider description
  */
-public class BasicConnectionProvider implements ConnectionProvider<BaseConfig, DummyConnection> {
+public class BasicConnectionProvider implements ConnectionProvider<DummyConnection> {
 
 	/**
 	 * Provider parameter description
@@ -19,7 +19,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BaseConfig, D
 	private String providerParameter;
 
 	@Override
-	public DummyConnection connect(BaseConfig config) throws ConnectionException {
+	public DummyConnection connect() throws ConnectionException {
 		return null;
 	}
 
@@ -30,7 +30,7 @@ public class BasicConnectionProvider implements ConnectionProvider<BaseConfig, D
 
 	@Override
 	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<BaseConfig, DummyConnection> factory) {
+			ConnectionHandlingStrategyFactory<DummyConnection> factory) {
 		return factory.none();
 	}
 
