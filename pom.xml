@@ -40,6 +40,8 @@
         <module>extension-with-operations-by-config</module>
         <module>extension-with-providers-by-config</module>
         <module>extension-with-operations-and-sources-by-config</module>
+        <module>extension-with-operations-shared-by-config</module>
+        <module>extension-with-imports</module>
     </modules>
 
     <distributionManagement>

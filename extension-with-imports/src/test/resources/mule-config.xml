@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:basic="http://www.mulesoft.org/schema/mule/basic"
+      xmlns:advance="http://www.mulesoft.org/schema/mule/advance"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/basic http://www.mulesoft.org/schema/mule/basic/current/mule-basic.xsd
+        http://www.mulesoft.org/schema/mule/advance http://www.mulesoft.org/schema/mule/basic/current/mule-advance.xsd">
+
+    <flow name="dummy-flow">
+        <advance:operation-with-string>
+            <advance:param>
+
+        </advance:operation-with-string>
+    </flow>
+
+</mule>
