@@ -8,6 +8,7 @@ import org.junit.Test;
 
 public class BasicExtensionTest extends ExtensionFunctionalTestCase
 {
+    @org.junit.Ignore
     @Test
     public void shouldNotExplodeLOL(){
         assertThat(flowRunner("dummy-flow").getFlowConstructName(), IsNull.notNullValue());
