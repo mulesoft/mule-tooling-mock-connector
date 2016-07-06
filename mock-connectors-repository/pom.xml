@@ -9,9 +9,11 @@
 
 	<properties>
 		<tycho.groupid>org.eclipse.tycho</tycho.groupid>
-		<tycho.version>0.16.0</tycho.version>
+		<tycho.version>0.24.0</tycho.version>
 		<tycho-extras.groupid>org.eclipse.tycho.extras</tycho-extras.groupid>
-		<tycho-extras.version>0.16.0</tycho-extras.version>
+		<tycho-extras.version>0.24.0</tycho-extras.version>
+		<mock-bucket>tooling-mock-connectors</mock-bucket>
+		<moc-dir>4x</moc-dir>
 	</properties>
 
 	<build>
@@ -70,9 +72,9 @@
 										<taskdef resource="org/mule/ant/tasks.properties"
 											classpathref="maven.plugin.classpath" />
 										<s3delete endpoint="s3.amazonaws.com" key="${aws.key}"
-											secret="${aws.secret}" bucket="tooling-mockconnectors" dir="" />
+											secret="${aws.secret}" bucket="${mock-bucket}" dir="${moc-dir}" />
 										<s3upload endpoint="s3.amazonaws.com" key="${aws.key}"
-											secret="${aws.secret}" bucket="tooling-mockconnectors" dest=""
+											secret="${aws.secret}" bucket="${mock-bucket}" dest="${moc-dir}"
 											contentType="application/x-whatever">
 											<fileset dir="${basedir}/target/repository" />
 										</s3upload>
@@ -110,7 +112,7 @@
 			</activation>
 		</profile>
 	</profiles>
-	
+
 	<pluginRepositories>
         <pluginRepository>
             <id>mule-ee-releases</id>
@@ -124,38 +126,23 @@
 
 	<repositories>
 		<repository>
-            <id>mule-ee-releases</id>
-            <layout>default</layout>
-            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/</url>
-        </repository>
-        <repository>
-            <id>mule-ee-snapshots</id>
-            <layout>default</layout>
-            <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
+        <id>mule-ee-releases</id>
+        <layout>default</layout>
+        <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-releases/</url>
+    </repository>
+    <repository>
+        <id>mule-ee-snapshots</id>
+        <layout>default</layout>
+        <url>http://repository-master.mulesoft.org/nexus/content/repositories/ci-snapshots/</url>
 		</repository>
 		<repository>
-			<id>mock-dynamic-connector</id>
-			<url>file:/${basedir}/../mock-dynamic-connector/target/update-site</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>mock-pojo-connector</id>
-			<url>file:/${basedir}/../mock-pojo-connector/target/update-site</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>mock-xml-connector</id>
-			<url>file:/${basedir}/../mock-xml-connector/target/update-site</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>mock-pojo-connector-3.4</id>
-			<url>file:/${basedir}/../mock-pojo-connector-3.4/target/update-site</url>
+			<id>basic-extension</id>
+			<url>file:/${basedir}/../basic-extension/target/update-site/</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
 			<id>studio-update-site</id>
-			<url>http://studio-nightly-update.s3.amazonaws.com</url>
+			<url>http://studio-nightly-update.s3.amazonaws.com/olympus</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>

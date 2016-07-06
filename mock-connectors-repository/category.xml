@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature id="org.mule.tooling.ui.extension.mock-dynamic-connector.3.5.0">
-      <category name="org.mule.tooling.mock-connectors"/>
-   </feature>
-   <feature id="org.mule.tooling.ui.extension.mock-pojo-connector.3.5.0">
-      <category name="org.mule.tooling.mock-connectors"/>
-   </feature>
-   <feature id="org.mule.tooling.ui.extension.mock-xml-connector.3.5.0">
-      <category name="org.mule.tooling.mock-connectors"/>
-   </feature>
-   <feature id="org.mule.tooling.ui.extension.mock-pojo-connector.3.4.0">
+   <feature id="org.mule.tooling.ui.extension.basic-connector.4.0.0">
       <category name="org.mule.tooling.mock-connectors"/>
    </feature>
    <category-def name="org.mule.tooling.mock-connectors" label="Mule Tooling Mock Connectors">
