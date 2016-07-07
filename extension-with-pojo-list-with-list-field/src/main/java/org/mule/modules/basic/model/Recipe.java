@@ -1,7 +1,5 @@
 package org.mule.modules.basic.model;
 
-import org.mule.runtime.extension.api.annotation.Parameter;
-
 import java.util.List;
 
 /**
@@ -10,17 +8,45 @@ import java.util.List;
 public class Recipe {
 
     /**
-     * Name of the dish for this recipe
-     */
-    @Parameter
-    private String dishName;
-
-    /**
      * Summery of the recipe
      */
-    @Parameter
     private String description;
 
-    @Parameter
+    /**
+     * Name of the dish for this recipe
+     */
+    private String dishName;
+
     private List<Ingredient> ingredients;
+
+    public String getDishName()
+    {
+        return dishName;
+    }
+
+    public void setDishName(String dishName)
+    {
+        this.dishName = dishName;
+    }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public List<Ingredient> getIngredients()
+    {
+        return ingredients;
+    }
+
+    public void setIngredients(List<Ingredient> ingredients)
+    {
+        this.ingredients = ingredients;
+    }
+
 }
