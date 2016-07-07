@@ -5,7 +5,7 @@
     <groupId>org.mule.modules</groupId>
     <artifactId>basic-connector</artifactId>
     <packaging>mule-extension</packaging>
-    <name>Mock Extension</name>
+    <name>Mock Basic Extension</name>
 
     <parent>
       <groupId>org.mule.modules</groupId>
