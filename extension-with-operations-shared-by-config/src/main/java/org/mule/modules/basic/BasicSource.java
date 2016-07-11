@@ -6,7 +6,7 @@ import org.mule.runtime.extension.api.runtime.source.Source;
 /**
  * Basic Source javadoc description
  */
-public class BasicSource extends Source<String,String>
+public class BasicSource extends Source<String,BasicAttributes>
 {
 
     /**
