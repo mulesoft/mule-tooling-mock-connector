@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" prefix="basic-custom-editor" url="http://www.mulesoft.org/schema/mule/basic-custom-editor">
+    <nested caption="Basic:Connection" description="" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" abstract="false" localId="connection" versions="[4.0,10.0]">
+        <string name="providerParameter" required="true" supportsExpressions="true" caption="Provider Parameter" description=""/>
+    </nested>
+    <global-cloud-connector connectivityTesting="off" metaData="static" supportsUserDefinedMetaData="false" caption="Basic Config" description="Config Description" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" abstract="false" localId="config" versions="[4.0,10.0]">
+        <attribute-category caption="General" description="Configuration Properties">
+            <group id="basicCustomEditorGenericProperties" caption="Basic Settings">
+                <name name="name" required="true" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref."/>
+            </group>
+            <group id="general" caption="General">
+                <string name="configParameter" required="true" supportsExpressions="true" caption="Config Parameter" description=""/>
+            </group>
+        </attribute-category>
+        <attribute-category caption="Connection" description="Configure the Connection Properties">
+            <group id="general" caption="General">
+                <childElement inplace="true" xmlOrder="10" indented="false" name="http://www.mulesoft.org/schema/mule/basic-custom-editor/connection"/>
+            </group>
+        </attribute-category>
+    </global-cloud-connector>
+    <cloud-connector caption="abstractBasicGeneric" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" abstract="true" localId="abstractBasicGeneric" versions="[4.0,10.0]">
+        <attribute-category caption="General" description="Configuration Properties">
+            <group id="abstractBasicGeneric" caption="Basic Settings">
+                <globalRef requiredType="http://www.mulesoft.org/schema/mule/basic-custom-editor/config" name="config-ref" required="true" caption="Extension Configuration" description="Specify which configuration to use for this invocation."/>
+            </group>
+        </attribute-category>
+    </cloud-connector>
+    <cloud-connector returnType="java.lang.String" metaData="static" caption="Operation With String" description="Operation With String description" extends="http://www.mulesoft.org/schema/mule/basic-custom-editor/abstractBasicGeneric" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" abstract="true" localId="operation-with-string" versions="[4.0,10.0]">
+        <attribute-category caption="General" description="Configuration Properties">
+            <group id="general" caption="General">
+                <string name="param" required="true" supportsExpressions="true" caption="Param" description="String param description"/>
+            </group>
+        </attribute-category>
+    </cloud-connector>
+    <cloud-connector aliasId="org.mule.tooling.ui.modules.core.pattern.basic-custom-editor" caption="Basic" description="Extension javadoc description" extends="http://www.mulesoft.org/schema/mule/basic-custom-editor/abstractBasicGeneric" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" localId="basic-custom-editor-connector" versions="[4.0,10.0]">
+        <attribute-category caption="General" description="General.">
+            <group id="basicCustomEditorConnectorGeneric" caption="Basic Settings">
+                <modeSwitch alwaysCombo="true" name="Basic operations to execute" caption="Operation" description="Operation.">
+                    <no-operation abstractElement="http://www.mulesoft.org/schema/mule/basic-custom-editor/abstractBasicGeneric" connector-name="processor"/>
+                    <mode modeId="http://www.mulesoft.org/schema/mule/basic-custom-editor/operation-with-string" modeLabel="Custom Label for My Operation"/>
+                </modeSwitch>
+            </group>
+        </attribute-category>
+    </cloud-connector>
+</namespace>
