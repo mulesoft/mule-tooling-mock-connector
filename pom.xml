@@ -43,6 +43,7 @@
         <module>extension-with-operations-shared-by-config</module>
         <module>extension-with-imports</module>
         <module>extension-with-custom-editor</module>
+        <module>extension-with-tls</module>
     </modules>
 
     <distributionManagement>

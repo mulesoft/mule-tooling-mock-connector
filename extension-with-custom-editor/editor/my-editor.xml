@@ -32,7 +32,7 @@
             </group>
         </attribute-category>
     </cloud-connector>
-    <cloud-connector aliasId="org.mule.tooling.ui.modules.core.pattern.basic-custom-editor" caption="Basic" description="Extension javadoc description" extends="http://www.mulesoft.org/schema/mule/basic-custom-editor/abstractBasicGeneric" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" localId="basic-custom-editor-connector" versions="[4.0,10.0]">
+    <cloud-connector aliasId="org.mule.tooling.ui.modules.core.pattern.basic-custom-editor" caption="BasicCustomEditor" description="Extension javadoc description" extends="http://www.mulesoft.org/schema/mule/basic-custom-editor/abstractBasicGeneric" icon="icons/small/basic-custom-editor-connector-24x16.png" image="icons/large/basic-custom-editor-connector-48x32.png" localId="basic-custom-editor-connector" versions="[4.0,10.0]">
         <attribute-category caption="General" description="General.">
             <group id="basicCustomEditorConnectorGeneric" caption="Basic Settings">
                 <modeSwitch alwaysCombo="true" name="Basic operations to execute" caption="Operation" description="Operation.">
