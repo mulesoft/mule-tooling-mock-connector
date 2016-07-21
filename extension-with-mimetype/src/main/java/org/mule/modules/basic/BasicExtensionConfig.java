@@ -14,4 +14,7 @@ public class BasicExtensionConfig {
 	@Parameter
 	private String outputMimeType;
 
+	@Parameter
+	private String outputEncoding;
+
 }
