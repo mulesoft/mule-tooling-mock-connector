@@ -1,8 +1,6 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.api.connection.ConnectionException;
-import org.mule.runtime.api.connection.ConnectionHandlingStrategy;
-import org.mule.runtime.api.connection.ConnectionHandlingStrategyFactory;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
 import org.mule.runtime.extension.api.annotation.Alias;
@@ -36,9 +34,4 @@ public class SourceConnectionProvider implements ConnectionProvider<DummyConnect
         return ConnectionValidationResult.success();
     }
 
-    @Override
-    public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(ConnectionHandlingStrategyFactory<DummyConnection> connectionHandlingStrategyFactory)
-    {
-        return connectionHandlingStrategyFactory.none();
-    }
 }

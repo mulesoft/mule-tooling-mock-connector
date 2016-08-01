@@ -1,16 +1,15 @@
 package org.mule.modules.basic;
 
+import org.mule.runtime.api.connection.CachedConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionException;
-import org.mule.runtime.api.connection.ConnectionHandlingStrategy;
-import org.mule.runtime.api.connection.ConnectionHandlingStrategyFactory;
-import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
 import org.mule.runtime.extension.api.annotation.Parameter;
 
 /**
  * Connection Provider description
  */
-public class BasicConnectionProvider implements ConnectionProvider<DummyConnection> {
+public class BasicConnectionProvider implements CachedConnectionProvider<DummyConnection>
+{
 
 	/**
 	 * Provider parameter description
@@ -26,12 +25,6 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 	@Override
 	public void disconnect(DummyConnection connection) {
 
-	}
-
-	@Override
-	public ConnectionHandlingStrategy<DummyConnection> getHandlingStrategy(
-			ConnectionHandlingStrategyFactory<DummyConnection> factory) {
-		return factory.cached();
 	}
 
 	@Override
