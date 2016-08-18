@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:subtypes="http://www.mulesoft.org/schema/mule/subtypes"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/subtypes http://www.mulesoft.org/schema/mule/subtypes/current/mule-subtypes.xsd">
+    <subtypes:config name="asd">
+        <subtypes:base-pojo>
+            <subtypes:book/>
+        </subtypes:base-pojo>
+    </subtypes:config>
+    <subtypes:config name="asd2">
+        <subtypes:base-pojo>
+            <subtypes:magazine/>
+        </subtypes:base-pojo>
+    </subtypes:config>
+    <flow name="dummy-flow">
+        <subtypes:operation-base-type config-ref="asd">
+            <subtypes:pojo>
+                <subtypes:book/>
+            </subtypes:pojo>
+        </subtypes:operation-base-type>
+        <subtypes:operation-base-type config-ref="asd2">
+            <subtypes:pojo>
+                <subtypes:magazine id="asd"/>
+            </subtypes:pojo>
+        </subtypes:operation-base-type>
+        <subtypes:operation-with-book config-ref="asd2">
+            <subtypes:book-param author="asd"/>
+        </subtypes:operation-with-book>
+    </flow>
+
+</mule>

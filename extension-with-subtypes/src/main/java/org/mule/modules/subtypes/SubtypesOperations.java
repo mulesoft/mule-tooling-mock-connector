@@ -14,7 +14,7 @@ public class SubtypesOperations
         return "";
     }
 
-    public String operationWithBook(Book book)
+    public String operationWithBook(Book bookParam)
     {
         return "";
     }

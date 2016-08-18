@@ -21,6 +21,7 @@
         <module>extension-with-text-property</module>
         <module>extension-with-password-property</module>
         <module>extension-with-mimetype</module>
+        <module>extension-with-simple-pojo</module>
         <module>extension-with-pojo</module>
         <module>extension-with-interfaces</module>
         <module>extension-with-map</module>
@@ -45,8 +46,35 @@
         <module>extension-with-custom-editor</module>
         <module>extension-with-tls</module>
         <module>extension-with-subtypes</module>
+        <module>mock-studio-connector</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.ferstl</groupId>
+                <artifactId>depgraph-maven-plugin</artifactId>
+                <version>1.0.4</version>
+                <configuration>
+                    <excludes >
+                     <exclude>jaxen:jaxen</exclude>
+                   </excludes>
+                    <showDuplicates>true</showDuplicates>
+                    <showConflicts>true</showConflicts>
+                    <outputFile>${project.build.testOutputDirectory}/dependency-graph.dot</outputFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>depgraph-dependencies-graph</id>
+                        <goals>
+                            <goal>graph</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
     <distributionManagement>
         <repository>
             <id>mulesoft-releases</id>

@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:basic="http://www.mulesoft.org/schema/mule/basic"
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:map-string-pojo="http://www.mulesoft.org/schema/mule/map-string-pojo"
       xmlns="http://www.mulesoft.org/schema/mule/core"
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-        http://www.mulesoft.org/schema/mule/basic http://www.mulesoft.org/schema/mule/basic/current/mule-basic.xsd">
-
+http://www.mulesoft.org/schema/mule/map-string-pojo http://www.mulesoft.org/schema/mule/map-string-pojo/current/mule-map-string-pojo.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd">
+    <map-string-pojo:ingredient name="globalPojo" amount="10" type="asd"/>
+    <map-string-pojo:config name="MapStringPojo_Config" doc:name="MapStringPojo Config">
+        <map-string-pojo:connection>
+            <map-string-pojo:map-parameters>
+                <map-string-pojo:map-parameter key="asd">
+                    <map-string-pojo:ingredient amount="10" type="10"/>
+                </map-string-pojo:map-parameter>
+                <map-string-pojo:map-parameter key="asd2">
+                    <map-string-pojo:ingredient amount="123" type="32"/>
+                </map-string-pojo:map-parameter>
+            </map-string-pojo:map-parameters>
+        </map-string-pojo:connection>
+    </map-string-pojo:config>
     <flow name="dummy-flow">
-        <basic:operation-with-map>
-            <basic:map-parameters>
-                <basic:map-parameter key="asd">
-                    <basic:ingredient amount="10" type="asd"/>
-                </basic:map-parameter>
-            </basic:map-parameters>
-        </basic:operation-with-map>
+        <map-string-pojo:operation-with-map config-ref="MapStringPojo_Config" doc:name="MapStringPojo">
+            <map-string-pojo:map-parameters>
+                <map-string-pojo:map-parameter key="asd">
+                    <map-string-pojo:ingredient amount="10" type="asd"/>
+                </map-string-pojo:map-parameter>
+            </map-string-pojo:map-parameters>
+        </map-string-pojo:operation-with-map>
     </flow>
-
 </mule>

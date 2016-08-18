@@ -16,13 +16,13 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 	 * Complex Pojo At Provider description
 	 */
 	@Parameter
-	private ComplexPojo complexPojoAtConfig;
+	private ComplexPojo complexPojoAtProvider;
 
 	/**
 	 * Ingredient At Provider description
 	 */
 	@Parameter
-	private Ingredient ingredientAtConfig;
+	private Ingredient ingredientAtProvider;
 
 	@Override
 	public DummyConnection connect() throws ConnectionException {

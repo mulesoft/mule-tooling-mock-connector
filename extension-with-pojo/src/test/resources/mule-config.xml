@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:pojo="http://www.mulesoft.org/schema/mule/pojo" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <pojo:complex-pojo name="Complex_Pojo" intField="3" doc:name="Complex Pojo"/>
+    <pojo:config name="Pojo_Config" doc:name="Pojo Config">
+        <pojo:connection complexPojoAtConfig="Complex_Pojo1"/>
+    </pojo:config>
+    <pojo:complex-pojo name="Complex_Pojo1" doc:name="Complex Pojo">
+        <pojo:ingredient amount="10" type="10"/>
+    </pojo:complex-pojo>
+    <pojo:ingredient name="Ingredient" amount="11" type="11" doc:name="Ingredient"/>
+    <pojo:config name="Pojo_Config1" doc:name="Pojo Config">
+        <pojo:connection>
+            <pojo:complex-pojo-at-config ingredient="Ingredient"/>
+        </pojo:connection>
+    </pojo:config>
+    <flow name="dummy-flow">
+        <pojo:operation-with-pojo config-ref="Pojo_Config1" doc:name="Pojo">
+            <pojo:complex-pojo-at-operation intField="9">
+                <pojo:ingredient amount="15" type="15"/>
+            </pojo:complex-pojo-at-operation>
+            <pojo:ingredient-at-operation amount="48" type="49"/>
+        </pojo:operation-with-pojo>
+        <pojo:operation-with-pojo config-ref="Pojo_Config" doc:name="Pojo">
+            <pojo:complex-pojo-at-operation intField="33"/>
+            <pojo:ingredient-at-operation amount="22" type="22"/>
+        </pojo:operation-with-pojo>
+    </flow>
+</mule>

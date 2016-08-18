@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:string-list="http://www.mulesoft.org/schema/mule/string-list" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <string-list:config name="StringList_Config" doc:name="StringList Config">
+        <string-list:config-parameters>
+            <string-list:config-parameter value="conf1"/>
+            <string-list:config-parameter value="conf2"/>
+        </string-list:config-parameters>
+        <string-list:connection>
+            <string-list:provider-parameters>
+                <string-list:provider-parameter value="asd"/>
+                <string-list:provider-parameter value="asd1"/>
+            </string-list:provider-parameters>
+        </string-list:connection>
+    </string-list:config>
+    <flow name="dummyFlow">
+        <string-list:operation-with-string config-ref="StringList_Config" doc:name="StringList">
+            <string-list:params>
+                <string-list:param value="op1"/>
+                <string-list:param value="op2"/>
+            </string-list:params>
+        </string-list:operation-with-string>
+    </flow>
+</mule>
