@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:subtypes="http://www.mulesoft.org/schema/mule/subtypes"
-      xmlns="http://www.mulesoft.org/schema/mule/core"
-      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-        http://www.mulesoft.org/schema/mule/subtypes http://www.mulesoft.org/schema/mule/subtypes/current/mule-subtypes.xsd">
-    <subtypes:config name="asd">
+
+<mule xmlns:subtypes="http://www.mulesoft.org/schema/mule/subtypes" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <subtypes:config name="Subtypes_Config" doc:name="Subtypes Config">
         <subtypes:base-pojo>
             <subtypes:book/>
         </subtypes:base-pojo>
     </subtypes:config>
-    <subtypes:config name="asd2">
-        <subtypes:base-pojo>
-            <subtypes:magazine/>
-        </subtypes:base-pojo>
-    </subtypes:config>
-    <flow name="dummy-flow">
-        <subtypes:operation-base-type config-ref="asd">
-            <subtypes:pojo>
-                <subtypes:book/>
-            </subtypes:pojo>
-        </subtypes:operation-base-type>
-        <subtypes:operation-base-type config-ref="asd2">
-            <subtypes:pojo>
-                <subtypes:magazine id="asd"/>
-            </subtypes:pojo>
-        </subtypes:operation-base-type>
-        <subtypes:operation-with-book config-ref="asd2">
-            <subtypes:book-param author="asd"/>
+    <flow name="dummyFlow1">
+        <subtypes:operation-with-book config-ref="Subtypes_Config" doc:name="Subtypes">
+            <subtypes:book-param id="231" author="asd" pages="300"/>
         </subtypes:operation-with-book>
     </flow>
-
+    <flow name="dummyFlow">
+        <subtypes:operation-base-type config-ref="Subtypes_Config" doc:name="Subtypes">
+            <subtypes:pojo>
+                <subtypes:magazine/>
+            </subtypes:pojo>
+        </subtypes:operation-base-type>
+    </flow>
 </mule>
