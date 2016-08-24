@@ -21,5 +21,15 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
                 <subtypes:magazine/>
             </subtypes:pojo>
         </subtypes:operation-base-type>
+        <subtypes:operation-with-interface>
+            <subtypes:factory-param>
+                <subtypes:factory-a paramaterA="1"/>
+            </subtypes:factory-param>
+        </subtypes:operation-with-interface>
+        <subtypes:operation-with-interface>
+            <subtypes:factory-param>
+                <subtypes:factory-b paramaterB="1"/>
+            </subtypes:factory-param>
+        </subtypes:operation-with-interface>
     </flow>
 </mule>

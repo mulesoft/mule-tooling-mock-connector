@@ -1,4 +1,4 @@
-package org.mule.modules.advance;
+package org.mule.modules.basic;
 
 import org.mule.modules.basic.model.ComplexPojo;
 
@@ -10,7 +10,7 @@ public class AdvanceOperations
      *
      * @param param String param description
      */
-    public String operationWithString(ComplexPojo param)
+    public String operationWithImportedPojo(ComplexPojo param)
     {
         return "";
     }

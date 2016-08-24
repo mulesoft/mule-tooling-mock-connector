@@ -1,4 +1,4 @@
-package org.mule.modules.advance;
+package org.mule.modules.basic;
 
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.connection.ConnectionProvider;

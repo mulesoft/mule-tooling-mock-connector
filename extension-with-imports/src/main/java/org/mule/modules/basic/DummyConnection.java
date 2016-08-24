@@ -1,4 +1,4 @@
-package org.mule.modules.advance;
+package org.mule.modules.basic;
 
 public class DummyConnection {
 

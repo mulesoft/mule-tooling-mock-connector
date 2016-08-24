@@ -1,4 +1,4 @@
-package org.mule.modules.advance;
+package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.Configuration;
 import org.mule.runtime.extension.api.annotation.Parameter;
