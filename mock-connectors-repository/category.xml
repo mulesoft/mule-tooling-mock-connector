@@ -12,6 +12,9 @@
    <feature id="org.mule.tooling.ui.extension.extension-with-subtypes.4.0.0">
       <category name="org.mule.tooling.mock-connectors"/>
    </feature>
+   <feature id="org.mule.tooling.ui.extension.extension-with-pojo.4.0.0">
+      <category name="org.mule.tooling.mock-connectors"/>
+   </feature>
    <category-def name="org.mule.tooling.mock-connectors" label="Mule Tooling Mock Connectors">
       <description>
          Mule Tooling Mock Connectors

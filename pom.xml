@@ -46,6 +46,7 @@
         <module>extension-with-custom-editor</module>
         <module>extension-with-tls</module>
         <module>extension-with-subtypes</module>
+        <module>extension-with-subtypes-list</module>
         <module>mock-studio-connector</module>
     </modules>
 

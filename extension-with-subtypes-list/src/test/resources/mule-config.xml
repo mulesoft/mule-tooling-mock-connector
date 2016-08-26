@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:subtypes-list="http://www.mulesoft.org/schema/mule/subtypes-list" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/subtypes-list http://www.mulesoft.org/schema/mule/subtypes-list/current/mule-subtypes-list.xsd">
+    <subtypes-list:factory-a name="Factory_A" paramaterA="4" doc:name="Factory A"/>
+    <subtypes-list:config name="Subtypes_Config" doc:name="Subtypes Config">
+        <subtypes-list:base-pojos>
+                <subtypes-list:book id="asd" author="asd" pages="90"/>
+        </subtypes-list:base-pojos>
+    </subtypes-list:config>
+    <subtypes-list:factory-b name="Factory_B" paramaterB="132" doc:name="Factory B"/>
+    <flow name="dummy-flow1">
+        <subtypes-list:operation-base-type-list config-ref="Subtypes_Config" doc:name="Subtypes">
+            <subtypes-list:pojos>
+                <subtypes-list:magazine id="123" pages="123"/>
+            </subtypes-list:pojos>
+        </subtypes-list:operation-base-type-list>
+    </flow>
+    <flow name="dummy-flow">
+        <subtypes-list:operation-with-interface-list config-ref="Subtypes_Config" doc:name="Subtypes" factories="#[payload]"/>
+        <subtypes-list:operation-with-interface-list config-ref="Subtypes_Config" doc:name="Subtypes">
+            <subtypes-list:factories>
+                <subtypes-list:factory-b parameterB="9"/>
+            </subtypes-list:factories>
+        </subtypes-list:operation-with-interface-list>
+    </flow>
+</mule>

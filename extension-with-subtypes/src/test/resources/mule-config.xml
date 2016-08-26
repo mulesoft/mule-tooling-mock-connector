@@ -5,30 +5,25 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <subtypes:factory-a name="Factory_A" paramaterA="4" doc:name="Factory A"/>
     <subtypes:config name="Subtypes_Config" doc:name="Subtypes Config">
         <subtypes:base-pojo>
-            <subtypes:book/>
+            <subtypes:book id="asd" author="asd" pages="90"/>
         </subtypes:base-pojo>
     </subtypes:config>
-    <flow name="dummyFlow1">
-        <subtypes:operation-with-book config-ref="Subtypes_Config" doc:name="Subtypes">
-            <subtypes:book-param id="231" author="asd" pages="300"/>
-        </subtypes:operation-with-book>
-    </flow>
-    <flow name="dummyFlow">
+    <subtypes:factory-b name="Factory_B" paramaterB="132" doc:name="Factory B"/>
+    <flow name="dummy-flow1">
         <subtypes:operation-base-type config-ref="Subtypes_Config" doc:name="Subtypes">
             <subtypes:pojo>
-                <subtypes:magazine/>
+                <subtypes:magazine id="123" pages="123"/>
             </subtypes:pojo>
         </subtypes:operation-base-type>
-        <subtypes:operation-with-interface>
+    </flow>
+    <flow name="dummy-flow">
+        <subtypes:operation-with-interface config-ref="Subtypes_Config" doc:name="Subtypes" factoryParam="Factory_A"/>
+        <subtypes:operation-with-interface config-ref="Subtypes_Config" doc:name="Subtypes">
             <subtypes:factory-param>
-                <subtypes:factory-a paramaterA="1"/>
-            </subtypes:factory-param>
-        </subtypes:operation-with-interface>
-        <subtypes:operation-with-interface>
-            <subtypes:factory-param>
-                <subtypes:factory-b paramaterB="1"/>
+                <subtypes:factory-b paramaterB="123"/>
             </subtypes:factory-param>
         </subtypes:operation-with-interface>
     </flow>

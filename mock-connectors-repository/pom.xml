@@ -146,6 +146,16 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
+			<id>extension-with-pojo</id>
+			<url>file:/${basedir}/../extension-with-pojo/target/update-site/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>extension-with-pojo-list</id>
+			<url>file:/${basedir}/../extension-with-pojo-list/target/update-site/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
 			<id>extension-with-tls</id>
 			<url>file:/${basedir}/../extension-with-tls/target/update-site/</url>
 			<layout>p2</layout>
