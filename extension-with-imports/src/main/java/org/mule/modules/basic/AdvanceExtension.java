@@ -10,7 +10,7 @@ import org.mule.runtime.extension.api.annotation.connector.Providers;
 /**
  * Extension javadoc description
  */
-@Extension(name = "basic", description = "Advance Connector Description")
+@Extension(name = "Imports", description = "Connectors With Imports Description")
 @Operations({ AdvanceOperations.class })
 @Configurations({ AdvanceExtensionConfig.class })
 @Providers({ AdvanceConnectionProvider.class })
