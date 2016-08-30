@@ -4,8 +4,11 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/pojo/current/mule-pojo.xsd">
     <pojo:complex-pojo name="Complex_Pojo" intField="3" doc:name="Complex Pojo"/>
+    <pojo:complex-pojo name="Complex_Pojo2" intField="3" ingredient="Ingredient" doc:name="Complex Pojo"/>
+    <pojo:complex-pojo name="Complex_Pojo3" intField="3" ingredient="#[payload]" doc:name="Complex Pojo"/>
     <pojo:config name="Pojo_Config" doc:name="Pojo Config">
         <pojo:connection complexPojoAtConfig="Complex_Pojo1"/>
     </pojo:config>

@@ -1,9 +1,23 @@
 package org.mule.modules.basic.model;
 
+import org.mule.runtime.extension.api.annotation.Expression;
+import org.mule.runtime.extension.api.annotation.Parameter;
+import org.mule.runtime.extension.api.annotation.param.Optional;
+import org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport;
+
 public class Ingredient
 {
+
+    @Parameter
     private double amount;
+
+    @Parameter
     private String type;
+
+    @Parameter
+    @Expression(ExpressionSupport.NOT_SUPPORTED)
+    @Optional( defaultValue = "6")
+    private String noExpressionField;
 
     public String getType()
     {
@@ -24,4 +38,15 @@ public class Ingredient
     {
         this.amount = amount;
     }
+
+    public String getNoExpressionField()
+    {
+        return noExpressionField;
+    }
+
+    public void setNoExpressionField(String noExpressionField)
+    {
+        this.noExpressionField = noExpressionField;
+    }
+
 }
