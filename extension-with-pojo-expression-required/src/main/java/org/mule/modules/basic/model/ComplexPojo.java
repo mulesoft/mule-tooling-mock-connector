@@ -1,6 +1,6 @@
 package org.mule.modules.basic.model;
 
-import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.NOT_SUPPORTED;
+import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.REQUIRED;
 import org.mule.runtime.extension.api.annotation.Expression;
 import org.mule.runtime.extension.api.annotation.Parameter;
 
@@ -13,7 +13,7 @@ public class ComplexPojo
     private Ingredient ingredient;
 
     @Parameter
-    @Expression(NOT_SUPPORTED)
+    @Expression(REQUIRED)
     private Ingredient ingredientNoExpression;
 
     public int getIntField()
