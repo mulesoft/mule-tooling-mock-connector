@@ -4,7 +4,7 @@ import org.mule.runtime.extension.api.annotation.Configurations;
 import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.capability.CustomStudioEditor;
-import org.mule.runtime.extension.api.annotation.connector.Providers;
+import org.mule.runtime.extension.api.annotation.connector.ConnectionProviders;
 
 /**
  * Extension javadoc description
@@ -12,7 +12,7 @@ import org.mule.runtime.extension.api.annotation.connector.Providers;
 @Extension(name = "BasicCustomEditor", description = "Basic Connector With Custom Editor")
 @Operations({ BasicOperations.class })
 @Configurations({ BasicExtensionConfig.class })
-@Providers({ BasicConnectionProvider.class })
+@ConnectionProviders({ BasicConnectionProvider.class })
 @CustomStudioEditor(fileName= "my-editor.xml")
 public class BasicExtension {
 
