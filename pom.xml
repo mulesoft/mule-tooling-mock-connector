@@ -41,6 +41,7 @@
         <module>extension-with-operations-and-sources</module>
         <module>extension-with-multiple-config</module>
         <module>extension-with-multiple-providers</module>
+        <module>extension-with-operations-configless</module>
         <module>extension-with-operations-by-config</module>
         <module>extension-with-providers-by-config</module>
         <module>extension-with-operations-and-sources-by-config</module>
