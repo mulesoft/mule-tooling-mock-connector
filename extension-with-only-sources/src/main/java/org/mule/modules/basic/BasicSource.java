@@ -1,6 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.Parameter;
+import org.mule.runtime.extension.api.annotation.param.UseConfig;
 import org.mule.runtime.extension.api.runtime.source.Source;
 
 /**
@@ -9,6 +10,8 @@ import org.mule.runtime.extension.api.runtime.source.Source;
 public class BasicSource extends Source<String,BasicAttributes>
 {
 
+    @UseConfig
+    private BasicExtensionConfig config;
     /**
      * Source Parameter description
      */

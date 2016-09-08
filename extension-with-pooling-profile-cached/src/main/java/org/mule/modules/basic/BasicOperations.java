@@ -7,9 +7,10 @@ public class BasicOperations {
 	/**
 	 * Operation With String description
 	 *
+	 * @param config config description
 	 * @param param String param description
 	 */
-	public String operationWithString(String param) {
+	public String operationWithString(@UseConfig BasicExtensionConfig config, String param) {
 			return param;
 	}
 

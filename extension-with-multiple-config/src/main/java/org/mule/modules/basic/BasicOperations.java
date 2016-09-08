@@ -9,7 +9,7 @@ public class BasicOperations {
 	 *
 	 * @param param String param description
 	 */
-	public String operationWithString(String param) {
+	public String operationWithString(@UseConfig BaseConfig config, String param) {
 			return param;
 	}
 

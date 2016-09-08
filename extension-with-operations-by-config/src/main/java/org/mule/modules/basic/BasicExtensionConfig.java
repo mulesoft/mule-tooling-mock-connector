@@ -8,7 +8,7 @@ import org.mule.runtime.extension.api.annotation.Parameter;
  * Config javadoc description
  */
 @Configuration(name = "config", description = "Config Description")
-@Operations({BasicOperations.class})
+@Operations({BasicOperations.class,SharedOperations.class})
 public class BasicExtensionConfig extends BaseConfig{
 	/**
 	 * Config Parameter description

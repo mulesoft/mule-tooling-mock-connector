@@ -2,13 +2,11 @@ package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.Configurations;
 import org.mule.runtime.extension.api.annotation.Extension;
-import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
  * Extension javadoc description
  */
-@Extension(name = "Basic", description = "Basic Connector Description")
-@Operations({ BasicOperations.class })
+@Extension(name = "SimpleTypes", description = "Basic Connector Description")
 @Configurations({ BasicExtensionConfig.class })
 public class BasicExtension {
 

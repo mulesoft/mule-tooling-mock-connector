@@ -1,15 +1,16 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.display.Text;
+import org.mule.runtime.extension.api.annotation.param.UseConfig;
 
 public class BasicOperations {
 
 	/**
 	 * Operation With String description
 	 *
+	 * @param config config description
 	 * @param param String param description
 	 */
-	public String operationWithString(@Text String param) {
+	public String operationWithString(@UseConfig BasicExtensionConfig config, String param) {
 			return param;
 	}
 

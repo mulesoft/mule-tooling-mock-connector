@@ -8,7 +8,7 @@ import org.mule.runtime.extension.api.annotation.connector.ConnectionProviders;
 /**
  * Extension javadoc description
  */
-@Extension(name = "Basic", description = "Basic Connector Description")
+@Extension(name = "ProvidersByConfig", description = "Basic Connector Description")
 @Configurations({BasicExtensionConfig.class, AnotherBasicExtensionConfig.class})
 @ConnectionProviders({BasicConnectionProvider.class})
 @Operations({SharedOperations.class})
