@@ -8,7 +8,7 @@ import org.hamcrest.core.IsNull;
 import org.junit.Test;
 
 @ArtifactClassLoaderRunnerConfig(
-        extensionBasePackage = "org.mule.modules.subtypes")
+        plugins = "org.mule.modules:extension-with-subtypes")
 public class SubtypesExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test

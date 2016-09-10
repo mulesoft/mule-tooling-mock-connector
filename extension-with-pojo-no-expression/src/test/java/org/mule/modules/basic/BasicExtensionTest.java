@@ -1,3 +1,4 @@
+
 package org.mule.modules.basic;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -8,7 +9,7 @@ import org.hamcrest.core.IsNull;
 import org.junit.Test;
 
 @ArtifactClassLoaderRunnerConfig(
-        extensionBasePackage = "org.mule.modules.basic")
+        plugins = "org.mule.modules:extension-with-pojo-no-expression")
 public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test
