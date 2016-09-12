@@ -22,6 +22,7 @@
             <groupId>org.mule.modules</groupId>
             <artifactId>extension-with-pojo</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <repositories>

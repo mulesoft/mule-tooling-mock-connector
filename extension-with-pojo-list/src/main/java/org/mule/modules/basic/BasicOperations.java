@@ -17,4 +17,8 @@ public class BasicOperations {
 			return recipes;
 	}
 
+	public List<Recipe> anotherOperationWithPojoList(@UseConfig BasicExtensionConfig config, List<Recipe> myRecipes) {
+		return myRecipes;
+	}
+
 }

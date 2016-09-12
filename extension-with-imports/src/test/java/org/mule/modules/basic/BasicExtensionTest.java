@@ -8,7 +8,7 @@ import org.hamcrest.core.IsNull;
 import org.junit.Test;
 
 @ArtifactClassLoaderRunnerConfig(
-        plugins = {"org.mule.modules:extension-with-imports","org.mule.modules:extension-with-pojo"})
+        plugins = {"org.mule.modules:extension-with-pojo"})
 public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test

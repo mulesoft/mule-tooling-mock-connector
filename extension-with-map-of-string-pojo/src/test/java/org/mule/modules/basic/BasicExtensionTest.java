@@ -1,12 +1,12 @@
 package org.mule.modules.basic;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import org.mule.functional.junit4.ExtensionFunctionalTestCase;
+import org.mule.functional.junit4.MuleArtifactFunctionalTestCase;
 
 import org.hamcrest.core.IsNull;
 import org.junit.Test;
 
-public class BasicExtensionTest extends ExtensionFunctionalTestCase
+public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test
     public void shouldNotExplodeLOL(){
@@ -19,8 +19,4 @@ public class BasicExtensionTest extends ExtensionFunctionalTestCase
         return "mule-config.xml";
     }
 
-    protected Class<?>[] getAnnotatedExtensionClasses()
-    {
-        return new Class[] {BasicExtension.class};
-    }
 }

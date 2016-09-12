@@ -10,7 +10,7 @@
     <flow name="dummy-flow">
         <imports:operation-with-imported-pojo>
             <imports:param>
-                <pojo:complex-pojo name="Complex_Pojo" intField="3"/>
+                <pojo:complex-pojo intField="3"/>
             </imports:param>
         </imports:operation-with-imported-pojo>
     </flow>

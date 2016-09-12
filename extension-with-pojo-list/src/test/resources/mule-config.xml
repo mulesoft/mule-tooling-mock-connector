@@ -25,5 +25,11 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
                 <pojo-list:recipe description="4" dishName="5"/>
             </pojo-list:recipes>
         </pojo-list:operation-with-pojo-list>
+        <pojo-list:another-operation-with-pojo-list config-ref="PojoList_Config">
+            <pojo-list:my-recipes>
+                <pojo-list:recipe description="14" dishName="14"/>
+                <pojo-list:recipe description="14" dishName="14"/>
+            </pojo-list:my-recipes>
+        </pojo-list:another-operation-with-pojo-list>
     </flow>
 </mule>

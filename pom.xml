@@ -54,32 +54,6 @@
         <module>mock-studio-connector</module>
     </modules>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.github.ferstl</groupId>
-                <artifactId>depgraph-maven-plugin</artifactId>
-                <version>1.0.4</version>
-                <configuration>
-                    <excludes >
-                     <exclude>jaxen:jaxen</exclude>
-                   </excludes>
-                    <showDuplicates>true</showDuplicates>
-                    <showConflicts>true</showConflicts>
-                    <outputFile>${project.build.testOutputDirectory}/dependency-graph.dot</outputFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>depgraph-dependencies-graph</id>
-                        <goals>
-                            <goal>graph</goal>
-                        </goals>
-                        <phase>process-resources</phase>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
     <distributionManagement>
         <repository>
             <id>mulesoft-releases</id>
