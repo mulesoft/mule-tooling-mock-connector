@@ -20,6 +20,7 @@
         <module>extension-with-simple-types-no-expression</module>
         <module>extension-with-text-property</module>
         <module>extension-with-password-property</module>
+        <module>extension-with-annotated-pojo-fields</module>
         <module>extension-with-mimetype</module>
         <module>extension-with-simple-pojo</module>
         <module>extension-with-simple-pojo-with-alias</module>
