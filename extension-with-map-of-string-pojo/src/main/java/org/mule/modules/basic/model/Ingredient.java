@@ -1,8 +1,11 @@
 package org.mule.modules.basic.model;
 
+import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+
 /**
  * Dummy Pojo for test
  */
+@XmlHints(allowTopLevelDefinition = true)
 public class Ingredient
 {
     private String type;
