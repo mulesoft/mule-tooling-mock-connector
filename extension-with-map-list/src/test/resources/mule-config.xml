@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:map-list="http://www.mulesoft.org/schema/mule/map-list"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/map-list http://www.mulesoft.org/schema/mule/map-list/current/mule-map-list.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd">
+    <map-list:config name="MapStringPojo_Config" doc:name="MapStringPojo Config">
+        <map-list:connection>
+            <map-list:map-parameters>
+                <map-list:map-parameter value="#[['a':'1','b':'2']]"/>
+            </map-list:map-parameters>
+        </map-list:connection>
+    </map-list:config>
+    <flow name="dummy-flow">
+        <map-list:operation-with-map config-ref="MapStringPojo_Config" doc:name="MapStringPojo">
+            <map-list:map-parameters>
+                <map-list:map-parameter value="#[['a':'1','b':'2']]"/>
+                <map-list:map-parameter value="#[['c':'3','d':'4']]"/>
+            </map-list:map-parameters>
+        </map-list:operation-with-map>
+    </flow>
+</mule>

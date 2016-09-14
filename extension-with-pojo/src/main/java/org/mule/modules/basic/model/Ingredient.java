@@ -1,5 +1,8 @@
 package org.mule.modules.basic.model;
 
+import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+
+@XmlHints(allowTopLevelDefinition = true)
 public class Ingredient
 {
     private double amount;

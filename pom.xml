@@ -51,6 +51,7 @@
         <module>extension-with-tls</module>
         <module>extension-with-subtypes</module>
         <module>extension-with-subtypes-list</module>
+        <module>extension-with-metadata</module>
         <module>mock-studio-connector</module>
     </modules>
 
@@ -89,6 +90,15 @@
             </build>
         </profile>
     </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mule.tests</groupId>
+            <artifactId>mule-tests-runner</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>

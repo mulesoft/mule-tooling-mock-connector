@@ -5,15 +5,14 @@ import org.mule.functional.junit4.MuleArtifactFunctionalTestCase;
 
 import org.hamcrest.core.IsNull;
 import org.junit.Test;
-import org.mule.test.runner.ArtifactClassLoaderRunnerConfig;
 
-@ArtifactClassLoaderRunnerConfig(
-        plugins = {"org.mule.modules:extension-with-pojo"})
 public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test
-    public void shouldNotExplodeLOL(){
+    public void shouldNotExplodeLOL() throws Exception
+    {
         assertThat(flowRunner("dummy-flow").getFlowConstructName(), IsNull.notNullValue());
+        flowRunner("dummy-flow").run();
     }
 
     @Override

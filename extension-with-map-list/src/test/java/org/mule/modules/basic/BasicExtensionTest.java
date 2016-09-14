@@ -5,10 +5,7 @@ import org.mule.functional.junit4.MuleArtifactFunctionalTestCase;
 
 import org.hamcrest.core.IsNull;
 import org.junit.Test;
-import org.mule.test.runner.ArtifactClassLoaderRunnerConfig;
 
-@ArtifactClassLoaderRunnerConfig(
-        plugins = {"org.mule.modules:extension-with-pojo"})
 public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
 {
     @Test
@@ -21,4 +18,5 @@ public class BasicExtensionTest extends MuleArtifactFunctionalTestCase
     {
         return "mule-config.xml";
     }
+
 }

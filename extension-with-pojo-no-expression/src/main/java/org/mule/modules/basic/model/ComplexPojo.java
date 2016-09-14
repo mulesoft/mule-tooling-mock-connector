@@ -3,7 +3,9 @@ package org.mule.modules.basic.model;
 import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.NOT_SUPPORTED;
 import org.mule.runtime.extension.api.annotation.Expression;
 import org.mule.runtime.extension.api.annotation.Parameter;
+import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
 
+@XmlHints(allowTopLevelDefinition = true)
 public class ComplexPojo
 {
     @Parameter

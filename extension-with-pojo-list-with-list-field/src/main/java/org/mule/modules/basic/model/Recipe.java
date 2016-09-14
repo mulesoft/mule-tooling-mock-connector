@@ -1,10 +1,13 @@
 package org.mule.modules.basic.model;
 
+import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+
 import java.util.List;
 
 /**
  * Recipe description
  */
+@XmlHints(allowTopLevelDefinition = true)
 public class Recipe {
 
     /**

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/metadata http://www.mulesoft.org/schema/mule/metadata/current/mule-metadata.xsd">
+    <metadata:config name="Pojo_Config" doc:name="Pojo Config"/>
+    <flow name="dummy-flow">
+        <metadata:create-entity>
+            <metadata:dynamic-objects>
+                <metadata:dynamic-object key="username" value="foo"/>
+                <metadata:dynamic-object key="id" value="132"/>
+            </metadata:dynamic-objects>
+        </metadata:create-entity>
+        <metadata:create-bulk dynamicObjects="#[[['a':'1','b':'2'],['c':'3','d':'4']]]"/>
+        <metadata:create-bulk>
+            <metadata:dynamic-objects>
+                <metadata:dynamic-object value="#[['a':'1','b':'2']]"/>
+                <metadata:dynamic-object value="#[['c':'3','d':'4']]"/>
+            </metadata:dynamic-objects>
+        </metadata:create-bulk>
+    </flow>
+</mule>
