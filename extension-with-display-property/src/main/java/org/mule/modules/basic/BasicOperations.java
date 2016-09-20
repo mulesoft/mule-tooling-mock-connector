@@ -1,5 +1,6 @@
 package org.mule.modules.basic;
 
+import org.mule.modules.basic.model.SOSPojo;
 import org.mule.runtime.extension.api.annotation.param.UseConfig;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 
@@ -13,7 +14,7 @@ public class BasicOperations
      * @param param  String param description
      */
     @DisplayName("Custom operation label")
-    public String operationWithString(@UseConfig BasicExtensionConfig config, @DisplayName("Foo Operation Parameter") String param)
+    public String operationWithString(@UseConfig BasicExtensionConfig config, @DisplayName("Foo Operation Parameter") String param, @DisplayName("SOS") SOSPojo pojoParam)
     {
         return param;
     }
