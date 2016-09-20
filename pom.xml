@@ -18,6 +18,7 @@
         <module>extension-with-no-providers</module>
         <module>extension-with-simple-types</module>
         <module>extension-with-simple-types-no-expression</module>
+        <module>extension-with-display-property</module>
         <module>extension-with-text-property</module>
         <module>extension-with-password-property</module>
         <module>extension-with-annotated-pojo-fields</module>
