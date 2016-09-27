@@ -56,6 +56,7 @@
         <module>extension-with-subtypes</module>
         <module>extension-with-subtypes-list</module>
         <module>extension-with-metadata</module>
+        <module>extension-stress-test</module>
         <module>mock-studio-connector</module>
     </modules>
 

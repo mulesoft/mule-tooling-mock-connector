@@ -26,5 +26,6 @@ public class BasicExtensionConfig
      * Config Parameter description
      */
     @Parameter
+    @Placement(order = 1)
     private String anotherParameter;
 }

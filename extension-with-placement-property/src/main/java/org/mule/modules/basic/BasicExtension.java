@@ -7,7 +7,7 @@ import org.mule.runtime.extension.api.annotation.connector.ConnectionProviders;
 /**
  * Extension javadoc description
  */
-@Extension(name = "FlattenedProperty", description = "PlacementProperty Connector Description")
+@Extension(name = "PlacementProperty", description = "PlacementProperty Connector Description")
 @Configurations({BasicExtensionConfig.class})
 @ConnectionProviders({BasicConnectionProvider.class})
 public class BasicExtension
