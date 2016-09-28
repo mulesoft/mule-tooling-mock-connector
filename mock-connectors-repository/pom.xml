@@ -166,6 +166,11 @@
 			<layout>p2</layout>
 		</repository>
 		<repository>
+			<id>extension-stress-test</id>
+			<url>file:/${basedir}/../extension-stress-test/target/update-site/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
 			<id>studio-update-site</id>
 			<url>http://studio-nightly-update.s3.amazonaws.com/olympus</url>
 			<layout>p2</layout>
