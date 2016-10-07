@@ -3,6 +3,8 @@ package org.mule.modules.basic.model;
 import org.mule.runtime.extension.api.annotation.Parameter;
 import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
 
+import java.util.List;
+
 @XmlHints(allowTopLevelDefinition = true)
 public class RecursiveChainA
 {
@@ -12,6 +14,6 @@ public class RecursiveChainA
     @Parameter
     RecursiveChainB chainB;
 
-    //@Parameter
-    //List<RecursiveChainB> bChains;
+    @Parameter
+    List<RecursiveChainB> bChains;
 }
