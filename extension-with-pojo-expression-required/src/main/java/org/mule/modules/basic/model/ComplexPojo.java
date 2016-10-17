@@ -1,6 +1,6 @@
 package org.mule.modules.basic.model;
 
-import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.REQUIRED;
+import org.mule.runtime.api.meta.ExpressionSupport;
 import org.mule.runtime.extension.api.annotation.Expression;
 import org.mule.runtime.extension.api.annotation.Parameter;
 import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
@@ -15,7 +15,7 @@ public class ComplexPojo
     private Ingredient ingredient;
 
     @Parameter
-    @Expression(REQUIRED)
+    @Expression(ExpressionSupport.REQUIRED)
     private Ingredient ingredientNoExpression;
 
     public int getIntField()

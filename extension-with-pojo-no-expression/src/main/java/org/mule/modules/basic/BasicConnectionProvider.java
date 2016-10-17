@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.NOT_SUPPORTED;
+import org.mule.runtime.api.meta.ExpressionSupport;
 import org.mule.modules.basic.model.ComplexPojo;
 import org.mule.modules.basic.model.Ingredient;
 import org.mule.runtime.api.connection.ConnectionException;
@@ -18,14 +18,14 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 	 * Complex Pojo At Provider description
 	 */
 	@Parameter
-	@Expression(NOT_SUPPORTED)
+	@Expression(ExpressionSupport.NOT_SUPPORTED)
 	private ComplexPojo complexPojoAtProvider;
 
 	/**
 	 * Ingredient At Provider description
 	 */
 	@Parameter
-	@Expression(NOT_SUPPORTED)
+	@Expression(ExpressionSupport.NOT_SUPPORTED)
 	private Ingredient ingredientAtProvider;
 
 	@Override

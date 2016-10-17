@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.NOT_SUPPORTED;
+import org.mule.runtime.api.meta.ExpressionSupport;
 import org.mule.runtime.api.tls.TlsContextFactory;
 import org.mule.runtime.extension.api.annotation.Configuration;
 import org.mule.runtime.extension.api.annotation.Expression;
@@ -17,7 +17,7 @@ public class BasicExtensionConfig {
 	 */
 	@Parameter
 	@Optional
-	@Expression(NOT_SUPPORTED)
+	@Expression(ExpressionSupport.NOT_SUPPORTED)
 	private TlsContextFactory tlsContextAtConfig;
 
 }

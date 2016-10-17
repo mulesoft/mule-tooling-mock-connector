@@ -1,8 +1,8 @@
 package org.mule.modules.basic;
 
+import org.mule.runtime.api.meta.ExpressionSupport;
 import org.mule.runtime.extension.api.annotation.Expression;
 import org.mule.runtime.extension.api.annotation.param.UseConfig;
-import org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport;
 
 import java.util.Date;
 

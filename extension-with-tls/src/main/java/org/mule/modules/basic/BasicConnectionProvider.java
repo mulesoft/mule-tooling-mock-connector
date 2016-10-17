@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import static org.mule.runtime.extension.api.introspection.parameter.ExpressionSupport.NOT_SUPPORTED;
+import org.mule.runtime.api.meta.ExpressionSupport;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
@@ -20,7 +20,7 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 
 	@Parameter
 	@Optional
-	@Expression(NOT_SUPPORTED)
+	@Expression(ExpressionSupport.NOT_SUPPORTED)
 	private TlsContextFactory tlsContextAtProvider;
 
 	@Override
