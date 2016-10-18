@@ -18,7 +18,7 @@ public class BasicOperations
      * @param connection config description
      * @param dynamicObject Dynamic Entity
      */
-    @OutputResolver(TestInputAndOutputResolverWithKeyResolver.class)
+    @OutputResolver(output=TestInputAndOutputResolverWithKeyResolver.class)
     public Map<String, Object> createEntity(@Connection MetadataConnection connection, @MetadataKeyId String type,
                                             @Content @TypeResolver(TestInputAndOutputResolverWithKeyResolver.class) Map<String, Object> dynamicObject)
     {
@@ -29,7 +29,7 @@ public class BasicOperations
         return dynamicObject;
     }
 
-    @OutputResolver(TestInputAndOutputResolverWithKeyResolver.class)
+    @OutputResolver(output=TestInputAndOutputResolverWithKeyResolver.class)
     public List<Map<String, Object>> createBulk(@Connection MetadataConnection connection,  @MetadataKeyId String type,
                              @Content @TypeResolver(TestInputAndOutputResolverWithKeyResolver.class) List<Map<String, Object>> dynamicObjects)
     {
