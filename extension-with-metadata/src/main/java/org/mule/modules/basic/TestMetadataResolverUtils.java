@@ -24,6 +24,7 @@ public class TestMetadataResolverUtils {
   public static final String BRAND = "Brand";
   public static final String SIZE = "Size";
   public static final String AGE = "Age";
+  public static final String KEY = "Key";
 
   public static Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException {
     return context.getConnection().map(c -> {
@@ -48,6 +49,9 @@ public class TestMetadataResolverUtils {
         objectBuilder.addField().key(NAME).value().stringType();
         objectBuilder.addField().key(AGE).value().numberType();
         break;
+      case MetadataConnection.ATTRIBUTES:
+        objectBuilder.addField().key(KEY).value().stringType();
+        break;
       default:
         throw new MetadataResolvingException("Unknown key " + key, INVALID_METADATA_KEY);
     }
@@ -55,4 +59,8 @@ public class TestMetadataResolverUtils {
     return objectBuilder.build();
   }
 
+  public static MetadataType getAttributesType() throws MetadataResolvingException
+  {
+    return getMetadata(MetadataConnection.ATTRIBUTES);
+  }
 }

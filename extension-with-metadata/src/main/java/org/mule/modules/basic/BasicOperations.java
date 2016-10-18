@@ -5,6 +5,8 @@ import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
 import org.mule.runtime.extension.api.annotation.metadata.OutputResolver;
 import org.mule.runtime.extension.api.annotation.metadata.TypeResolver;
 import org.mule.runtime.extension.api.annotation.param.Connection;
+import org.mule.runtime.extension.api.runtime.operation.OperationResult;
+import org.mule.runtime.extension.api.runtime.operation.OperationResultBuilderFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -38,5 +40,16 @@ public class BasicOperations
             throw new RuntimeException("dynamicObjects cannot be null");
         }
         return dynamicObjects;
+    }
+
+    @OutputResolver(output=TestInputAndOutputResolverWithKeyResolver.class, attributes = TestInputAndOutputResolverWithKeyResolver.class)
+    public OperationResult<List<Map<String, Object>>,BasicAttributes> createBulkWithAttributes(@Connection MetadataConnection connection, @MetadataKeyId String type,
+                                                                                                  @Content @TypeResolver(TestInputAndOutputResolverWithKeyResolver.class) List<Map<String, Object>> dynamicObjects)
+    {
+        if (dynamicObjects == null)
+        {
+            throw new RuntimeException("dynamicObjects cannot be null");
+        }
+        return OperationResultBuilderFactory.getDefaultFactory().<List<Map<String, Object>>,BasicAttributes>create().output(dynamicObjects).attributes(new BasicAttributes()).build();
     }
 }
