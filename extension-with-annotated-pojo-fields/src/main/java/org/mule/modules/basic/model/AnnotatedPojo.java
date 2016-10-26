@@ -16,4 +16,13 @@ public class AnnotatedPojo
     @Password
     private String password;
 
+    public String getContent()
+    {
+        return content;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
 }

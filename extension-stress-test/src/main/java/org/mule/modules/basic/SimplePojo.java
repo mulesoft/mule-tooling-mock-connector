@@ -7,4 +7,9 @@ public class SimplePojo
 {
     @Parameter
     private String stringField;
+
+    public String getStringField()
+    {
+        return stringField;
+    }
 }

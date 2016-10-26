@@ -8,5 +8,10 @@ public class PojoWithMap
 {
 
     @Parameter
-    Map<String, String> properties;
+    private Map<String, String> properties;
+
+    public Map<String, String> getProperties()
+    {
+        return properties;
+    }
 }

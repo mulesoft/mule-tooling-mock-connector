@@ -10,4 +10,13 @@ public class SOSPojo
     @Parameter
     private String type;
 
+    public double getAmount()
+    {
+        return amount;
+    }
+
+    public String getType()
+    {
+        return type;
+    }
 }

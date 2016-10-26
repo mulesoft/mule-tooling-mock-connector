@@ -11,4 +11,14 @@ public class ContainerPojo
 
     @ParameterGroup
     private SOSPojo groupedFields;
+
+    public String getSimpleField()
+    {
+        return simpleField;
+    }
+
+    public SOSPojo getGroupedFields()
+    {
+        return groupedFields;
+    }
 }
