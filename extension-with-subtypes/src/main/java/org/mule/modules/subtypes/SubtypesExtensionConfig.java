@@ -3,7 +3,7 @@ package org.mule.modules.subtypes;
 import org.mule.modules.subtypes.model.BasePojo;
 import org.mule.runtime.extension.api.annotation.Configuration;
 import org.mule.runtime.extension.api.annotation.Operations;
-import org.mule.runtime.extension.api.annotation.Parameter;
+import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 /**
  * Config javadoc description

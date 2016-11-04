@@ -1,9 +1,11 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.Parameter;
+import org.mule.runtime.api.exception.MuleException;
+import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.UseConfig;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 import org.mule.runtime.extension.api.runtime.source.Source;
+import org.mule.runtime.extension.api.runtime.source.SourceCallback;
 
 /**
  * Basic Source javadoc description
@@ -21,13 +23,13 @@ public class BasicSource extends Source<String,BasicAttributes>
     private String sourceParameter;
 
     @Override
-    public void start() throws Exception
+    public void onStart(SourceCallback<String, BasicAttributes> sourceCallback) throws MuleException
     {
 
     }
 
     @Override
-    public void stop() throws Exception
+    public void onStop()
     {
 
     }
