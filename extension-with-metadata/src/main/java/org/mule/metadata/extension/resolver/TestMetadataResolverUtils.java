@@ -1,4 +1,10 @@
-package org.mule.modules.basic;
+/*
+ * Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+ * The software in this package is published under the terms of the CPAL v1.0
+ * license, a copy of which has been included with this distribution in the
+ * LICENSE.txt file.
+ */
+package org.mule.metadata.extension.resolver;
 
 import static java.util.Collections.emptySet;
 import static java.util.stream.Collectors.toSet;
@@ -7,6 +13,7 @@ import static org.mule.runtime.api.metadata.resolving.FailureCode.INVALID_METADA
 import org.mule.metadata.api.builder.BaseTypeBuilder;
 import org.mule.metadata.api.builder.ObjectTypeBuilder;
 import org.mule.metadata.api.model.MetadataType;
+import org.mule.metadata.extension.MetadataConnection;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.metadata.MetadataContext;
 import org.mule.runtime.api.metadata.MetadataKey;
@@ -24,7 +31,6 @@ public class TestMetadataResolverUtils {
   public static final String BRAND = "Brand";
   public static final String SIZE = "Size";
   public static final String AGE = "Age";
-  public static final String KEY = "Key";
 
   public static Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException {
     return context.getConnection().map(c -> {
@@ -49,9 +55,6 @@ public class TestMetadataResolverUtils {
         objectBuilder.addField().key(NAME).value().stringType();
         objectBuilder.addField().key(AGE).value().numberType();
         break;
-      case MetadataConnection.ATTRIBUTES:
-        objectBuilder.addField().key(KEY).value().stringType();
-        break;
       default:
         throw new MetadataResolvingException("Unknown key " + key, INVALID_METADATA_KEY);
     }
@@ -59,8 +62,4 @@ public class TestMetadataResolverUtils {
     return objectBuilder.build();
   }
 
-  public static MetadataType getAttributesType() throws MetadataResolvingException
-  {
-    return getMetadata(MetadataConnection.ATTRIBUTES);
-  }
 }
