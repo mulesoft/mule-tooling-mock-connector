@@ -30,7 +30,7 @@
         <module>extension-with-pojo</module>
         <module>extension-with-pojo-no-expression</module>
         <module>extension-with-pojo-expression-required</module>
-        <!--<module>extension-with-interfaces</module>-->
+        <module>extension-with-interfaces</module>
         <module>extension-with-map</module>
         <module>extension-with-map-of-string-pojo</module>
         <module>extension-with-string-list</module>
@@ -56,7 +56,7 @@
         <module>extension-with-subtypes</module>
         <module>extension-with-subtypes-list</module>
         <module>extension-with-metadata</module>
-        <!--<module>extension-with-recursive-structures</module>-->
+        <module>extension-with-recursive-structures</module>
         <module>extension-stress-test</module>
         <module>mock-studio-connector</module>
     </modules>

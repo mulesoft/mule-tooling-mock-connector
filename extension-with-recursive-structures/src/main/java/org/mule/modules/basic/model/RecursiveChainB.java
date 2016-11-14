@@ -8,12 +8,29 @@ import java.util.List;
 @XmlHints(allowTopLevelDefinition = true)
 public class RecursiveChainB
 {
-    @Parameter
-    String fieldB;
 
     @Parameter
-    RecursiveChainA chainA;
+    private String fieldB;
 
     @Parameter
-    List<RecursiveChainA> aChains;
+    private RecursiveChainA chainA;
+
+    @Parameter
+    private List<RecursiveChainA> aChains;
+
+
+    public String getFieldB()
+    {
+        return fieldB;
+    }
+
+    public RecursiveChainA getChainA()
+    {
+        return chainA;
+    }
+
+    public List<RecursiveChainA> getaChains()
+    {
+        return aChains;
+    }
 }

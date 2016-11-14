@@ -9,11 +9,27 @@ import java.util.List;
 public class RecursiveChainA
 {
     @Parameter
-    String fieldA;
+    private String fieldA;
 
     @Parameter
-    RecursiveChainB chainB;
+    private RecursiveChainB chainB;
 
     @Parameter
-    List<RecursiveChainB> bChains;
+    private List<RecursiveChainB> bChains;
+
+    public String getFieldA()
+    {
+        return fieldA;
+    }
+
+    public RecursiveChainB getChainB()
+    {
+        return chainB;
+    }
+
+    public List<RecursiveChainB> getbChains()
+    {
+        return bChains;
+    }
 }
+

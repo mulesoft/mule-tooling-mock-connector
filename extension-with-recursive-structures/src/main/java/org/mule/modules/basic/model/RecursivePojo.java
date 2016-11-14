@@ -19,4 +19,19 @@ public class RecursivePojo
 
     @Parameter
     private Map<String, RecursivePojo> mappedChilds;
+
+    public RecursivePojo getNext()
+    {
+        return next;
+    }
+
+    public List<RecursivePojo> getChilds()
+    {
+        return childs;
+    }
+
+    public Map<String, RecursivePojo> getMappedChilds()
+    {
+        return mappedChilds;
+    }
 }
