@@ -22,15 +22,15 @@ http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/poj
         </pojo:connection>
     </pojo:config>
     <flow name="dummy-flow">
-        <pojo:operation-with-pojo config-ref="Pojo_Config1" doc:name="Pojo">
+        <pojo:operation-with-one-pojo config-ref="Pojo_Config1" doc:name="Pojo">
             <pojo:complex-pojo-at-operation intField="9">
                 <pojo:ingredient amount="15" type="15"/>
             </pojo:complex-pojo-at-operation>
             <pojo:ingredient-at-operation amount="48" type="49"/>
-        </pojo:operation-with-pojo>
-        <pojo:operation-with-pojo config-ref="Pojo_Config" doc:name="Pojo">
+        </pojo:operation-with-one-pojo>
+        <pojo:operation-with-one-pojo config-ref="Pojo_Config" doc:name="Pojo">
             <pojo:complex-pojo-at-operation intField="33"/>
             <pojo:ingredient-at-operation amount="22" type="22"/>
-        </pojo:operation-with-pojo>
+        </pojo:operation-with-one-pojo>
     </flow>
 </mule>
