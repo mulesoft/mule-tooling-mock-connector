@@ -7,14 +7,23 @@ import org.mule.runtime.extension.api.annotation.param.UseConfig;
 public class BasicOperations {
 
 	/**
-	 * Operation With String description
+	 * Operation With One Pojo description
+	 *
+	 * @param config config description
+	 * @param ingredientAtOperation Ingredient at operation description
+	 */
+	public String operationWithOnePojo(@UseConfig BasicExtensionConfig config, Ingredient ingredientAtOperation) {
+			return null;
+	}
+
+	/**
+	 * Operation With Pojos description
 	 *
 	 * @param config config description
 	 * @param complexPojoAtOperation Complex Pojo at operation description
 	 * @param ingredientAtOperation Ingredient at operation description
 	 */
 	public String operationWithPojo(@UseConfig BasicExtensionConfig config, ComplexPojo complexPojoAtOperation, Ingredient ingredientAtOperation) {
-			return null;
+		return null;
 	}
-
 }
