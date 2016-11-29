@@ -9,7 +9,7 @@ public class ContainerPojo
     @Parameter
     private String simpleField;
 
-    @ParameterGroup
+    @ParameterGroup("SOSPojo")
     private SOSPojo groupedFields;
 
     public String getSimpleField()

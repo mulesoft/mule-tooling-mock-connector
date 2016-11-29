@@ -152,7 +152,7 @@ public class MetadataOperations {
   }
 
   public LocationKey simpleMultiLevelKeyResolver(@Connection MetadataConnection connection,
-                                                 @ParameterGroup @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
+                                                 @ParameterGroup("Location") @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
                                                  @Optional @TypeResolver(TestMultiLevelKeyResolver.class) Object content) {
     return locationKey;
   }
@@ -191,7 +191,7 @@ public class MetadataOperations {
                                                                @Content @TypeResolver(TestInputResolverWithoutKeyResolver.class) Map<String, Object> mapContent) {}
 
   public void contentParameterShouldNotGenerateListChildElement(
-                                                                @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> listContent) {}
+                                                                @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> contents) {}
 
   public void contentParameterShouldNotGeneratePojoChildElement(
                                                                 @TypeResolver(TestInputResolverWithoutKeyResolver.class) Bear animalContent) {}
