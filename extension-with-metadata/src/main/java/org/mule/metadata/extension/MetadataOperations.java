@@ -17,6 +17,7 @@ import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.annotation.param.Query;
 import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.display.Text;
 import org.mule.runtime.extension.api.runtime.operation.Result;
 import org.mule.runtime.extension.api.runtime.streaming.PagingProvider;
 import org.mule.metadata.extension.model.animals.Animal;
@@ -200,6 +201,13 @@ public class MetadataOperations {
       entityResolver = MetadataExtensionEntityResolver.class,
       nativeOutputResolver = NativeQueryOutputResolver.class)
   public String doQuery(@MetadataKeyId String query) {
+    return query;
+  }
+
+  @Query(translator = MetadataExtensionQueryTranslator.class,
+          entityResolver = MetadataExtensionEntityResolver.class,
+          nativeOutputResolver = NativeQueryOutputResolver.class)
+  public String doQueryWithChildKey(@MetadataKeyId @Text String query) {
     return query;
   }
 
