@@ -57,6 +57,7 @@
         <module>extension-with-subtypes-list</module>
         <module>extension-with-metadata</module>
         <module>extension-with-recursive-structures</module>
+        <module>extension-with-error-mapping</module>
         <module>extension-stress-test</module>
         <module>mock-studio-connector</module>
     </modules>
