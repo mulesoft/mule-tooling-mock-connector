@@ -36,12 +36,12 @@ public class AnotherSource extends Source<String,BasicAttributes>
     }
 
     @OnSuccess
-    public void logSuccess( String message){
+    public void logSuccess( String successMessage){
 
     }
 
     @OnError
-    public void logError( String message, String details){
+    public void logError( String errorMessage, String details){
 
     }
 }
