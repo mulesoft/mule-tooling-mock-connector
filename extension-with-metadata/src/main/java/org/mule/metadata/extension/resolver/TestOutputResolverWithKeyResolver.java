@@ -16,15 +16,23 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 
 import java.util.Set;
 
-public class TestOutputResolverWithKeyResolver implements TypeKeysResolver, OutputTypeResolver<String> {
+public class TestOutputResolverWithKeyResolver implements TypeKeysResolver, OutputTypeResolver<String>
+{
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException
+  {
     return TestMetadataResolverUtils.getKeys(context);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public String getResolverName() {
+    return "TestOutputResolverWithKeyResolver";
+  }
+
+  @Override
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     return TestMetadataResolverUtils.getMetadata(key);
   }
 

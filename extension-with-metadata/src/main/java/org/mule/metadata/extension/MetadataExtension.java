@@ -6,13 +6,6 @@
  */
 package org.mule.metadata.extension;
 
-import org.mule.metadata.extension.model.animals.Bear;
-import org.mule.metadata.extension.model.attribute.AbstractOutputAttributes;
-import org.mule.metadata.extension.model.attribute.ShapeOutputAttributes;
-import org.mule.metadata.extension.model.shapes.Circle;
-import org.mule.metadata.extension.model.shapes.Rectangle;
-import org.mule.metadata.extension.model.shapes.Shape;
-import org.mule.metadata.extension.model.shapes.Square;
 import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.Sources;
@@ -22,7 +15,14 @@ import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
 import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.metadata.extension.model.animals.Animal;
+import org.mule.metadata.extension.model.animals.Bear;
+import org.mule.metadata.extension.model.attribute.AbstractOutputAttributes;
 import org.mule.metadata.extension.model.attribute.AnimalsOutputAttributes;
+import org.mule.metadata.extension.model.attribute.ShapeOutputAttributes;
+import org.mule.metadata.extension.model.shapes.Circle;
+import org.mule.metadata.extension.model.shapes.Rectangle;
+import org.mule.metadata.extension.model.shapes.Shape;
+import org.mule.metadata.extension.model.shapes.Square;
 
 @Extension(name = "Metadata")
 @Operations({MetadataOperations.class, MetadataFailureOperations.class, MetadataInheritedExtensionResolversOperations.class,

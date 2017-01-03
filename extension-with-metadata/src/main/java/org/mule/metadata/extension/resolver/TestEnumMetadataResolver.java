@@ -9,16 +9,17 @@ package org.mule.metadata.extension.resolver;
 import static org.mule.runtime.api.metadata.resolving.FailureCode.INVALID_METADATA_KEY;
 import org.mule.metadata.api.ClassTypeLoader;
 import org.mule.metadata.api.model.MetadataType;
-import org.mule.metadata.extension.model.animals.Bear;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.metadata.MetadataContext;
 import org.mule.runtime.api.metadata.MetadataResolvingException;
 import org.mule.runtime.api.metadata.resolving.InputTypeResolver;
 import org.mule.runtime.extension.api.declaration.type.ExtensionsTypeLoaderFactory;
 import org.mule.metadata.extension.model.animals.AnimalClade;
+import org.mule.metadata.extension.model.animals.Bear;
 import org.mule.metadata.extension.model.animals.SwordFish;
 
-public class TestEnumMetadataResolver implements InputTypeResolver<AnimalClade> {
+public class TestEnumMetadataResolver implements InputTypeResolver<AnimalClade>
+{
 
   public static final ClassTypeLoader loader = ExtensionsTypeLoaderFactory.getDefault().createTypeLoader();
 
@@ -29,7 +30,8 @@ public class TestEnumMetadataResolver implements InputTypeResolver<AnimalClade> 
 
   @Override
   public MetadataType getInputMetadata(MetadataContext context, AnimalClade key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     switch (key) {
       case MAMMAL:
         return loader.load(Bear.class);

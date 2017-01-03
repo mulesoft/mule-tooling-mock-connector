@@ -16,8 +16,8 @@ public class BasicOperations
      * @param param  String param description
      */
     @DisplayName("Custom operation label")
-    public String operationWithString(@UseConfig BasicExtensionConfig config, String param, SOSPojo pojoParam, @Placement(tab = Placement.ADVANCED_TAB) @ParameterGroup("Advance Group") BasicParameterGroup basicGroup,
-                                      @Placement(tab = Placement.ADVANCED_TAB) @ParameterGroup("Another Group") AnotherParameterGroup anotherGroup)
+    public String operationWithString(@UseConfig BasicExtensionConfig config, String param, SOSPojo pojoParam, @Placement(tab = Placement.ADVANCED_TAB) @ParameterGroup(name = "Advance Group") BasicParameterGroup basicGroup,
+                                      @Placement(tab = Placement.ADVANCED_TAB) @ParameterGroup(name = "Another Group") AnotherParameterGroup anotherGroup)
     {
         return param;
     }

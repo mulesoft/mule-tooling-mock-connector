@@ -17,22 +17,31 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 import java.util.Set;
 
 public class TestMetadataResolverRuntimeExceptionFailure
-    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String> {
+    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String>
+{
 
   @Override
   public String getCategoryName() {
     return "MetadataExtensionResolver";
   }
 
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException {
+  @Override
+  public String getResolverName() {
+    return "TestMetadataResolverRuntimeExceptionFailure";
+  }
+
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException
+  {
     throw new RuntimeException("Runtime Exception thrown");
   }
 
-  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException
+  {
     throw new RuntimeException("Runtime Exception thrown");
   }
 
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     throw new RuntimeException("Runtime Exception thrown");
   }
 }

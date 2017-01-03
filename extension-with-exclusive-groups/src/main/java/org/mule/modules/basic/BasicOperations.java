@@ -12,7 +12,7 @@ public class BasicOperations
      * @param config config description
      * @param param  String param description
      */
-    public String operationWithExclusiveOptionalGroup(@UseConfig BasicExtensionConfig config, String param, @ParameterGroup("Exclusive Group") ExclusiveOptionalGroup basicGroup)
+    public String operationWithExclusiveOptionalGroup(@UseConfig BasicExtensionConfig config, String param, @ParameterGroup(name = "Exclusive Group") ExclusiveOptionalGroup basicGroup)
     {
         return param;
     }

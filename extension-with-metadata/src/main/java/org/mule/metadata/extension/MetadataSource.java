@@ -6,6 +6,7 @@
  */
 package org.mule.metadata.extension;
 
+import static org.mule.metadata.extension.MetadataConnection.PERSON;
 import org.mule.metadata.extension.resolver.TestInputAndOutputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestInputAndOutputWithAttributesResolverWithKeyResolver;
 import org.mule.runtime.api.exception.MuleException;
@@ -31,9 +32,10 @@ public class MetadataSource extends Source<Map<String, Object>, StringAttributes
   private MetadataConnection connection;
 
   @Override
-  public void onStart(SourceCallback<Map<String, Object>, StringAttributes> sourceCallback) throws MuleException {
-    if (!type.equals(MetadataConnection.PERSON)) {
-      throw new RuntimeException(String.format("Invalid MetadataKey with value [%s], the key should be [%s]", type, MetadataConnection.PERSON));
+  public void onStart(SourceCallback<Map<String, Object>, StringAttributes> sourceCallback) throws MuleException
+  {
+    if (!type.equals(PERSON)) {
+      throw new RuntimeException(String.format("Invalid MetadataKey with value [%s], the key should be [%s]", type, PERSON));
     }
   }
 

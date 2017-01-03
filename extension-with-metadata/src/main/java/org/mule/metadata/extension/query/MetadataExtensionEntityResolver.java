@@ -23,7 +23,8 @@ import org.mule.metadata.extension.model.shapes.Square;
 import java.util.Set;
 import java.util.stream.Stream;
 
-public class MetadataExtensionEntityResolver implements QueryEntityResolver {
+public class MetadataExtensionEntityResolver implements QueryEntityResolver
+{
 
   private static final ClassTypeLoader LOADER = ExtensionsTypeLoaderFactory.getDefault().createTypeLoader();
 
@@ -31,13 +32,15 @@ public class MetadataExtensionEntityResolver implements QueryEntityResolver {
   public static final String SQUARE = "Square";
 
   @Override
-  public Set<MetadataKey> getEntityKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException {
+  public Set<MetadataKey> getEntityKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException
+  {
     return Stream.of(newKey(SQUARE).build(), newKey(CIRCLE).build()).collect(toSet());
   }
 
   @Override
   public MetadataType getEntityMetadata(MetadataContext context, String key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     switch (key) {
       case CIRCLE:
         return LOADER.load(Circle.class);

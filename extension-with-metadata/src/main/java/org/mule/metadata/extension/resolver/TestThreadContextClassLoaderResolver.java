@@ -15,14 +15,15 @@ import org.mule.runtime.api.metadata.MetadataResolvingException;
 import org.mule.runtime.api.metadata.resolving.InputTypeResolver;
 import org.mule.runtime.api.metadata.resolving.OutputTypeResolver;
 import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
-import org.mule.runtime.core.util.ValueHolder;
+import org.mule.runtime.api.util.Reference;
 
 import java.util.Set;
 
 public class TestThreadContextClassLoaderResolver
-    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String> {
+    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String>
+{
 
-  private static ValueHolder<ClassLoader> contextClassLoader = new ValueHolder<>();
+  private static Reference<ClassLoader> contextClassLoader = new Reference<>();
 
   public static void reset() {
     contextClassLoader.set(null);
@@ -38,19 +39,27 @@ public class TestThreadContextClassLoaderResolver
   }
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException {
+  public String getResolverName() {
+    return "TestThreadContextClassLoaderResolver";
+  }
+
+  @Override
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException
+  {
     contextClassLoader.set(Thread.currentThread().getContextClassLoader());
     return TestMetadataResolverUtils.getKeys(context);
   }
 
   @Override
-  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException
+  {
     contextClassLoader.set(Thread.currentThread().getContextClassLoader());
     return TestMetadataResolverUtils.getMetadata(key);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     contextClassLoader.set(Thread.currentThread().getContextClassLoader());
     return TestMetadataResolverUtils.getMetadata(key);
   }

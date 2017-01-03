@@ -25,11 +25,17 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class TestNoConfigMetadataResolver implements TypeKeysResolver, InputTypeResolver<Object>,
-    OutputTypeResolver<Object>, AttributesTypeResolver<Object> {
+        OutputTypeResolver<Object>, AttributesTypeResolver<Object>
+{
 
   @Override
   public String getCategoryName() {
     return "MetadataExtensionResolver";
+  }
+
+  @Override
+  public String getResolverName() {
+    return "TestNoConfigMetadataResolver";
   }
 
   @Override
@@ -57,7 +63,8 @@ public class TestNoConfigMetadataResolver implements TypeKeysResolver, InputType
 
   @Override
   public MetadataType getAttributesType(MetadataContext context, Object key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     if (key instanceof NullMetadataKey) {
       return BaseTypeBuilder.create(JAVA).voidType().build();
     }

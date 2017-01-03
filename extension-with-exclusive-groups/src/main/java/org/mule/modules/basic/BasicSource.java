@@ -21,7 +21,7 @@ public class BasicSource extends Source<String,BasicAttributes>
     @Parameter
     private String sourceParameter;
 
-    @ParameterGroup("Exclusive Group")
+    @ParameterGroup(name="Exclusive Group")
     ExclusiveOptionalGroup basicGroup;
 
     @Override

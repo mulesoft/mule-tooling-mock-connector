@@ -7,21 +7,9 @@
 package org.mule.metadata.extension;
 
 import static org.mule.metadata.extension.MetadataConnection.CAR;
-import org.mule.metadata.extension.model.animals.Bear;
-import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
-import org.mule.runtime.extension.api.annotation.metadata.OutputResolver;
-import org.mule.runtime.extension.api.annotation.metadata.TypeResolver;
-import org.mule.runtime.extension.api.annotation.param.Connection;
-import org.mule.runtime.extension.api.annotation.param.Content;
-import org.mule.runtime.extension.api.annotation.param.Optional;
-import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
-import org.mule.runtime.extension.api.annotation.param.Query;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
-import org.mule.runtime.extension.api.annotation.param.display.Text;
-import org.mule.runtime.extension.api.runtime.operation.Result;
-import org.mule.runtime.extension.api.runtime.streaming.PagingProvider;
 import org.mule.metadata.extension.model.animals.Animal;
 import org.mule.metadata.extension.model.animals.AnimalClade;
+import org.mule.metadata.extension.model.animals.Bear;
 import org.mule.metadata.extension.model.attribute.AbstractOutputAttributes;
 import org.mule.metadata.extension.model.shapes.Rectangle;
 import org.mule.metadata.extension.model.shapes.Shape;
@@ -41,6 +29,17 @@ import org.mule.metadata.extension.resolver.TestOutputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestOutputResolverWithoutKeyResolver;
 import org.mule.metadata.extension.resolver.TestResolverWithCache;
 import org.mule.metadata.extension.resolver.TestThreadContextClassLoaderResolver;
+import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
+import org.mule.runtime.extension.api.annotation.metadata.OutputResolver;
+import org.mule.runtime.extension.api.annotation.metadata.TypeResolver;
+import org.mule.runtime.extension.api.annotation.param.Connection;
+import org.mule.runtime.extension.api.annotation.param.Content;
+import org.mule.runtime.extension.api.annotation.param.Optional;
+import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
+import org.mule.runtime.extension.api.annotation.param.Query;
+import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.runtime.operation.Result;
+import org.mule.runtime.extension.api.runtime.streaming.PagingProvider;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -153,7 +152,8 @@ public class MetadataOperations {
   }
 
   public LocationKey simpleMultiLevelKeyResolver(@Connection MetadataConnection connection,
-                                                 @ParameterGroup("Location") @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
+                                                 @ParameterGroup(
+                                                     name = "key") @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
                                                  @Optional @TypeResolver(TestMultiLevelKeyResolver.class) Object content) {
     return locationKey;
   }
@@ -201,13 +201,6 @@ public class MetadataOperations {
       entityResolver = MetadataExtensionEntityResolver.class,
       nativeOutputResolver = NativeQueryOutputResolver.class)
   public String doQuery(@MetadataKeyId String query) {
-    return query;
-  }
-
-  @Query(translator = MetadataExtensionQueryTranslator.class,
-          entityResolver = MetadataExtensionEntityResolver.class,
-          nativeOutputResolver = NativeQueryOutputResolver.class)
-  public String doQueryWithChildKey(@MetadataKeyId @Text String query) {
     return query;
   }
 

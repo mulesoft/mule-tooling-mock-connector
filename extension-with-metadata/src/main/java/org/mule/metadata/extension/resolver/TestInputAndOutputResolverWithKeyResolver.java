@@ -18,25 +18,34 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 import java.util.Set;
 
 public class TestInputAndOutputResolverWithKeyResolver
-    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String> {
+    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String>
+{
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException
+  {
     return TestMetadataResolverUtils.getKeys(context);
   }
 
   @Override
-  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException
+  {
     return TestMetadataResolverUtils.getMetadata(key);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     return TestMetadataResolverUtils.getMetadata(key);
   }
 
   @Override
   public String getCategoryName() {
     return "MetadataExtensionResolver";
+  }
+
+  @Override
+  public String getResolverName() {
+    return "TestInputAndOutputResolverWithKeyResolver";
   }
 }

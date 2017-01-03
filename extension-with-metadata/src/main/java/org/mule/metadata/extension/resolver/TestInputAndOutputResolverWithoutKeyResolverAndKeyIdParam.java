@@ -17,18 +17,26 @@ import org.mule.runtime.api.metadata.resolving.InputTypeResolver;
 import org.mule.runtime.api.metadata.resolving.OutputTypeResolver;
 
 public class TestInputAndOutputResolverWithoutKeyResolverAndKeyIdParam
-    implements InputTypeResolver<String>, OutputTypeResolver<String> {
+    implements InputTypeResolver<String>, OutputTypeResolver<String>
+{
 
   private static final String KEY_SHOULD_BE_EMPTY = "Metadata resolvers without Key Resolver should get a NullMetadataKey as Key";
 
   @Override
-  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException {
+  public String getResolverName() {
+    return "TestInputAndOutputResolverWithoutKeyResolverAndKeyIdParam";
+  }
+
+  @Override
+  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException
+  {
     checkArgument(isBlank(key), KEY_SHOULD_BE_EMPTY);
     return getMetadata(PERSON);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     checkArgument(isBlank(key), KEY_SHOULD_BE_EMPTY);
     return getMetadata(PERSON);
   }

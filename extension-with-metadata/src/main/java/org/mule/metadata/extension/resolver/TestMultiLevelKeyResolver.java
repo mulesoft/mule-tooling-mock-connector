@@ -8,11 +8,11 @@ package org.mule.metadata.extension.resolver;
 
 import static com.google.common.collect.Sets.newHashSet;
 import static org.mule.runtime.api.metadata.MetadataKeyBuilder.newKey;
+import static org.mule.metadata.extension.resolver.TestMetadataResolverUtils.APPLICATION_JAVA_MIME_TYPE;
 import org.mule.metadata.api.builder.BaseTypeBuilder;
 import org.mule.metadata.api.builder.ObjectTypeBuilder;
 import org.mule.metadata.api.model.MetadataFormat;
 import org.mule.metadata.api.model.MetadataType;
-import org.mule.metadata.extension.LocationKey;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.metadata.MetadataContext;
 import org.mule.runtime.api.metadata.MetadataKey;
@@ -20,10 +20,12 @@ import org.mule.runtime.api.metadata.MetadataResolvingException;
 import org.mule.runtime.api.metadata.resolving.FailureCode;
 import org.mule.runtime.api.metadata.resolving.InputTypeResolver;
 import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
+import org.mule.metadata.extension.LocationKey;
 
 import java.util.Set;
 
-public class TestMultiLevelKeyResolver implements TypeKeysResolver, InputTypeResolver<LocationKey> {
+public class TestMultiLevelKeyResolver implements TypeKeysResolver, InputTypeResolver<LocationKey>
+{
 
   public static final String ERROR_MESSAGE = "LocationKey type metadata key was not injected properly in the NamedTypeResolver";
 
@@ -50,11 +52,17 @@ public class TestMultiLevelKeyResolver implements TypeKeysResolver, InputTypeRes
   }
 
   @Override
+  public String getResolverName() {
+    return "TestMultiLevelKeyResolver";
+  }
+
+  @Override
   public MetadataType getInputMetadata(MetadataContext context, LocationKey key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     checkLocationKey(key);
     final ObjectTypeBuilder objectBuilder =
-        BaseTypeBuilder.create(new MetadataFormat(key.toString(), key.toString(), TestMetadataResolverUtils.APPLICATION_JAVA_MIME_TYPE)).objectType();
+        BaseTypeBuilder.create(new MetadataFormat(key.toString(), key.toString(), APPLICATION_JAVA_MIME_TYPE)).objectType();
     objectBuilder.addField().key("CONTINENT").value().stringType();
     objectBuilder.addField().key("COUNTRY").value().stringType();
     objectBuilder.addField().key("CITY").value().stringType();
@@ -62,7 +70,8 @@ public class TestMultiLevelKeyResolver implements TypeKeysResolver, InputTypeRes
   }
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException
+  {
     return newHashSet(buildAmericaKey(), buildEuropeKey());
   }
 
@@ -76,7 +85,8 @@ public class TestMultiLevelKeyResolver implements TypeKeysResolver, InputTypeRes
         .withChild(newKey(USA).withDisplayName(USA_DISPLAY_NAME).withChild(newKey(SAN_FRANCISCO))).build();
   }
 
-  private void checkLocationKey(LocationKey key) throws MetadataResolvingException {
+  private void checkLocationKey(LocationKey key) throws MetadataResolvingException
+  {
     boolean injectedProperly =
         key != null && key.getContinent().equals(AMERICA) && key.getCountry().equals(USA) && key.getCity().equals(SAN_FRANCISCO);
 

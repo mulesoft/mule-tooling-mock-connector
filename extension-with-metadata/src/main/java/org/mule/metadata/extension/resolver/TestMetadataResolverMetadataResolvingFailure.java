@@ -18,22 +18,31 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 import java.util.Set;
 
 public class TestMetadataResolverMetadataResolvingFailure
-    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String> {
+    implements TypeKeysResolver, InputTypeResolver<String>, OutputTypeResolver<String>
+{
 
   @Override
   public String getCategoryName() {
     return "MetadataExtensionResolver";
   }
 
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException {
+  @Override
+  public String getResolverName() {
+    return "TestMetadataResolverMetadataResolvingFailure";
+  }
+
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException
+  {
     throw new MetadataResolvingException("Failing keysResolver retriever", FailureCode.CONNECTION_FAILURE);
   }
 
-  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getInputMetadata(MetadataContext context, String key) throws MetadataResolvingException
+  {
     throw new MetadataResolvingException("Failing keysResolver retriever", FailureCode.CONNECTION_FAILURE);
   }
 
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     throw new MetadataResolvingException("Failing keysResolver retriever", FailureCode.CONNECTION_FAILURE);
   }
 }

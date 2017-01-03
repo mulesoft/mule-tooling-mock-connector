@@ -9,14 +9,15 @@ package org.mule.metadata.extension.resolver;
 import static org.mule.runtime.api.metadata.resolving.FailureCode.INVALID_METADATA_KEY;
 import org.mule.metadata.api.ClassTypeLoader;
 import org.mule.metadata.api.model.MetadataType;
-import org.mule.metadata.extension.model.animals.SwordFish;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.metadata.MetadataContext;
 import org.mule.runtime.api.metadata.MetadataResolvingException;
 import org.mule.runtime.api.metadata.resolving.InputTypeResolver;
 import org.mule.runtime.extension.api.declaration.type.ExtensionsTypeLoaderFactory;
+import org.mule.metadata.extension.model.animals.SwordFish;
 
-public class TestBooleanMetadataResolver implements InputTypeResolver<Boolean> {
+public class TestBooleanMetadataResolver implements InputTypeResolver<Boolean>
+{
 
   public static final ClassTypeLoader loader = ExtensionsTypeLoaderFactory.getDefault().createTypeLoader();
 
@@ -27,7 +28,8 @@ public class TestBooleanMetadataResolver implements InputTypeResolver<Boolean> {
 
   @Override
   public MetadataType getInputMetadata(MetadataContext context, Boolean key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     if (key) {
       return loader.load(SwordFish.class);
     }

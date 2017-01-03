@@ -21,21 +21,25 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 import java.util.Set;
 
 public class TestOutputAttributesResolverWithKeyResolver
-    implements TypeKeysResolver, OutputTypeResolver<String>, AttributesTypeResolver<String> {
+    implements TypeKeysResolver, OutputTypeResolver<String>, AttributesTypeResolver<String>
+{
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException
+  {
     return TestMetadataResolverUtils.getKeys(context);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
+  {
     return TestMetadataResolverUtils.getMetadata(key);
   }
 
   @Override
   public MetadataType getAttributesType(MetadataContext context, String key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     DictionaryTypeBuilder builder = BaseTypeBuilder.create(JAVA).dictionaryType();
     builder.ofKey().dateType();
     builder.ofValue().stringType();
@@ -45,5 +49,10 @@ public class TestOutputAttributesResolverWithKeyResolver
   @Override
   public String getCategoryName() {
     return "MetadataExtensionResolver";
+  }
+
+  @Override
+  public String getResolverName() {
+    return "TestOutputAttributesResolverWithKeyResolver";
   }
 }

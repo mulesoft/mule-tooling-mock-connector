@@ -27,11 +27,12 @@ public class MetadataSourceWithMultilevel extends Source<Map<String, Object>, St
   private static final String ERROR_MESSAGE = "LocationKey field was not injected properly";
 
   @MetadataKeyId
-  @ParameterGroup("Location")
+  @ParameterGroup(name = "Location")
   public LocationKey key;
 
   @Override
-  public void onStart(SourceCallback<Map<String, Object>, StringAttributes> sourceCallback) throws MuleException {
+  public void onStart(SourceCallback<Map<String, Object>, StringAttributes> sourceCallback) throws MuleException
+  {
     boolean injectedProperly = key != null && key.getCity().equals(BUENOS_AIRES) && key.getCountry().equals(ARGENTINA)
         && key.getContinent().equals(AMERICA);
 

@@ -28,7 +28,8 @@ import java.util.Optional;
 import java.util.Set;
 
 public class TestResolverWithCache
-    implements InputTypeResolver<String>, OutputTypeResolver<String>, TypeKeysResolver {
+    implements InputTypeResolver<String>, OutputTypeResolver<String>, TypeKeysResolver
+{
 
   public static final String MISSING_ELEMENT_ERROR_MESSAGE =
       "Missing element in the cache. There was no element in the cache for the key: " + BRAND;
@@ -42,8 +43,14 @@ public class TestResolverWithCache
   }
 
   @Override
+  public String getResolverName() {
+    return "TestResolverWithCache";
+  }
+
+  @Override
   public MetadataType getInputMetadata(MetadataContext context, String key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     MetadataCache cache = context.getCache();
     Optional<? extends Serializable> element = cache.get(BRAND);
     if (!element.isPresent()) {
@@ -55,7 +62,8 @@ public class TestResolverWithCache
 
   @Override
   public MetadataType getOutputType(MetadataContext context, String key)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     MetadataCache cache = context.getCache();
     Optional<String> brand = cache.get(BRAND);
     if (brand.isPresent()) {
@@ -72,7 +80,8 @@ public class TestResolverWithCache
   }
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws MetadataResolvingException, ConnectionException
+  {
     context.getCache().put(AGE, AGE_VALUE);
     context.getCache().put(NAME, NAME_VALUE);
     return TestMetadataResolverUtils.getKeys(context);

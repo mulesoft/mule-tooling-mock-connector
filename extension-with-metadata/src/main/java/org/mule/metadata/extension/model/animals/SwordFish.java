@@ -6,10 +6,12 @@
  */
 package org.mule.metadata.extension.model.animals;
 
+import static org.mule.metadata.extension.model.animals.AnimalClade.FISH;
+
 public class SwordFish implements Animal {
 
   @Override
   public AnimalClade clade() {
-    return AnimalClade.FISH;
+    return FISH;
   }
 }

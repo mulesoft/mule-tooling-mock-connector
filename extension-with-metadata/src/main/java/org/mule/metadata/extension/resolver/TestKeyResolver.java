@@ -14,7 +14,8 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 
 import java.util.Set;
 
-public class TestKeyResolver implements TypeKeysResolver {
+public class TestKeyResolver implements TypeKeysResolver
+{
 
   @Override
   public String getCategoryName() {
@@ -23,7 +24,8 @@ public class TestKeyResolver implements TypeKeysResolver {
 
   @Override
   public Set<MetadataKey> getKeys(MetadataContext context)
-      throws MetadataResolvingException, ConnectionException {
+          throws MetadataResolvingException, ConnectionException
+  {
     return TestMetadataResolverUtils.getKeys(context);
   }
 }
