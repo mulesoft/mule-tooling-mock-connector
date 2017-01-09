@@ -53,6 +53,7 @@
         <module>extension-with-imports</module>
         <module>extension-with-custom-editor</module>
         <module>extension-with-tls</module>
+        <module>extension-with-summary</module>
         <module>extension-with-subtypes</module>
         <module>extension-with-subtypes-list</module>
         <module>extension-with-metadata</module>
