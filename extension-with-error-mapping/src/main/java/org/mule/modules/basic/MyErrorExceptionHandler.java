@@ -1,9 +1,9 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.exception.ModuleException;
-import org.mule.runtime.extension.api.runtime.exception.ExceptionEnricher;
+import org.mule.runtime.extension.api.runtime.exception.ExceptionHandler;
 
-public class MyErrorExceptionEnricher implements ExceptionEnricher
+public class MyErrorExceptionHandler extends ExceptionHandler
 {
 
     @Override
