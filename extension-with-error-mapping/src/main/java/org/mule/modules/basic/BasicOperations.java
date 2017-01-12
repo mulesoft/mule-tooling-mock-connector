@@ -9,7 +9,7 @@ public class BasicOperations
     /**
      * Operation With String description
      */
-    @OnException(MyErrorExceptionEnricher.class)
+    @OnException(MyErrorExceptionHandler.class)
     public String operationWithString(@UseConfig BasicExtensionConfig config, String stringParam) throws CustomException
     {
         return "";
