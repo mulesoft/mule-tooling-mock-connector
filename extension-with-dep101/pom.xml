@@ -5,8 +5,8 @@
     <groupId>org.mule.modules</groupId>
     <artifactId>extension-with-dep1</artifactId>
     <packaging>mule-extension</packaging>
-    <name>Mock Basic Extension Dep 1</name>
-
+    <name>Mock Basic Extension Dep 1.0.1</name>
+    <version>1.0.1-SNAPSHOT</version>
     <parent>
       <groupId>org.mule.modules</groupId>
       <artifactId>mock-parent</artifactId>

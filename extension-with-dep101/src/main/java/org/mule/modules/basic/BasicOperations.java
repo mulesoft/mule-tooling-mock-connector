@@ -7,7 +7,7 @@ public class BasicOperations {
 	 *
 	 * @param param String param description
 	 */
-	public String operationWithString(String param) {
+	public String operationWithString( String param) {
 			return param;
 	}
 

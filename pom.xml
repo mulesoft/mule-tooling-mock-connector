@@ -13,6 +13,9 @@
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
     <packaging>pom</packaging>
+    <properties>
+        <mule.version>4.0-SNAPSHOT</mule.version>
+    </properties>
     <modules>
         <module>basic-extension</module>
         <module>extension-with-no-providers</module>
@@ -63,7 +66,8 @@
         <module>extension-stress-test</module>
         <module>extension-with-exclusive-groups</module>
         <module>mock-studio-connector</module>
-        <module>extension-with-dep1</module>
+        <module>extension-with-dep100</module>
+        <module>extension-with-dep101</module>
         <module>extension-with-dep2</module>
         <module>extension-with-dep3</module>
     </modules>
@@ -108,7 +112,7 @@
         <dependency>
             <groupId>org.mule.tests</groupId>
             <artifactId>mule-tests-runner</artifactId>
-            <version>${project.version}</version>
+            <version>${mule.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
