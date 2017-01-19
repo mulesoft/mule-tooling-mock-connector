@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mule.modules</groupId>
-    <artifactId>extension-with-imports</artifactId>
+    <artifactId>extension-with-dep3</artifactId>
     <packaging>mule-extension</packaging>
-    <name>Mock Extension With Imports</name>
+    <name>Mock Basic Extension Dep 3</name>
 
     <parent>
-      <groupId>org.mule.modules</groupId>
-      <artifactId>mock-parent</artifactId>
-      <version>4.0-SNAPSHOT</version>
+        <groupId>org.mule.modules</groupId>
+        <artifactId>mock-parent</artifactId>
+        <version>4.0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -20,9 +21,20 @@
     <dependencies>
         <dependency>
             <groupId>org.mule.modules</groupId>
-            <artifactId>extension-with-pojo</artifactId>
+            <artifactId>extension-with-dep1</artifactId>
             <version>${project.version}</version>
             <classifier>mule-plugin</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>extension-with-dep2</artifactId>
+            <version>${project.version}</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
         </dependency>
     </dependencies>
     <repositories>

@@ -3,9 +3,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mule.modules</groupId>
-    <artifactId>extension-with-imports</artifactId>
+    <artifactId>extension-with-dep2</artifactId>
     <packaging>mule-extension</packaging>
-    <name>Mock Extension With Imports</name>
+    <name>Mock Basic Extension Dep 2</name>
 
     <parent>
       <groupId>org.mule.modules</groupId>
@@ -19,10 +19,9 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>extension-with-pojo</artifactId>
-            <version>${project.version}</version>
-            <classifier>mule-plugin</classifier>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
         </dependency>
     </dependencies>
     <repositories>
