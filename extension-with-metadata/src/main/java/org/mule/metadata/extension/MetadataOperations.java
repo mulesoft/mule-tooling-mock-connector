@@ -20,7 +20,6 @@ import org.mule.metadata.extension.resolver.TestBooleanMetadataResolver;
 import org.mule.metadata.extension.resolver.TestEnumMetadataResolver;
 import org.mule.metadata.extension.resolver.TestInputAndOutputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestInputAndOutputResolverWithoutKeyResolverAndKeyIdParam;
-import org.mule.metadata.extension.resolver.TestInputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestInputResolverWithoutKeyResolver;
 import org.mule.metadata.extension.resolver.TestMultiLevelKeyResolver;
 import org.mule.metadata.extension.resolver.TestOutputAnyTypeResolver;
@@ -37,7 +36,6 @@ import org.mule.runtime.extension.api.annotation.param.Content;
 import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.annotation.param.Query;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
 import org.mule.runtime.extension.api.runtime.operation.Result;
 import org.mule.runtime.extension.api.runtime.streaming.PagingProvider;
 
@@ -47,13 +45,6 @@ import java.util.List;
 import java.util.Map;
 
 public class MetadataOperations {
-
-  @OutputResolver(output = TestOutputAnyTypeResolver.class)
-  public Object contentMetadataWithKeyId(@UseConfig Object object, @Connection MetadataConnection connection,
-                                         @MetadataKeyId(TestInputResolverWithKeyResolver.class) String type,
-                                         @Optional @Content @TypeResolver(TestInputResolverWithKeyResolver.class) Object content) {
-    return null;
-  }
 
   @OutputResolver(output = TestOutputResolverWithKeyResolver.class)
   public Object outputMetadataWithKeyId(@Connection MetadataConnection connection,
@@ -65,7 +56,7 @@ public class MetadataOperations {
   @OutputResolver(output = TestOutputResolverWithKeyResolver.class)
   public Object metadataKeyWithDefaultValue(@Connection MetadataConnection connection,
                                             @Optional(
-                                                defaultValue = CAR) @MetadataKeyId(TestOutputResolverWithKeyResolver.class) String type,
+                                                    defaultValue = CAR) @MetadataKeyId(TestOutputResolverWithKeyResolver.class) String type,
                                             @Optional @Content Object content) {
     return type;
   }
@@ -153,7 +144,7 @@ public class MetadataOperations {
 
   public LocationKey simpleMultiLevelKeyResolver(@Connection MetadataConnection connection,
                                                  @ParameterGroup(
-                                                     name = "key") @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
+                                                         name = "key") @MetadataKeyId(TestMultiLevelKeyResolver.class) LocationKey locationKey,
                                                  @Optional @TypeResolver(TestMultiLevelKeyResolver.class) Object content) {
     return locationKey;
   }
@@ -169,8 +160,8 @@ public class MetadataOperations {
   }
 
   public void resolverContentWithContextClassLoader(
-                                                    @Optional @TypeResolver(TestThreadContextClassLoaderResolver.class) Object content,
-                                                    @MetadataKeyId(TestThreadContextClassLoaderResolver.class) String type) {}
+          @Optional @TypeResolver(TestThreadContextClassLoaderResolver.class) Object content,
+          @MetadataKeyId(TestThreadContextClassLoaderResolver.class) String type) {}
 
   @OutputResolver(output = TestThreadContextClassLoaderResolver.class)
   public Object resolverOutputWithContextClassLoader(@MetadataKeyId String type) {
@@ -178,9 +169,18 @@ public class MetadataOperations {
   }
 
   @OutputResolver(output = TestOutputAttributesResolverWithKeyResolver.class,
-      attributes = TestOutputAttributesResolverWithKeyResolver.class)
+          attributes = TestOutputAttributesResolverWithKeyResolver.class)
   public Result<Object, AbstractOutputAttributes> outputAttributesWithDynamicMetadata(
-                                                                                      @MetadataKeyId(TestOutputAttributesResolverWithKeyResolver.class) String type) {
+          @MetadataKeyId(TestOutputAttributesResolverWithKeyResolver.class) String type) {
+    return null;
+  }
+
+  public List<Result<String, StringAttributes>> listOfMessages() {
+    return null;
+  }
+
+  @OutputResolver(output = TestOutputResolverWithoutKeyResolver.class)
+  public List<Result> dynamicListOfMessages(@MetadataKeyId String type) {
     return null;
   }
 
@@ -189,17 +189,17 @@ public class MetadataOperations {
   }
 
   public void contentParameterShouldNotGenerateMapChildElement(
-                                                               @Content @TypeResolver(TestInputResolverWithoutKeyResolver.class) Map<String, Object> mapContent) {}
+          @Content @TypeResolver(TestInputResolverWithoutKeyResolver.class) Map<String, Object> mapContent) {}
 
   public void contentParameterShouldNotGenerateListChildElement(
-                                                                @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> contents) {}
+          @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> contents) {}
 
   public void contentParameterShouldNotGeneratePojoChildElement(
-                                                                @TypeResolver(TestInputResolverWithoutKeyResolver.class) Bear animalContent) {}
+          @TypeResolver(TestInputResolverWithoutKeyResolver.class) Bear animalContent) {}
 
   @Query(translator = MetadataExtensionQueryTranslator.class,
-      entityResolver = MetadataExtensionEntityResolver.class,
-      nativeOutputResolver = NativeQueryOutputResolver.class)
+          entityResolver = MetadataExtensionEntityResolver.class,
+          nativeOutputResolver = NativeQueryOutputResolver.class)
   public String doQuery(@MetadataKeyId String query) {
     return query;
   }
