@@ -68,6 +68,7 @@
         <module>mock-studio-connector</module>
         <module>extension-with-dep100</module>
         <module>extension-with-dep101</module>
+        <module>extension-with-dep200</module>
         <module>extension-with-dep2</module>
         <module>extension-with-dep3</module>
     </modules>
