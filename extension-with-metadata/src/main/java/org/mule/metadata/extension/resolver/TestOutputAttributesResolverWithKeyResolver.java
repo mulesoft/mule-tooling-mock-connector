@@ -8,7 +8,7 @@ package org.mule.metadata.extension.resolver;
 
 import static org.mule.metadata.api.model.MetadataFormat.JAVA;
 import org.mule.metadata.api.builder.BaseTypeBuilder;
-import org.mule.metadata.api.builder.DictionaryTypeBuilder;
+import org.mule.metadata.api.builder.ObjectTypeBuilder;
 import org.mule.metadata.api.model.MetadataType;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.metadata.MetadataContext;
@@ -21,28 +21,23 @@ import org.mule.runtime.api.metadata.resolving.TypeKeysResolver;
 import java.util.Set;
 
 public class TestOutputAttributesResolverWithKeyResolver
-    implements TypeKeysResolver, OutputTypeResolver<String>, AttributesTypeResolver<String>
-{
+        implements TypeKeysResolver, OutputTypeResolver<String>, AttributesTypeResolver<String> {
 
   @Override
-  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException
-  {
+  public Set<MetadataKey> getKeys(MetadataContext context) throws ConnectionException {
     return TestMetadataResolverUtils.getKeys(context);
   }
 
   @Override
-  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException
-  {
+  public MetadataType getOutputType(MetadataContext context, String key) throws MetadataResolvingException {
     return TestMetadataResolverUtils.getMetadata(key);
   }
 
   @Override
   public MetadataType getAttributesType(MetadataContext context, String key)
-          throws MetadataResolvingException, ConnectionException
-  {
-    DictionaryTypeBuilder builder = BaseTypeBuilder.create(JAVA).dictionaryType();
-    builder.ofKey().dateType();
-    builder.ofValue().stringType();
+          throws MetadataResolvingException, ConnectionException {
+    ObjectTypeBuilder builder = BaseTypeBuilder.create(JAVA).objectType();
+    builder.openWith().stringType();
     return builder.build();
   }
 
