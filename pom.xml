@@ -7,16 +7,17 @@
     <parent>
         <groupId>org.mule.extensions</groupId>
         <artifactId>mule-extensions-parent</artifactId>
-        <version>4.0-SNAPSHOT</version>
+        <version>4.0.0-M5-RC-SNAPSHOT</version>
     </parent>
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
     <packaging>pom</packaging>
     <properties>
-        <mule.version>4.0-SNAPSHOT</mule.version>
+        <mule.version>4.0.0-M5-RC-SNAPSHOT</mule.version>
     </properties>
     <modules>
+        <module>external-lib</module>
         <module>basic-extension</module>
         <module>extension-with-no-providers</module>
         <module>extension-with-simple-types</module>
@@ -63,6 +64,7 @@
         <module>extension-with-metadata</module>
         <module>extension-with-recursive-structures</module>
         <module>extension-with-error-mapping</module>
+        <module>extension-with-external-lib</module>
         <module>extension-stress-test</module>
         <module>extension-with-exclusive-groups</module>
         <module>mock-studio-connector</module>
