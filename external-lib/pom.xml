@@ -8,12 +8,6 @@
     <packaging>jar</packaging>
     <name>External Lib</name>
     
-    <parent>
-        <groupId>org.mule.modules</groupId>
-        <artifactId>mock-parent</artifactId>
-        <version>4.0.0-M5-RC-SNAPSHOT</version>
-    </parent>
-    
     <repositories>
         <repository>
             <id>mulesoft-releases</id>
