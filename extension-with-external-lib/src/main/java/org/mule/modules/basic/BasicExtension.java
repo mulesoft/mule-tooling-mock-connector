@@ -9,7 +9,7 @@ import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProvider
  */
 @Extension(name = "ExternalLib", description = "ExternalLib Connector Description")
 @Configurations({BasicExtensionConfig.class})
-@ConnectionProviders({BasicConnectionProvider.class, ExtendedBasicConnectionProvider.class})
+@ConnectionProviders({BasicConnectionProvider.class, ExtendedBasicConnectionProvider.class, LibBasedConnectionProvider.class})
 public class BasicExtension
 {
 
