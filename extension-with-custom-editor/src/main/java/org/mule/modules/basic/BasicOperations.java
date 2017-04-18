@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 public class BasicOperations {
 

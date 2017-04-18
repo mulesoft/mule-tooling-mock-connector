@@ -3,7 +3,7 @@ package org.mule.modules.basic;
 import org.mule.runtime.api.exception.MuleException;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.runtime.source.Source;
 import org.mule.runtime.extension.api.runtime.source.SourceCallback;
 
@@ -13,7 +13,7 @@ import org.mule.runtime.extension.api.runtime.source.SourceCallback;
 public class BasicSource extends Source<String,BasicAttributes>
 {
 
-    @UseConfig
+    @Config
     private BasicExtensionConfig config;
     /**
      * Source Parameter description

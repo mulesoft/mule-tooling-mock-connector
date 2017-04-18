@@ -4,7 +4,7 @@ import org.mule.runtime.api.exception.MuleException;
 import org.mule.runtime.extension.api.annotation.execution.OnError;
 import org.mule.runtime.extension.api.annotation.execution.OnSuccess;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.annotation.source.EmitsResponse;
 import org.mule.runtime.extension.api.runtime.source.Source;
 import org.mule.runtime.extension.api.runtime.source.SourceCallback;
@@ -16,7 +16,7 @@ import org.mule.runtime.extension.api.runtime.source.SourceCallback;
 public class AnotherSource extends Source<String, BasicAttributes>
 {
 
-    @UseConfig
+    @Config
     private BasicExtensionConfig config;
     /**
      * Source Parameter description

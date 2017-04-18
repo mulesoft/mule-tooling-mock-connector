@@ -1,7 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 public class BasicOperations
 {
@@ -12,7 +12,7 @@ public class BasicOperations
      * @param config config description
      * @param param  String param description
      */
-    public String operationWithExclusiveOptionalGroup(@UseConfig BasicExtensionConfig config, String param, @ParameterGroup(name = "Exclusive Group") ExclusiveOptionalGroup basicGroup)
+    public String operationWithExclusiveOptionalGroup(@Config BasicExtensionConfig config, String param, @ParameterGroup(name = "Exclusive Group") ExclusiveOptionalGroup basicGroup)
     {
         return param;
     }

@@ -1,7 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.modules.basic.model.Ingredient;
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 public class BasicOperations {
 
@@ -11,7 +11,7 @@ public class BasicOperations {
 	 * @param config config description
 	 * @param ingredientAtOperation Ingredient at operation description
 	 */
-	public String operationWithPojo(@UseConfig BasicExtensionConfig config, Ingredient ingredientAtOperation) {
+	public String operationWithPojo(@Config BasicExtensionConfig config, Ingredient ingredientAtOperation) {
 			return null;
 	}
 

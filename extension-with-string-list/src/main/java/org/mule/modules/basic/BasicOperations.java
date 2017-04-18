@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ public class BasicOperations {
 	 * @param params String param description
 	 * @param userIds String param description
 	 */
-	public List<String> operationWithString(@UseConfig BasicExtensionConfig config, List<String> params, List<String> userIds) {
+	public List<String> operationWithString(@Config BasicExtensionConfig config, List<String> params, List<String> userIds) {
 			return params;
 	}
 

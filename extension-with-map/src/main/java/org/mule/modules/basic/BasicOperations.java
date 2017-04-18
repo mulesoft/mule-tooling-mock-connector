@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 import java.util.Map;
 
@@ -12,7 +12,7 @@ public class BasicOperations {
 	 * @param config config description
 	 * @param mapParameter Map param description
 	 */
-	public String operationWithMap(@UseConfig BasicExtensionConfig config, Map<String,Object>  mapParameter) {
+	public String operationWithMap(@Config BasicExtensionConfig config, Map<String,Object>  mapParameter) {
 			return null;
 	}
 

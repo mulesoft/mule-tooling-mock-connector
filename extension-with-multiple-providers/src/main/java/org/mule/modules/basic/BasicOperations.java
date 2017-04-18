@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 public class BasicOperations {
 
@@ -10,7 +10,7 @@ public class BasicOperations {
 	 * @param config config description
 	 * @param param String param description
 	 */
-	public String operationWithString(@UseConfig BasicExtensionConfig config, String param) {
+	public String operationWithString(@Config BasicExtensionConfig config, String param) {
 			return param;
 	}
 

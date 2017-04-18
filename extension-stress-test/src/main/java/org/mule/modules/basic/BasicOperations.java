@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.UseConfig;
+import org.mule.runtime.extension.api.annotation.param.Config;
 
 public class BasicOperations
 {
@@ -8,7 +8,7 @@ public class BasicOperations
     /**
      * Operation With String description
      */
-    public String operationWithString(@UseConfig BasicExtensionConfig config, String stringParam0,
+    public String operationWithString(@Config BasicExtensionConfig config, String stringParam0,
                                       String stringParam1,
                                       String stringParam2,
                                       String stringParam3,
@@ -33,7 +33,7 @@ public class BasicOperations
         return "";
     }
 
-    public String operationWithEnum(@UseConfig BasicExtensionConfig config, TestEnum entry0,
+    public String operationWithEnum(@Config BasicExtensionConfig config, TestEnum entry0,
                                         TestEnum entry1,
                                       TestEnum entry2,
                                       TestEnum entry3,
@@ -58,7 +58,7 @@ public class BasicOperations
         return "";
     }
 
-    public String operationWithSimplePojo(@UseConfig BasicExtensionConfig config, SimplePojo simplePojo0,
+    public String operationWithSimplePojo(@Config BasicExtensionConfig config, SimplePojo simplePojo0,
                                     SimplePojo simplePojo1,
                                     SimplePojo simplePojo2,
                                     SimplePojo simplePojo3,
@@ -84,7 +84,7 @@ public class BasicOperations
     }
 
 
-    public String operationWithPojoMap(@UseConfig BasicExtensionConfig config, PojoWithMap pojoWithMap0,
+    public String operationWithPojoMap(@Config BasicExtensionConfig config, PojoWithMap pojoWithMap0,
                                           PojoWithMap pojoWithMap1,
                                           PojoWithMap pojoWithMap2,
                                           PojoWithMap pojoWithMap3,
