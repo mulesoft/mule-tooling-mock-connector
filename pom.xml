@@ -31,6 +31,7 @@
         <module>extension-with-mimetype</module>
         <module>extension-with-simple-pojo</module>
         <module>extension-with-simple-pojo-with-alias</module>
+        <module>extension-with-parameter-group</module>
         <module>extension-with-pojo</module>
         <module>extension-with-pojo-no-expression</module>
         <module>extension-with-pojo-expression-required</module>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:simple-pojo="http://www.mulesoft.org/schema/mule/simple-pojo" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <simple-pojo:ingredient name="Ingredient" amount="897" type="465" doc:name="Ingredient"/>
+    <simple-pojo:ingredient name="Ingredient1" amount="90" type="90" doc:name="Ingredient"/>
+    <simple-pojo:config name="SimplePojo_Config" ingredientAtConfig="Ingredient1" doc:name="SimplePojo Config">
+        <simple-pojo:connection ingredientAtProvider="Ingredient"/>
+    </simple-pojo:config>
+    <simple-pojo:config name="SimplePojo_Config1" doc:name="SimplePojo Config">
+        <simple-pojo:connection>
+            <simple-pojo:ingredient-at-provider amount="33" type="33	"/>
+        </simple-pojo:connection>
+    </simple-pojo:config>
+    <simple-pojo:ingredient name="Ingredient2" amount="10" type="16" doc:name="Ingredient"/>
+    <simple-pojo:ingredient name="new_item" doc:name="Ingredient"/>
+    <simple-pojo:config name="SimplePojo_Config2" doc:name="SimplePojo Config">
+        <simple-pojo:ingredient-at-config amount="890" type="890"/>
+        <simple-pojo:connection>
+            <simple-pojo:ingredient-at-provider amount="123" type="123"/>
+        </simple-pojo:connection>
+    </simple-pojo:config>
+    <flow name="dummy-flow">
+        <simple-pojo:operation-with-pojo config-ref="SimplePojo_Config1" doc:name="SimplePojo"    >
+            <simple-pojo:ingredient-at-operation amount="31" type="12"/>
+        </simple-pojo:operation-with-pojo>
+        <simple-pojo:operation-with-pojo config-ref="SimplePojo_Config" ingredientAtOperation="Ingredient2" doc:name="SimplePojo"/>
+        <simple-pojo:operation-with-pojo config-ref="SimplePojo_Config2" ingredientAtOperation="Ingredient" doc:name="SimplePojo"/>
+    </flow>
+</mule>
