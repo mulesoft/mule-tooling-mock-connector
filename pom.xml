@@ -45,6 +45,7 @@
         <module>extension-with-map-of-string-list-of-pojo</module>
         <module>extension-with-pojo-list</module>
         <module>extension-with-pojo-list-with-list-field</module>
+        <module>extension-with-pojo-list-with-list-field-no-expression</module>
         <module>extension-with-pooling-profile-cached</module>
         <module>extension-with-pooling-profile-pooled</module>
         <module>extension-with-only-sources</module>

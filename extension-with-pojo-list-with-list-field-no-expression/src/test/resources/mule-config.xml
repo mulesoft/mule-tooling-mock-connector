@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:pojo-list-with-list-field="http://www.mulesoft.org/schema/mule/pojo-list-with-list-field" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+    <pojo-list-with-list-field:ingredient name="globalIngredient" description="234"/>
+    <pojo-list-with-list-field:recipe name="globalRecipe" dishName="123" description="123"/>
+    <pojo-list-with-list-field:config name="config">
+        <pojo-list-with-list-field:connection recipes="#[payload]"/>
+    </pojo-list-with-list-field:config>
+    <flow name="dummy-flow">
+            <pojo-list-with-list-field:operation-with-pojo-list config-ref="config">
+                <pojo-list-with-list-field:recipes>
+                    <pojo-list-with-list-field:recipe dishName="asd">
+                        <pojo-list-with-list-field:ingredients>
+                            <pojo-list-with-list-field:ingredient description="1"/>
+                            <pojo-list-with-list-field:ingredient description="2"/>
+                        </pojo-list-with-list-field:ingredients>
+                    </pojo-list-with-list-field:recipe>
+                    <pojo-list-with-list-field:recipe dishName="asd2">
+                        <pojo-list-with-list-field:ingredients>
+                            <pojo-list-with-list-field:ingredient description="3"/>
+                            <pojo-list-with-list-field:ingredient description="4"/>
+                        </pojo-list-with-list-field:ingredients>
+                    </pojo-list-with-list-field:recipe>
+                </pojo-list-with-list-field:recipes>
+            </pojo-list-with-list-field:operation-with-pojo-list>
+    </flow>
+</mule>
