@@ -70,12 +70,12 @@
         <module>extension-with-external-lib</module>
         <module>extension-stress-test</module>
         <module>extension-with-exclusive-groups</module>
-        <module>mock-studio-connector</module>
         <module>extension-with-dep100</module>
         <module>extension-with-dep101</module>
         <module>extension-with-dep200</module>
         <module>extension-with-dep2</module>
         <module>extension-with-dep3</module>
+        <module>mule-plugin-with-no-extension-model</module>
     </modules>
 
     <distributionManagement>
