@@ -11,7 +11,7 @@ public class MyErrorExceptionHandler extends ExceptionHandler
     {
         if (e instanceof CustomException)
         {
-            return new ModuleException(e, ((CustomException) e).getType(), "Ups: " + e.getMessage());
+            return new ModuleException("Ups: " + e.getMessage(), ((CustomException) e).getType(), e);
         }
         return e;
     }

@@ -76,6 +76,8 @@
         <module>extension-with-dep2</module>
         <module>extension-with-dep3</module>
         <module>mule-plugin-with-no-extension-model</module>
+        <module>smart-connector-using-core</module>
+        <module>smart-connector-using-validation</module>
     </modules>
 
     <distributionManagement>

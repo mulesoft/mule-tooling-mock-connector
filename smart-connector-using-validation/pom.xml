@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mule.modules</groupId>
+	<artifactId>smart-connector-using-validation</artifactId>
+  <version>4.0.0-SNAPSHOT</version>
+  <packaging>mule-extension</packaging>
+
+	<name>Smart Connector Using Validation</name>
+
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<mule.version>4.0.0-SNAPSHOT</mule.version>
+		<mule.extensions.maven.plugin.version>1.0.0-SNAPSHOT</mule.extensions.maven.plugin.version>
+    <extension.documentation.maven.plugin.version>1.0.0-SNAPSHOT</extension.documentation.maven.plugin.version>
+		<mule.module.validation.version>1.0.0-SNAPSHOT</mule.module.validation.version>
+	</properties>
+
+  <build>
+      <plugins>
+          <plugin>
+              <!-- BUILD PLUGIN FOR JAVA_AND_SMART_CONNECTORS -->
+              <groupId>org.mule.runtime.plugins</groupId>
+              <artifactId>mule-extensions-maven-plugin</artifactId>
+              <version>${mule.extensions.maven.plugin.version}</version>
+              <extensions>true</extensions>
+          </plugin>
+      </plugins>
+  </build>
+	<!-- Mule Dependencies -->
+	<dependencies>
+		<!-- Mule Modules -->
+			<dependency>
+					<groupId>org.mule.modules</groupId>
+					<artifactId>mule-validation-module</artifactId>
+					<version>${mule.module.validation.version}</version>
+					<classifier>mule-plugin</classifier>
+	  	</dependency>
+      <dependency>
+          <groupId>org.mule.runtime</groupId>
+          <artifactId>mule-module-extensions-xml-support</artifactId>
+          <version>${mule.version}</version>
+          <scope>provided</scope>
+      </dependency>
+	</dependencies>
+
+	<repositories>
+          <repository>
+            <id>Central</id>
+            <name>Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshots Repository</name>
+            <url>http://repository.mulesoft.org/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-release</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mulesoft-snapshots</id>
+            <name>mulesoft snapshots repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/snapshots/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
