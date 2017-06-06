@@ -2,6 +2,7 @@ package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.Configuration;
 import org.mule.runtime.extension.api.annotation.Operations;
+import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 import java.util.List;
@@ -18,5 +19,9 @@ public class BasicExtensionConfig {
 	 */
 	@Parameter
 	private List<Map<String,Object>> mapParameters;
+
+	@Optional
+	@Parameter
+	private List<Map<String,Object>> optinalParameters;
 
 }
