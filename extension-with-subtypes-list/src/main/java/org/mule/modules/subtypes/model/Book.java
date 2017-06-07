@@ -1,11 +1,14 @@
 package org.mule.modules.subtypes.model;
 
 import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 @XmlHints(allowTopLevelDefinition = true)
 public class Book extends BasePojo
 {
+    @Parameter
     private Integer pages;
+    @Parameter
     private String author;
 
     public String getAuthor()

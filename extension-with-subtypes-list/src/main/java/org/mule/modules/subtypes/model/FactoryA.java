@@ -6,6 +6,17 @@ import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
 @XmlHints(allowTopLevelDefinition = true)
 public final class FactoryA implements IFactory
 {
+
+    public String getParameterA()
+    {
+        return parameterA;
+    }
+
+    public void setParameterA(String parameterA)
+    {
+        this.parameterA = parameterA;
+    }
+
     @Parameter
-    private String paramaterA;
+    private String parameterA;
 }

@@ -6,13 +6,13 @@
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/subtypes-list http://www.mulesoft.org/schema/mule/subtypes-list/current/mule-subtypes-list.xsd">
-    <subtypes-list:factory-a name="Factory_A" paramaterA="4" doc:name="Factory A"/>
+    <subtypes-list:factory-a name="Factory_A" parameterA="4" doc:name="Factory A"/>
     <subtypes-list:config name="Subtypes_Config" doc:name="Subtypes Config">
         <subtypes-list:base-pojos>
                 <subtypes-list:book id="asd" author="asd" pages="90"/>
         </subtypes-list:base-pojos>
     </subtypes-list:config>
-    <subtypes-list:factory-b name="Factory_B" paramaterB="132" doc:name="Factory B"/>
+    <subtypes-list:factory-b name="Factory_B" parameterB="132" doc:name="Factory B"/>
     <flow name="dummy-flow1">
         <subtypes-list:operation-base-type-list config-ref="Subtypes_Config" doc:name="Subtypes">
             <subtypes-list:pojos>
