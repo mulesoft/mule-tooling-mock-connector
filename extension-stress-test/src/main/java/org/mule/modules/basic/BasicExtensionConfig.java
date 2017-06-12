@@ -24,9 +24,6 @@ public class BasicExtensionConfig
     private Integer integerParam;
 
     @Parameter
-    private Boolean booleanParam;
-
-    @Parameter
     private boolean booleanPrimitiveParam;
 
     @Parameter
