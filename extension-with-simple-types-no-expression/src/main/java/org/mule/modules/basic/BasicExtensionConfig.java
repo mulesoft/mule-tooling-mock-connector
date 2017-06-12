@@ -30,10 +30,6 @@ public class BasicExtensionConfig
 
     @Expression(ExpressionSupport.NOT_SUPPORTED)
     @Parameter
-    private Boolean booleanParam;
-
-    @Expression(ExpressionSupport.NOT_SUPPORTED)
-    @Parameter
     private boolean booleanPrimitiveParam;
 
     @Expression(ExpressionSupport.NOT_SUPPORTED)
