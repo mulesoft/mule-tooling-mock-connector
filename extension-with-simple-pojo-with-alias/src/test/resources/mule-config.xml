@@ -4,6 +4,7 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+      http://www.mulesoft.org/schema/mule/simple-pojo-with-alias http://www.mulesoft.org/schema/mule/simple-pojo-with-alias/current/mule-simple-pojo-with-alias.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
     <simple-pojo-with-alias:my-ingredient name="Ingredient" amount="897" type="465" doc:name="Ingredient"/>
     <simple-pojo-with-alias:my-ingredient name="Ingredient1" amount="90" type="90" doc:name="Ingredient"/>
@@ -16,12 +17,11 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
         </simple-pojo-with-alias:connection>
     </simple-pojo-with-alias:config>
     <simple-pojo-with-alias:my-ingredient name="Ingredient2" amount="10" type="16" doc:name="Ingredient"/>
-    <simple-pojo-with-alias:my-ingredient name="new_item" doc:name="Ingredient"/>
     <simple-pojo-with-alias:config name="SimplePojo_Config2" doc:name="SimplePojo Config">
-        <simple-pojo-with-alias:ingredient-at-config amount="890" type="890"/>
         <simple-pojo-with-alias:connection>
             <simple-pojo-with-alias:ingredient-at-provider amount="123" type="123"/>
         </simple-pojo-with-alias:connection>
+        <simple-pojo-with-alias:ingredient-at-config amount="890" type="890"/>
     </simple-pojo-with-alias:config>
     <flow name="dummy-flow">
         <simple-pojo-with-alias:operation-with-pojo config-ref="SimplePojo_Config1" doc:name="SimplePojo"    >

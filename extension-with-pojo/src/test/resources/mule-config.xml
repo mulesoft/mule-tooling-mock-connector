@@ -4,13 +4,14 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+      http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/pojo/current/mule-pojo.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/pojo/current/mule-pojo.xsd">
     <pojo:complex-pojo name="Complex_Pojo" intField="3" doc:name="Complex Pojo"/>
     <pojo:complex-pojo name="Complex_Pojo2" intField="3" ingredient="Ingredient" doc:name="Complex Pojo"/>
     <pojo:complex-pojo name="Complex_Pojo3" intField="3" ingredient="#[payload]" doc:name="Complex Pojo"/>
     <pojo:config name="Pojo_Config" doc:name="Pojo Config">
-        <pojo:connection complexPojoAtConfig="Complex_Pojo1"/>
+        <pojo:connection complexPojoAtProvider="Complex_Pojo1"/>
     </pojo:config>
     <pojo:complex-pojo name="Complex_Pojo1" doc:name="Complex Pojo">
         <pojo:ingredient amount="10" type="10"/>
@@ -18,18 +19,14 @@ http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/poj
     <pojo:ingredient name="Ingredient" amount="11" type="11" doc:name="Ingredient"/>
     <pojo:config name="Pojo_Config1" doc:name="Pojo Config">
         <pojo:connection>
-            <pojo:complex-pojo-at-config ingredient="Ingredient"/>
+            <pojo:complex-pojo-at-provider ingredient="Ingredient"/>
         </pojo:connection>
     </pojo:config>
     <flow name="dummy-flow">
         <pojo:operation-with-one-pojo config-ref="Pojo_Config1" doc:name="Pojo">
-            <pojo:complex-pojo-at-operation intField="9">
-                <pojo:ingredient amount="15" type="15"/>
-            </pojo:complex-pojo-at-operation>
-            <pojo:ingredient-at-operation amount="48" type="49"/>
+            <pojo:ingredient-at-operation amount="15" type="15"/>
         </pojo:operation-with-one-pojo>
         <pojo:operation-with-one-pojo config-ref="Pojo_Config" doc:name="Pojo">
-            <pojo:complex-pojo-at-operation intField="33"/>
             <pojo:ingredient-at-operation amount="22" type="22"/>
         </pojo:operation-with-one-pojo>
     </flow>

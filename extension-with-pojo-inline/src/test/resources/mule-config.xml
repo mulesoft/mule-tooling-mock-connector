@@ -7,20 +7,22 @@
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/pojo-inline http://www.mulesoft.org/schema/mule/pojo-inline/current/mule-pojo-inline.xsd">
     <pojo-inline:config name="Pojo_Config" doc:name="Pojo Config">
-    </pojo-inline:config>
-    <pojo-inline:ingredient name="Ingredient" amount="11" type="11" doc:name="Ingredient"/>
-    <pojo-inline:config name="Pojo_Config1" doc:name="Pojo Config">
+        <pojo-inline:connection/>
     </pojo-inline:config>
     <flow name="dummy-flow">
-        <pojo-inline:operation-with-pojo config-ref="Pojo_Config1" doc:name="Pojo">
+        <pojo-inline:operation-with-pojo-inline config-ref="Pojo_Config" doc:name="Pojo">
             <pojo-inline:complex-pojo-at-operation intField="9">
                 <pojo-inline:ingredient amount="15" type="15"/>
+                <pojo-inline:ingredient-no-expression amount="15" type="15"/>
             </pojo-inline:complex-pojo-at-operation>
             <pojo-inline:ingredient-at-operation amount="48" type="49"/>
-        </pojo-inline:operation-with-pojo>
-        <pojo-inline:operation-with-pojo config-ref="Pojo_Config" doc:name="Pojo">
-            <pojo-inline:complex-pojo-at-operation intField="33"/>
+        </pojo-inline:operation-with-pojo-inline>
+        <pojo-inline:operation-with-pojo-inline config-ref="Pojo_Config" doc:name="Pojo">
+            <pojo-inline:complex-pojo-at-operation intField="33">
+                <pojo-inline:ingredient amount="15" type="15"/>
+                <pojo-inline:ingredient-no-expression amount="15" type="15"/>
+            </pojo-inline:complex-pojo-at-operation>
             <pojo-inline:ingredient-at-operation amount="22" type="22"/>
-        </pojo-inline:operation-with-pojo>
+        </pojo-inline:operation-with-pojo-inline>
     </flow>
 </mule>
