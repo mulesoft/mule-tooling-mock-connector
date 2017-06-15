@@ -7,12 +7,12 @@
     <artifactId>extension-with-dep3</artifactId>
     <packaging>mule-extension</packaging>
     <name>Mock Basic Extension Dep 3</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-BETA-SNAPSHOT</version>
 
     <parent>
         <groupId>org.mule.modules</groupId>
         <artifactId>mock-parent</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0-BETA-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -23,13 +23,13 @@
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>extension-with-dep1</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-BETA-SNAPSHOT</version>
             <classifier>mule-plugin</classifier>
         </dependency>
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>extension-with-dep2</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0-BETA-SNAPSHOT</version>
             <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
