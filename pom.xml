@@ -7,14 +7,14 @@
     <parent>
         <groupId>org.mule.extensions</groupId>
         <artifactId>mule-modules-parent</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0-BETA-SNAPSHOT</version>
     </parent>
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
     <packaging>pom</packaging>
     <properties>
-        <mule.version>4.0.0-SNAPSHOT</mule.version>
+        <mule.version>4.0.0-BETA-SNAPSHOT</mule.version>
     </properties>
     <modules>
         <module>external-lib</module>
