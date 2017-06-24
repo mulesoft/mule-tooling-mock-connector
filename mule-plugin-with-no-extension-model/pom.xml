@@ -6,16 +6,16 @@
     <artifactId>mule-plugin-with-no-extension-model</artifactId>
     <packaging>mule-plugin</packaging>
     <name>Mock Mule Plugin With No Extension Model</name>
-    <version>1.0.0-BETA-SNAPSHOT</version>
+    <version>1.0.0-BETA</version>
 
     <parent>
         <groupId>org.mule.runtime</groupId>
         <artifactId>mule-modules</artifactId>
-        <version>4.0.0-BETA-SNAPSHOT</version>
+        <version>4.0.0-BETA</version>
     </parent>
 
     <properties>
-        <mule.version>4.0.0-BETA-SNAPSHOT</mule.version>
+        <mule.version>4.0.0-BETA</mule.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
     </properties>
 

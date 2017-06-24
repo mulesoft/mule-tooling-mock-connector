@@ -6,11 +6,11 @@
     <artifactId>extension-with-dep1</artifactId>
     <packaging>mule-extension</packaging>
     <name>Mock Basic Extension Dep 1.0.0</name>
-    <version>1.0.0-BETA-SNAPSHOT</version>
+    <version>1.0.0-BETA</version>
     <parent>
       <groupId>org.mule.modules</groupId>
       <artifactId>mock-parent</artifactId>
-      <version>4.0.0-BETA-SNAPSHOT</version>
+      <version>4.0.0-BETA</version>
     </parent>
 
     <properties>
