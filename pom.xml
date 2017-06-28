@@ -80,6 +80,7 @@
         <module>mule-plugin-with-no-extension-model</module>
         <module>smart-connector-using-core</module>
         <module>smart-connector-using-validation</module>
+        <module>extension-with-soap</module>
     </modules>
 
     <distributionManagement>
