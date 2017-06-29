@@ -5,7 +5,7 @@
 
 	<groupId>org.mule.modules</groupId>
 	<artifactId>smart-connector-using-validation</artifactId>
-  <version>4.0.0-BETA</version>
+  <version>4.0.0-BETA-SNAPSHOT</version>
   <packaging>mule-extension</packaging>
 
 	<name>Smart Connector Using Validation</name>

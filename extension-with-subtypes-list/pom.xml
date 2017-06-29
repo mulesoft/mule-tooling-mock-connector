@@ -8,9 +8,9 @@
     <name>Mock Extension With Subtypes List</name>
 
     <parent>
-      <groupId>org.mule.modules</groupId>
-      <artifactId>mock-parent</artifactId>
-      <version>4.0.0-BETA</version>
+        <groupId>org.mule.modules</groupId>
+        <artifactId>mock-parent</artifactId>
+        <version>4.0.0-BETA-SNAPSHOT</version>
     </parent>
 
     <properties>
