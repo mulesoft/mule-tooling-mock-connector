@@ -7,6 +7,7 @@ import org.mule.runtime.extension.api.soap.SoapServiceProvider;
 import org.mule.runtime.extension.api.soap.WebServiceDefinition;
 import org.mule.runtime.extension.api.soap.security.SecurityStrategy;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +21,12 @@ public class BasicServiceProvider implements SoapServiceProvider
         List<WebServiceDefinition> result = newArrayList();
         for (ServiceDefinition service : generateServicesDefinitions())
         {
+            final URL resource = this.getClass().getClassLoader().getResource("wsdl/" + service.getId()+".wsdl");
             result.add(builder()
                                .withId(service.getId())
                                .withFriendlyName(service.getDisplayName())
-                               .withWsdlUrl(this.getClass().getClassLoader().getResource("wsdl/" + service.getId()))
+                               .withWsdlUrl(resource)
+                               .withAddress("http://fruta.com")
                                .withService(service.getService())
                                .withPort(service.getPort())
                                .build());

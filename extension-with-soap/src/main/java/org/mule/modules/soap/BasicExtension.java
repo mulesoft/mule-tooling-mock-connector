@@ -1,5 +1,6 @@
 package org.mule.modules.soap;
 
+import org.mule.runtime.extension.api.annotation.Export;
 import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
 import org.mule.runtime.extension.api.soap.HttpMessageDispatcherProvider;
@@ -13,6 +14,7 @@ import org.mule.runtime.extension.api.soap.annotation.SoapMessageDispatcherProvi
 @Xml(prefix = "soap")
 @Soap({BasicServiceProvider.class})
 @SoapMessageDispatcherProviders(HttpMessageDispatcherProvider.class)
+@Export(classes = { Services.class, ServiceDefinition.class})
 public class BasicExtension {
 
 }

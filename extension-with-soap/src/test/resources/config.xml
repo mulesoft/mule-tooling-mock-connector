@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:soap="http://www.mulesoft.org/schema/mule/soap" xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/soap http://www.mulesoft.org/schema/mule/soap/current/mule-soap.xsd">
+
+    <soap:config name="soap_Config" doc:name="soap Config" doc:id="b4bcbfb2-76eb-4af1-b9c4-57cb596799f9" >
+        <soap:basic-connection>
+            <soap:transport >
+                <soap:default-http-message-dispatcher-provider />
+            </soap:transport>
+        </soap:basic-connection>
+    </soap:config>
+    <flow name="invokeFlow" doc:id="2da9c58a-affc-4246-824f-f2a169daf969" >
+        <soap:invoke config-ref="soap_Config" doc:name="Invoke" doc:id="16254e80-a266-4906-a6fc-11cc1715921f" service="Compensation_Review" operation="Get_Employee_Awards"/>
+    </flow>
+</mule>
