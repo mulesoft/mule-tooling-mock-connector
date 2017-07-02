@@ -11,11 +11,11 @@
     <parent>
         <groupId>org.mule.runtime</groupId>
         <artifactId>mule-modules</artifactId>
-        <version>4.0.0-BETA</version>
+        <version>4.0.0-BETA.1</version>
     </parent>
 
     <properties>
-        <mule.version>4.0.0-BETA</mule.version>
+        <mule.version>4.0.0-BETA.1</mule.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
     </properties>
 
