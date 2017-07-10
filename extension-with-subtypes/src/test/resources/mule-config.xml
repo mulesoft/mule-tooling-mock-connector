@@ -4,7 +4,8 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/subtypes http://www.mulesoft.org/schema/mule/subtypes/current/mule-subtypes.xsd">
     <subtypes:config name="Subtypes_Config" doc:name="Subtypes Config">
         <subtypes:base-pojo>
             <subtypes:magazine id="qwe" pages="1"/>

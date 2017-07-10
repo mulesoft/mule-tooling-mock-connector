@@ -4,7 +4,8 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/pojo-list-with-list-field http://www.mulesoft.org/schema/mule/pojo-list-with-list-field/current/mule-pojo-list-with-list-field.xsd">
 
     <pojo-list-with-list-field:ingredient name="globalIngredient" description="234"/>
     <pojo-list-with-list-field:recipe name="globalRecipe" dishName="123" description="123"/>

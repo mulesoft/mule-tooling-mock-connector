@@ -4,17 +4,18 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/pojo-list http://www.mulesoft.org/schema/mule/pojo-list/current/mule-pojo-list.xsd">
     <pojo-list:recipe name="globalRecipe" description="d1" dishName="d2"/>
     <pojo-list:config name="PojoList_Config" doc:name="PojoList Config">
-        <pojo-list:recipes>
-            <pojo-list:recipe description="124" dishName="124"/>
-        </pojo-list:recipes>
         <pojo-list:connection>
             <pojo-list:recipes>
                 <pojo-list:recipe description="123" dishName="123"/>
             </pojo-list:recipes>
         </pojo-list:connection>
+        <pojo-list:recipes>
+            <pojo-list:recipe description="124" dishName="124"/>
+        </pojo-list:recipes>
     </pojo-list:config>
     <flow name="dummy-flow">
         <pojo-list:operation-with-pojo-list config-ref="PojoList_Config" recipes="#[payload]" doc:name="PojoList"/>

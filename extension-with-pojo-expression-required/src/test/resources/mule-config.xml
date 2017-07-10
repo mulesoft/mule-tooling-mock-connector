@@ -6,10 +6,11 @@
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/pojo-expression-required http://www.mulesoft.org/schema/mule/pojo-expression-required/current/mule-pojo-expression-required.xsd">
-    <pojo-expression-required:complex-pojo name="Complex_Pojo" intField="3" doc:name="Complex Pojo"/>
+    <pojo-expression-required:complex-pojo name="Complex_Pojo" intField="3" ingredientNoExpression="Ingredient" ingredient="#[payload]" doc:name="Complex Pojo"/>
     <pojo-expression-required:config name="Pojo_Config" doc:name="Pojo Config" complexPojoAtConfig="#[payload]" ingredientAtConfig="#[payload]">
+        <pojo-expression-required:connection complexPojoAtProvider="#[payload]" ingredientAtProvider="#[payload]"/>
     </pojo-expression-required:config>
-    <pojo-expression-required:complex-pojo name="Complex_Pojo1" doc:name="Complex Pojo" intField="2">
+    <pojo-expression-required:complex-pojo name="Complex_Pojo1" doc:name="Complex Pojo" intField="2" ingredientNoExpression="Ingredient">
         <pojo-expression-required:ingredient amount="10" type="10"/>
     </pojo-expression-required:complex-pojo>
     <pojo-expression-required:ingredient name="Ingredient" amount="11" type="11" doc:name="Ingredient"/>

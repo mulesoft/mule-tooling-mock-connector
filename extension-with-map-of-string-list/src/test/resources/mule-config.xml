@@ -4,13 +4,9 @@
       xmlns:spring="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
-http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/map-string-list http://www.mulesoft.org/schema/mule/map-string-list/current/mule-map-string-list.xsd">
     <map-string-list:config name="MapStringList_Config" doc:name="MapStringList Config">
-        <map-string-list:map-parameters>
-            <map-string-list:map-parameter key="conf1">
-                <map-string-list:map-parameter-item value="4"/>
-            </map-string-list:map-parameter>
-        </map-string-list:map-parameters>
         <map-string-list:connection>
             <map-string-list:map-parameters>
                 <map-string-list:map-parameter key="pro">
@@ -18,6 +14,11 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
                 </map-string-list:map-parameter>
             </map-string-list:map-parameters>
         </map-string-list:connection>
+        <map-string-list:map-parameters>
+            <map-string-list:map-parameter key="conf1">
+                <map-string-list:map-parameter-item value="4"/>
+            </map-string-list:map-parameter>
+        </map-string-list:map-parameters>
     </map-string-list:config>
     <flow name="dummyFlow">
         <map-string-list:operation-with-map config-ref="MapStringList_Config" doc:name="MapStringList">

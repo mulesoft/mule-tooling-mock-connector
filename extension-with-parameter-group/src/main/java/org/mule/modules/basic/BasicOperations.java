@@ -13,7 +13,12 @@ public class BasicOperations
      * @param config                config description
      * @param ingredientShowInDsl Ingredient at operation description
      */
-    public String operationWithPojo(@Config BasicExtensionConfig config, @ParameterGroup(name = "Ingredient shown in DSL", showInDsl = true) Ingredient ingredientShowInDsl)
+    public String operationWithPojoShowInDsl(@Config BasicExtensionConfig config, @ParameterGroup(name = "Ingredient shown in DSL", showInDsl = true) Ingredient ingredientShowInDsl)
+    {
+        return null;
+    }
+
+    public String operationWithPojo(@Config BasicExtensionConfig config, @ParameterGroup(name = "Ingredient") Ingredient ingredientAtOperation)
     {
         return null;
     }

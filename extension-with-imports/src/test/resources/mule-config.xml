@@ -5,12 +5,15 @@
       xmlns="http://www.mulesoft.org/schema/mule/core"
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
         http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/pojo/current/mule-pojo.xsd
-        http://www.mulesoft.org/schema/mule/imports http://www.mulesoft.org/schema/mule/basic/current/mule-basic.xsd">
+        http://www.mulesoft.org/schema/mule/imports http://www.mulesoft.org/schema/mule/imports/current/mule-imports.xsd">
 
+    <imports:config name="config" configParameter="123">
+        <imports:connection providerParameter="12"/>
+    </imports:config>
+    <pojo:ingredient name="Ingredient" type="13" amount="123"/>
     <flow name="dummy-flow">
-        <imports:operation-with-imported-pojo>
-            <imports:param>
-                <pojo:complex-pojo intField="3"/>
+        <imports:operation-with-imported-pojo config-ref="config">
+            <imports:param ingredient="Ingredient" intField="3">
             </imports:param>
         </imports:operation-with-imported-pojo>
     </flow>
