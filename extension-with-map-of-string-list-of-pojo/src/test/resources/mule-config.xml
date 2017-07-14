@@ -5,12 +5,19 @@
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
         http://www.mulesoft.org/schema/mule/basic http://www.mulesoft.org/schema/mule/basic/current/mule-basic.xsd">
 
+    <basic:config name="config">
+        <basic:connection/>
+        <basic:map-parameters>
+            <basic:map-parameter key="123" value="#[{'type':'APPLE','amount':'1.0'}]"/>
+        </basic:map-parameters>
+    </basic:config>
     <flow name="dummy-flow">
-        <basic:operation-with-map>
+        <basic:operation-with-map config-ref="config">
             <basic:map-parameters>
                 <basic:map-parameter key="asd">
-                    <basic:map-parameter-item value="asd" />
+                    <basic:ingredient value="#[payload]"/>
                 </basic:map-parameter>
+                <basic:map-parameter key="asd2" value="#[payload.2]"/>
             </basic:map-parameters>
         </basic:operation-with-map>
     </flow>
