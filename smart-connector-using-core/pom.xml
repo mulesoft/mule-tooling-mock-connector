@@ -14,9 +14,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>4.0.0-BETA.2</mule.version>
-		<mule.extensions.maven.plugin.version>1.0.0-BETA.2</mule.extensions.maven.plugin.version>
-    <extension.documentation.maven.plugin.version>1.0.0-BETA.2</extension.documentation.maven.plugin.version>
+		<mule.version>4.0.0-BETA.4</mule.version>
+		<mule.extensions.maven.plugin.version>1.0.0-BETA.4</mule.extensions.maven.plugin.version>
+    <extension.documentation.maven.plugin.version>1.0.0-BETA.4</extension.documentation.maven.plugin.version>
 	</properties>
 
   <build>
