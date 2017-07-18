@@ -1,8 +1,8 @@
 package org.mule.metadata.extension;
 
-import org.mule.runtime.api.message.Attributes;
+import java.io.Serializable;
 
-public class StringAttributes implements Attributes {
+public class StringAttributes implements Serializable {
 
   private String value;
 

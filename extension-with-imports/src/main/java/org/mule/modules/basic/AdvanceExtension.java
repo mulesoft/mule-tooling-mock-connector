@@ -12,7 +12,7 @@ import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProvider
 @Extension(name = "Imports", description = "Connectors With Imports Description")
 @Configurations({ AdvanceExtensionConfig.class })
 @ConnectionProviders({ AdvanceConnectionProvider.class })
-@Import(type = ComplexPojo.class, from = "Pojo")
+@Import(type = ComplexPojo.class)
 public class AdvanceExtension
 {
 

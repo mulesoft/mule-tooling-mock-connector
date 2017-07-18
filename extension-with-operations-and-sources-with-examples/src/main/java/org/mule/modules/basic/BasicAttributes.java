@@ -1,10 +1,11 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.api.message.Attributes;
+import java.io.Serializable;
+
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.display.Example;
 
-public class BasicAttributes implements Attributes
+public class BasicAttributes implements Serializable
 {
     @Parameter
     private String username;

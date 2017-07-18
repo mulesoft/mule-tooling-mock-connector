@@ -1,8 +1,8 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.api.message.Attributes;
+import java.io.Serializable;
 
-public class BasicAttributes implements Attributes
+public class BasicAttributes implements Serializable
 {
     private String username;
 

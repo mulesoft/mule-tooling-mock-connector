@@ -3,6 +3,7 @@ package org.mule.modules.basic;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
+import org.mule.runtime.api.meta.ExternalLibraryType;
 import org.mule.runtime.extension.api.annotation.Alias;
 import org.mule.runtime.extension.api.annotation.ExternalLib;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
@@ -10,8 +11,8 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 /**
  * Connection Provider description
  */
-@ExternalLib(name = "Foo Driver", requiredClassName = "org.mule.modules.FooDriver")
-@ExternalLib(name = "Extended Foo Driver", requiredClassName = "org.mule.modules.ExtendedFooDriver")
+@ExternalLib(name = "Foo Driver", requiredClassName = "org.mule.modules.FooDriver", type = ExternalLibraryType.JAR)
+@ExternalLib(name = "Extended Foo Driver", requiredClassName = "org.mule.modules.ExtendedFooDriver", type = ExternalLibraryType.JAR)
 @Alias("extended-provider")
 public class ExtendedBasicConnectionProvider implements ConnectionProvider<DummyConnection>
 {

@@ -6,11 +6,10 @@
  */
 package org.mule.metadata.extension.model.attribute;
 
-import org.mule.runtime.core.message.BaseAttributes;
 import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
 
 @XmlHints(allowTopLevelDefinition = true)
-public class ShapeOutputAttributes extends BaseAttributes implements AbstractOutputAttributes {
+public class ShapeOutputAttributes implements AbstractOutputAttributes {
 
   private String outputId = "ShapesOutputAttributes";
 

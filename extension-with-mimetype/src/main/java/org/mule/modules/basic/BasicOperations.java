@@ -8,10 +8,9 @@ public class BasicOperations {
 	 * Operation With String description
 	 *
 	 * @param config config description
-	 * @param outputMimeType String param description
 	 */
-	public String operationWithMimeType(@Config BasicExtensionConfig config, String outputMimeType) {
-			return outputMimeType;
+	public String operationWithMimeType(@Config BasicExtensionConfig config) {
+			return "";
 	}
 
 }
