@@ -82,6 +82,7 @@
         <module>smart-connector-using-validation</module>
         <module>extension-with-soap</module>
         <module>extension-with-path</module>
+        <module>extension-with-value-providers</module>
     </modules>
 
     <distributionManagement>
