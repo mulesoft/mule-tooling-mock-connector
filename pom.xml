@@ -83,6 +83,8 @@
         <module>extension-with-soap</module>
         <module>extension-with-path</module>
         <module>extension-with-value-providers</module>
+        <module>extension-with-flow-ref</module>
+        <module>extension-with-config-ref</module>
     </modules>
 
     <distributionManagement>
