@@ -14,10 +14,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>4.0.0-SNAPSHOT</mule.version>
-		<mule.extensions.maven.plugin.version>1.0.0-SNAPSHOT</mule.extensions.maven.plugin.version>
-    <extension.documentation.maven.plugin.version>1.0.0-SNAPSHOT</extension.documentation.maven.plugin.version>
-		<mule.module.validation.version>0.8.0-SNAPSHOT</mule.module.validation.version>
+		<mule.version>4.0.0-rc.batman</mule.version>
+		<mule.extensions.maven.plugin.version>1.0.0-rc.batman</mule.extensions.maven.plugin.version>
+    <extension.documentation.maven.plugin.version>1.0.0-rc.batman</extension.documentation.maven.plugin.version>
+		<mule.module.validation.version>0.9.0-rc.batman</mule.module.validation.version>
 	</properties>
 
   <build>
