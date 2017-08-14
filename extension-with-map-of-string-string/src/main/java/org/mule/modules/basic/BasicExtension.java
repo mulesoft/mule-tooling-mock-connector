@@ -1,15 +1,14 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.Configurations;
 import org.mule.runtime.extension.api.annotation.Extension;
-import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
+import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
  * Extension javadoc description
  */
 @Extension(name = "MapStringString", description = "Basic Connector Description")
-@Configurations({ BasicExtensionConfig.class })
-@ConnectionProviders({ BasicConnectionProvider.class })
-public class BasicExtension {
+@Operations({BasicOperations.class})
+public class BasicExtension
+{
 
 }
