@@ -15,7 +15,7 @@
     <version>4.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <mule.version>4.0.0-SNAPSHOT</mule.version>
+        <mule.version>4.0.0-rc.batman</mule.version>
     </properties>
     <modules>
         <module>external-lib</module>
@@ -39,6 +39,7 @@
         <module>extension-with-pojo-inline</module>
         <module>extension-with-interfaces</module>
         <module>extension-with-map</module>
+        <module>extension-with-map-of-string-string</module>
         <module>extension-with-map-of-string-pojo</module>
         <module>extension-with-string-list</module>
         <module>extension-with-map-list</module>
