@@ -86,6 +86,7 @@
         <module>extension-with-value-providers</module>
         <module>extension-with-flow-ref</module>
         <module>extension-with-config-ref</module>
+        <module>extension-with-objectstore-ref</module>
     </modules>
 
     <distributionManagement>

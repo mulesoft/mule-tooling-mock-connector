@@ -15,6 +15,15 @@ public class BasicExtension
 
     @FlowReference
     @Parameter
-    String flowRefAtConfig;
+    private String flowRefAtConfig;
 
+    public String getFlowRefAtConfig()
+    {
+        return flowRefAtConfig;
+    }
+
+    public void setFlowRefAtConfig(String flowRefAtConfig)
+    {
+        this.flowRefAtConfig = flowRefAtConfig;
+    }
 }

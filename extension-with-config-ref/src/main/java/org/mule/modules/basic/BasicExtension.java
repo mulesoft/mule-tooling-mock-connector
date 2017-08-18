@@ -15,6 +15,15 @@ public class BasicExtension
 
     @ConfigReference(name = "http",namespace = "requesterConfig")
     @Parameter
-    String requesterConfig;
+    private String requesterConfig;
 
+    public String getRequesterConfig()
+    {
+        return requesterConfig;
+    }
+
+    public void setRequesterConfig(String requesterConfig)
+    {
+        this.requesterConfig = requesterConfig;
+    }
 }
