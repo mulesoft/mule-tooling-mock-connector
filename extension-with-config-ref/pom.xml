@@ -6,7 +6,6 @@
     <artifactId>extension-with-config-ref</artifactId>
     <packaging>mule-extension</packaging>
     <name>Mock Extension With Config Ref</name>
-    <version>1.0.0-SNAPSHOT</version>
     <parent>
       <groupId>org.mule.modules</groupId>
       <artifactId>mock-parent</artifactId>
