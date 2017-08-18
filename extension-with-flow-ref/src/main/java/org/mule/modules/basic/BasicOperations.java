@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.param.reference.FlowReference ;
+import org.mule.runtime.extension.api.annotation.param.reference.FlowReference;
 
 public class BasicOperations
 {
@@ -10,7 +10,7 @@ public class BasicOperations
      *
      * @return
      */
-    public String operationWithFlowRef(@FlowReference String flowRefAtOperation)
+    public String operationWithFlowRef(@FlowReference String flowRefAtOperation, PojoWithRef pojo)
     {
         return "";
     }
