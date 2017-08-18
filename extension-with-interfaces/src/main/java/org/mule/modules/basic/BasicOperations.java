@@ -13,8 +13,8 @@ public class BasicOperations {
 	 * @param callable ICallable param description
 	 * @param callables List of ICallable param description
 	 */
-	public ICallable operationWithInterfaces(@Config BasicExtensionConfig config, ICallable callable, List<ICallable> callables) {
-			return callable;
+	public void operationWithInterfaces(@Config BasicExtensionConfig config, ICallable callable, List<ICallable> callables) {
+
 	}
 
 }

@@ -1,8 +1,8 @@
 package org.mule.modules.basic.model;
 
-import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+import org.mule.runtime.extension.api.annotation.dsl.xml.TypeDsl;
 
-@XmlHints(allowTopLevelDefinition = true)
+@TypeDsl(allowTopLevelDefinition = true)
 public class Book extends BasePojo
 {
     private Integer pages;

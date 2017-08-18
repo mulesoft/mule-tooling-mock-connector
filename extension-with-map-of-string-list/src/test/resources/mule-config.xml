@@ -11,6 +11,7 @@ http://www.mulesoft.org/schema/mule/map-string-list http://www.mulesoft.org/sche
             <map-string-list:map-parameters>
                 <map-string-list:map-parameter key="pro">
                     <map-string-list:map-parameter-item value="5"/>
+                    <map-string-list:map-parameter-item value="4"/>
                 </map-string-list:map-parameter>
             </map-string-list:map-parameters>
         </map-string-list:connection>

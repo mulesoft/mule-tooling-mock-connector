@@ -1,7 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.Extension;
-import org.mule.runtime.extension.api.annotation.FlowReference;
+import org.mule.runtime.extension.api.annotation.param.reference.FlowReference ;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 

@@ -37,7 +37,7 @@ import static org.mule.modules.soap.Services.TALENT;
 import static org.mule.modules.soap.Services.TENANT_DATA_TRANSLATION;
 import static org.mule.modules.soap.Services.TIME_TRACKING;
 import static org.mule.modules.soap.Services.WORKFORCE_PLANNING;
-import static org.mule.runtime.module.extension.internal.metadata.MultilevelMetadataKeyBuilder.newKey;
+import static org.mule.runtime.module.extension.api.metadata.MultilevelMetadataKeyBuilder.newKey;
 import org.mule.functional.junit4.MuleArtifactFunctionalTestCase;
 import org.mule.runtime.api.component.location.Location;
 import org.mule.runtime.api.meta.model.operation.OperationModel;

@@ -1,10 +1,10 @@
 package org.mule.modules.basic.model;
 
 import org.mule.runtime.extension.api.annotation.Alias;
-import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+import org.mule.runtime.extension.api.annotation.dsl.xml.TypeDsl;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 
-@XmlHints(allowTopLevelDefinition = true)
+@TypeDsl(allowTopLevelDefinition = true)
 @DisplayName("Save me Pojo")
 @Alias("sos-pojo")
 public class SOSPojo

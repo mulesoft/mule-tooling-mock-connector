@@ -14,10 +14,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>4.0.0-rc.batman</mule.version>
-		<mule.extensions.maven.plugin.version>1.0.0-rc.batman</mule.extensions.maven.plugin.version>
-    <extension.documentation.maven.plugin.version>1.0.0-rc.batman</extension.documentation.maven.plugin.version>
-		<mule.module.validation.version>0.9.0-rc.batman</mule.module.validation.version>
+		<mule.version>4.0.0-rc.cyborg</mule.version>
+		<mule.extensions.maven.plugin.version>1.0.0-rc.cyborg</mule.extensions.maven.plugin.version>
+    <extension.documentation.maven.plugin.version>1.0.0-rc.cyborg</extension.documentation.maven.plugin.version>
+		<mule.module.validation.version>0.9.0-rc.cyborg</mule.module.validation.version>
 	</properties>
 
   <build>

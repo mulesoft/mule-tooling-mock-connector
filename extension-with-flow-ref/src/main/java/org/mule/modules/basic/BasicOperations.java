@@ -1,6 +1,6 @@
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.FlowReference;
+import org.mule.runtime.extension.api.annotation.param.reference.FlowReference ;
 
 public class BasicOperations
 {

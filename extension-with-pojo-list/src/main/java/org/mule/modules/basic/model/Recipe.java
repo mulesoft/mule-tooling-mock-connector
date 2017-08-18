@@ -1,11 +1,11 @@
 package org.mule.modules.basic.model;
 
-import org.mule.runtime.extension.api.annotation.dsl.xml.XmlHints;
+import org.mule.runtime.extension.api.annotation.dsl.xml.TypeDsl;
 
 /**
  * Recipe description
  */
-@XmlHints(allowTopLevelDefinition = true)
+@TypeDsl(allowTopLevelDefinition = true)
 public class Recipe {
 
     public String getDishName()

@@ -20,6 +20,7 @@ import org.mule.metadata.extension.resolver.TestBooleanMetadataResolver;
 import org.mule.metadata.extension.resolver.TestEnumMetadataResolver;
 import org.mule.metadata.extension.resolver.TestInputAndOutputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestInputAndOutputResolverWithoutKeyResolverAndKeyIdParam;
+import org.mule.metadata.extension.resolver.TestInputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestInputResolverWithoutKeyResolver;
 import org.mule.metadata.extension.resolver.TestMultiLevelKeyResolver;
 import org.mule.metadata.extension.resolver.TestOutputAnyTypeResolver;
@@ -31,6 +32,7 @@ import org.mule.metadata.extension.resolver.TestThreadContextClassLoaderResolver
 import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
 import org.mule.runtime.extension.api.annotation.metadata.OutputResolver;
 import org.mule.runtime.extension.api.annotation.metadata.TypeResolver;
+import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.annotation.param.Connection;
 import org.mule.runtime.extension.api.annotation.param.Content;
 import org.mule.runtime.extension.api.annotation.param.Optional;
@@ -45,6 +47,13 @@ import java.util.List;
 import java.util.Map;
 
 public class MetadataOperations {
+
+  @OutputResolver(output = TestOutputAnyTypeResolver.class)
+  public Object contentMetadataWithKeyId(@Config Object object, @Connection MetadataConnection connection,
+                                         @MetadataKeyId(TestInputResolverWithKeyResolver.class) String type,
+                                         @Optional @Content @TypeResolver(TestInputResolverWithKeyResolver.class) Object content) {
+    return null;
+  }
 
   @OutputResolver(output = TestOutputResolverWithKeyResolver.class)
   public Object outputMetadataWithKeyId(@Connection MetadataConnection connection,
@@ -204,6 +213,7 @@ public class MetadataOperations {
     return query;
   }
 
+  @OutputResolver(output = TestOutputResolverWithoutKeyResolver.class)
   public PagingProvider<MetadataConnection, Animal> pagedOperationMetadata(Animal animal) {
     return new PagingProvider<MetadataConnection, Animal>() {
 
