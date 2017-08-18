@@ -10,7 +10,7 @@ public class BasicOperations
      *
      * @return
      */
-    public String operationWithConfigRef(@ConfigReference(name = "http",namespace = "requesterConfig") String configRefAtOperation)
+    public String operationWithConfigRef(@ConfigReference(name = "http",namespace = "requesterConfig") String configRefAtOperation, PojoWithRef pojo)
     {
         return "";
     }
