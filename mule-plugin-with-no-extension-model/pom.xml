@@ -11,11 +11,11 @@
     <parent>
         <groupId>org.mule.runtime</groupId>
         <artifactId>mule-modules</artifactId>
-        <version>4.0.0-rc.cyborg</version>
+        <version>4.0.0-rc.darkseid-SNAPSHOT</version>
     </parent>
 
     <properties>
-        <mule.version>4.0.0-rc.cyborg</mule.version>
+        <mule.version>4.0.0-rc.darkseid-SNAPSHOT</mule.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
     </properties>
 
