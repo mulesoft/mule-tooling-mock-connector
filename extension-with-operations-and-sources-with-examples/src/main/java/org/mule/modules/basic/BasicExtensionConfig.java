@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.Sources;
 
 /**
- * Config javadoc description
+ * Config Description
  */
-@Configuration(name = "config", description = "Config Description")
+@Configuration(name = "config")
 @Operations({ BasicOperations.class })
 @Sources({BasicSource.class})
 public class BasicExtensionConfig {

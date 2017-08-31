@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Basic Connector with Streamming
  */
-@Extension(name = "streaming", description = "Basic Connector with Streamming")
+@Extension(name = "streaming")
 @Configurations({ BasicExtensionConfig.class })
 public class BasicExtension {
 

@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Basic Connector Description
  */
-@Extension(name = "PasswordProperty", description = "Basic Connector Description")
+@Extension(name = "PasswordProperty")
 @Configurations({ BasicExtensionConfig.class })
 @ConnectionProviders({ BasicConnectionProvider.class })
 public class BasicExtension {

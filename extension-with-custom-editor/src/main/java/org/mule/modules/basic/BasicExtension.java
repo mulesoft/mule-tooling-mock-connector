@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Basic Connector With Custom Editor
  */
-@Extension(name = "BasicCustomEditor", description = "Basic Connector With Custom Editor")
+@Extension(name = "BasicCustomEditor")
 @Operations({ BasicOperations.class })
 @Configurations({ BasicExtensionConfig.class })
 @ConnectionProviders({ BasicConnectionProvider.class })

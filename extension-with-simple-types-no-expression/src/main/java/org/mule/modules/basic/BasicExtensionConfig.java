@@ -9,9 +9,9 @@ import org.mule.runtime.api.meta.ExpressionSupport;
 import java.util.Date;
 
 /**
- * Config javadoc description
+ * Config Description
  */
-@Configuration(name = "config", description = "Config Description")
+@Configuration(name = "config")
 @Operations({ BasicOperations.class })
 public class BasicExtensionConfig
 {

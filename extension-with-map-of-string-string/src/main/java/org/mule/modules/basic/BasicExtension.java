@@ -4,9 +4,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
- * Extension javadoc description
+ * Basic Connector Description
  */
-@Extension(name = "MapStringString", description = "Basic Connector Description")
+@Extension(name = "MapStringString")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

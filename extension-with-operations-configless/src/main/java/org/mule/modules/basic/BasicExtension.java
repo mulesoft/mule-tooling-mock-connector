@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.Sources;
 
 /**
- * Extension javadoc description
+ * Configless Operations Connector Description
  */
-@Extension(name = "Configless", description = "Configless Operations Connector Description")
+@Extension(name = "Configless")
 @Sources({ BasicSource.class })
 @Operations({ BasicOperations.class })
 public class BasicExtension {

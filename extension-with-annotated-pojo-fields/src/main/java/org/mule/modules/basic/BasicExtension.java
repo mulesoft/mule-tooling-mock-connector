@@ -4,9 +4,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
- * Extension javadoc description
+ * Pojo Connector Description
  */
-@Extension(name = "AnnotatedPojo", description = "Pojo Connector Description")
+@Extension(name = "AnnotatedPojo")
 @Operations({BasicOperations.class})
 public class BasicExtension {
 

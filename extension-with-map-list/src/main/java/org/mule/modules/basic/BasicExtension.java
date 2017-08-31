@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * MapListConnector Description
  */
-@Extension(name = "MapList", description = "MapListConnector Description")
+@Extension(name = "MapList")
 @Configurations({ BasicExtensionConfig.class })
 @ConnectionProviders({ BasicConnectionProvider.class })
 public class BasicExtension {

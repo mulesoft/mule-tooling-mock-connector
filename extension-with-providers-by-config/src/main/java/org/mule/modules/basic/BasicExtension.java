@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Basic Connector Description
  */
-@Extension(name = "ProvidersByConfig", description = "Basic Connector Description")
+@Extension(name = "ProvidersByConfig")
 @Configurations({BasicExtensionConfig.class, AnotherBasicExtensionConfig.class})
 @ConnectionProviders({BasicConnectionProvider.class})
 @Operations({SharedOperations.class})

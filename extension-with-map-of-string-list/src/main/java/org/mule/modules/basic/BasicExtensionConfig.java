@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Config javadoc description
+ * Config Description
  */
-@Configuration(name = "config", description = "Config Description")
+@Configuration(name = "config")
 @Operations({ BasicOperations.class })
 public class BasicExtensionConfig {
 	/**

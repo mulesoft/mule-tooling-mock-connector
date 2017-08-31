@@ -11,9 +11,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.SubTypeMapping;
 
 /**
- * Extension javadoc description
+ * Subtypes List Connector Description
  */
-@Extension(name = "SubtypesList", description = "Subtypes List Connector Description")
+@Extension(name = "SubtypesList")
 @Configurations({ SubtypesExtensionConfig.class })
 @SubTypeMapping(baseType = BasePojo.class,subTypes = {Book.class, Magazine.class})
 @SubTypeMapping(baseType = IFactory.class,subTypes = {FactoryA.class, FactoryB.class})

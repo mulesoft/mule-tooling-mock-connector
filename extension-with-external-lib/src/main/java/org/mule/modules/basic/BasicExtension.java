@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * ExternalLib Connector Description
  */
-@Extension(name = "ExternalLib", description = "ExternalLib Connector Description")
+@Extension(name = "ExternalLib")
 @Configurations({BasicExtensionConfig.class})
 @ConnectionProviders({BasicConnectionProvider.class, ExtendedBasicConnectionProvider.class, LibBasedConnectionProvider.class})
 public class BasicExtension

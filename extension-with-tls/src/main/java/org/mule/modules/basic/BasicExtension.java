@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * TLS Connector Description
  */
-@Extension(name = "ExtensionWihTls", description = "TLS Connector Description")
+@Extension(name = "ExtensionWihTls")
 @Operations({ BasicOperations.class })
 @Configurations({ BasicExtensionConfig.class })
 @ConnectionProviders({ BasicConnectionProvider.class })

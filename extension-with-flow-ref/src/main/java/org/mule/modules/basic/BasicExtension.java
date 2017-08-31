@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 /**
- * Extension javadoc description
+ * Basic Connector with @FlowReference
  */
-@Extension(name = "FlowRef", description = "Basic Connector with @FlowReference")
+@Extension(name = "FlowRef")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

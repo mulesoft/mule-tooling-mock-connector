@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Config javadoc description
+ * Config Description
  */
-@Configuration(name = "config", description = "Config Description")
+@Configuration(name = "config")
 @Operations({BasicOperations.class})
 @ConnectionProviders({BasicConnectionProvider.class})
 public class BasicExtensionConfig implements IConfig

@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Sources;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Config javadoc description
+ * Source Config Description
  */
-@Configuration(name = "source-config", description = "Source Config Description")
+@Configuration(name = "source-config")
 @Sources({ BasicSource.class })
 @ConnectionProviders({SourceConnectionProvider.class})
 public class SourceBasicExtensionConfig

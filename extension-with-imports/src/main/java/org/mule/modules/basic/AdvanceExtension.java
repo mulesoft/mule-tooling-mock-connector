@@ -7,9 +7,9 @@ import org.mule.runtime.extension.api.annotation.Import;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Connectors With Imports Description
  */
-@Extension(name = "Imports", description = "Connectors With Imports Description")
+@Extension(name = "Imports")
 @Configurations({ AdvanceExtensionConfig.class })
 @ConnectionProviders({ AdvanceConnectionProvider.class })
 @Import(type = ComplexPojo.class)

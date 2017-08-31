@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Config javadoc description
+ * Another Config Description
  */
-@Configuration(name = "another-config", description = "Another Config Description")
+@Configuration(name = "another-config")
 @Operations({AnotherBasicOperations.class})
 @ConnectionProviders({FooConnectionProvider.class})
 public class AnotherBasicExtensionConfig extends BaseConfig{

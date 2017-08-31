@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.reference.ObjectStoreReference;
 
 /**
- * Extension javadoc description
+ * Basic Connector with @ObjectStoreReference
  */
-@Extension(name = "ObjectStoreRef", description = "Basic Connector with @ObjectStoreReference")
+@Extension(name = "ObjectStoreRef")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

@@ -28,7 +28,7 @@
       <xs:complexContent>
         <xs:extension base="mule:abstractExtensionType">
           <xs:annotation>
-            <xs:documentation>Config javadoc description</xs:documentation>
+            <xs:documentation>Config Description</xs:documentation>
           </xs:annotation>
           <xs:sequence minOccurs="1" maxOccurs="1">
             <xs:element xmlns:extension="http://www.mulesoft.org/schema/mule/extension" minOccurs="1" maxOccurs="1" ref="extension:abstractConnectionProvider"></xs:element>

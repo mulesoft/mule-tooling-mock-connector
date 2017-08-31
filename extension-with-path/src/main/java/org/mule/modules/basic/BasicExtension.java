@@ -8,9 +8,9 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.display.Path;
 
 /**
- * Extension javadoc description
+ * Basic Connector with @Path
  */
-@Extension(name = "Path", description = "Basic Connector with @Path")
+@Extension(name = "Path")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

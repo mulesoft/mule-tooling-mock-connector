@@ -5,9 +5,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Extension javadoc description
+ * Simple Pojo Connector Description
  */
-@Extension(name = "SimplePojo", description = "Simple Pojo Connector Description")
+@Extension(name = "SimplePojo")
 @Configurations({ BasicExtensionConfig.class })
 @ConnectionProviders({ BasicConnectionProvider.class })
 public class BasicExtension {

@@ -4,9 +4,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
- * Extension javadoc description
+ * Recursive Connector Description
  */
-@Extension(name = "Recursive", description = "Recursive Connector Description")
+@Extension(name = "Recursive")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

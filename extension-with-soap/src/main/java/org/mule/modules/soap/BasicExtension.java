@@ -8,7 +8,7 @@ import org.mule.runtime.extension.api.soap.annotation.Soap;
 import org.mule.runtime.extension.api.soap.annotation.SoapMessageDispatcherProviders;
 
 /**
- * Extension javadoc description
+ * Basic Connector Description
  */
 @Extension(name = "Soap")
 @Xml(prefix = "soap")

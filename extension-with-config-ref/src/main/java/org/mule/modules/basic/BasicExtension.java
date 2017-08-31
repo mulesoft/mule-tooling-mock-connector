@@ -6,9 +6,9 @@ import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 /**
- * Extension javadoc description
+ * Basic Connector with @ConfigReference
  */
-@Extension(name = "ConfigRef", description = "Basic Connector with @ConfigReference")
+@Extension(name = "ConfigRef")
 @Operations({BasicOperations.class})
 public class BasicExtension
 {

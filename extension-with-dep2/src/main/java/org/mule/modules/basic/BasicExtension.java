@@ -4,9 +4,9 @@ import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 
 /**
- * Extension javadoc description
+ * Basic Connector Description
  */
-@Extension(name = "BasicDep2", description = "Basic Connector Description")
+@Extension(name = "BasicDep2")
 @Operations({ BasicOperations.class })
 public class BasicExtension {
 
