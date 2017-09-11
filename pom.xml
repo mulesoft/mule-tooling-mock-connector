@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.mule.extensions</groupId>
         <artifactId>mule-modules-parent</artifactId>
-        <version>1.0.0-rc.darkseid</version>
+        <version>1.0.0-rc-SNAPSHOT</version>
     </parent>
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
@@ -15,7 +15,7 @@
     <version>4.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <mule.version>4.0.0-rc.darkseid</mule.version>
+        <mule.version>4.0.0-rc-SNAPSHOT</mule.version>
     </properties>
     <modules>
         <module>external-lib</module>
