@@ -6,7 +6,7 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 
 /**
- * Config Description
+ * Source And Operation Config Description
  */
 @Configuration(name = "config")
 @Operations({BasicOperations.class})
