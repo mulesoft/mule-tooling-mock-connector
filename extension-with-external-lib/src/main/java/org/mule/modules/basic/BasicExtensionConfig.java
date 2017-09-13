@@ -12,6 +12,12 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
 @Configuration(name = "config")
 @Operations({BasicOperations.class})
 @ExternalLib(name = "FooDriver", requiredClassName = "org.mule.modules.FooDriver", type = ExternalLibraryType.JAR)
+@ExternalLib(
+        name = "JCo Native Library",
+        description = "JCo Native Library that depends on the OS",
+        type = ExternalLibraryType.NATIVE,
+        nameRegexpMatcher = "mock-native-lib.*\\.war"
+)
 public class BasicExtensionConfig
 {
 

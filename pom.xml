@@ -19,6 +19,7 @@
     </properties>
     <modules>
         <module>external-lib</module>
+        <module>mock-native-lib</module>
         <module>basic-extension</module>
         <module>extension-with-no-providers</module>
         <module>extension-with-simple-types</module>

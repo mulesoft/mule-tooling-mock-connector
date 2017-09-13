@@ -1,0 +1,15 @@
+<assembly xmlns="http://maven.apache.org/xsd/assembly"
+      xsi:schemaLocation="http://maven.apache.org/xsd/assembly-1.0.0.xsd">
+  <formats>
+      <format>war</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory>/target</outputDirectory>
+      <includes>
+        <include>*.jar</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>
