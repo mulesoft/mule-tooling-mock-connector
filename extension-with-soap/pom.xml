@@ -10,7 +10,7 @@
     <parent>
       <groupId>com.mulesoft.mule.extensions</groupId>
       <artifactId>mule-modules-soap-parent</artifactId>
-      <version>1.0.0-rc-SNAPSHOT</version>
+      <version>1.0.0-rc</version>
     </parent>
 
     <properties>
