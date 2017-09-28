@@ -6,7 +6,7 @@
     <artifactId>mule-plugin-with-no-extension-model</artifactId>
     <packaging>mule-plugin</packaging>
     <name>Mock Mule Plugin With No Extension Model</name>
-    <version>1.0.0-rc-SNAPSHOT</version>
+    <version>1.0.0--SNAPSHOT</version>
 
     <parent>
         <groupId>org.mule.runtime</groupId>
