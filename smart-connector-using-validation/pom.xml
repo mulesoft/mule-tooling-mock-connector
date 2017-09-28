@@ -5,7 +5,7 @@
 
 	<groupId>org.mule.modules</groupId>
 	<artifactId>smart-connector-using-validation</artifactId>
-  <version>4.0.0-SNAPSHOT</version>
+  <version>4.0.0-rc-SNAPSHOT</version>
   <packaging>mule-extension</packaging>
 
 	<name>Smart Connector Using Validation</name>
@@ -17,7 +17,7 @@
 		<mule.version>4.0.0-rc</mule.version>
 		<mule.extensions.maven.plugin.version>1.0.0-rc</mule.extensions.maven.plugin.version>
 		<extension.documentation.maven.plugin.version>1.0.0-rc</extension.documentation.maven.plugin.version>
-		<mule.module.validation.version>0.9.0-SNAPSHOT</mule.module.validation.version>
+		<mule.module.validation.version>0.9.0</mule.module.validation.version>
 	</properties>
 
   <build>
