@@ -234,7 +234,7 @@ public class MetadataOperations
     }
 
     public void contentParameterShouldNotGenerateListChildElement(
-            @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> contents)
+            @Content @TypeResolver(TestInputResolverWithoutKeyResolver.class) List<String> contents)
     {
     }
 
