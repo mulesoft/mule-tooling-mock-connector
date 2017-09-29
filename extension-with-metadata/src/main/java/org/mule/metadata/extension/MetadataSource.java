@@ -23,7 +23,7 @@ import java.util.Map;
 
 @MetadataScope(keysResolver = TestInputAndOutputResolverWithKeyResolver.class,
     outputResolver = TestInputAndOutputWithAttributesResolverWithKeyResolver.class)
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class MetadataSource extends Source<Map<String, Object>, StringAttributes> {
 
   @MetadataKeyId

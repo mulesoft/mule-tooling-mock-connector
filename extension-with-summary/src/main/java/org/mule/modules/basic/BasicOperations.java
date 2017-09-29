@@ -14,7 +14,7 @@ public class BasicOperations {
 	 * @param ingredientAtOperation Ingredient at operation description
 	 */
 	@Summary("Operation Summary")
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojo(@Config BasicExtensionConfig config, Ingredient ingredientAtOperation, @Summary("Parameter Summary") String stringParam) {
 			return null;
 	}

@@ -10,7 +10,7 @@ public class BasicOperations {
 	 *
 	 * @param param String param description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithString(@Config IConfig config, String param) {
 			return param;
 	}

@@ -12,7 +12,7 @@ public class BasicOperations {
 	 * @param config config description
 	 * @param ingredientAtOperation Ingredient at operation description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojo(@Config BasicExtensionConfig config, Ingredient ingredientAtOperation) {
 			return null;
 	}

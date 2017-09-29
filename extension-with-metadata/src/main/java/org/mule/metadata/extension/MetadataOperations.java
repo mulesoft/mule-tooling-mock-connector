@@ -246,7 +246,7 @@ public class MetadataOperations
     @Query(translator = MetadataExtensionQueryTranslator.class,
             entityResolver = MetadataExtensionEntityResolver.class,
             nativeOutputResolver = NativeQueryOutputResolver.class)
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String doQuery(@MetadataKeyId String query)
     {
         return query;
@@ -273,7 +273,7 @@ public class MetadataOperations
             @Override
             public void close(MetadataConnection metadataConnection) throws MuleException
             {
-                
+
             }
 
         };

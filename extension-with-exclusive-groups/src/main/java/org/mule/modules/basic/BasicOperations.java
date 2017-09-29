@@ -13,7 +13,7 @@ public class BasicOperations
      * @param config config description
      * @param param  String param description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithExclusiveOptionalGroup(@Config BasicExtensionConfig config, String param, @ParameterGroup(name = "Exclusive Group") ExclusiveOptionalGroup basicGroup)
     {
         return param;

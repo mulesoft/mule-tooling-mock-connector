@@ -8,7 +8,7 @@ public class BasicOperations {
 	/**
 	 * Operation With String description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojo(AnnotatedPojo pojo) {
 			return null;
 	}

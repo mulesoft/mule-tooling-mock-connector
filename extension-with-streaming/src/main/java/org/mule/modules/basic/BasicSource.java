@@ -12,7 +12,7 @@ import java.io.InputStream;
 /**
  * Basic Source with Streamming
  */
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class BasicSource extends Source<InputStream,BasicAttributes>
 {
 

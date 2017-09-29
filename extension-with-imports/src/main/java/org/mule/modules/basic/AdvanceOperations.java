@@ -13,7 +13,7 @@ public class AdvanceOperations
      * @param config config description
      * @param param String param description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithImportedPojo(@Config AdvanceExtensionConfig config, ComplexPojo param)
     {
         return "";

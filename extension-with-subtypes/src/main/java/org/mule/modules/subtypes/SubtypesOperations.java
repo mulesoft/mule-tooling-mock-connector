@@ -15,19 +15,19 @@ public class SubtypesOperations
     /**
      * Operation With String description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationBaseType(@Config SubtypesExtensionConfig config, BasePojo pojo)
     {
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithBook(@Config SubtypesExtensionConfig config, Book bookParam)
     {
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithInterface(@Config SubtypesExtensionConfig config, @Optional @NullSafe(defaultImplementingType = FactoryC.class) IFactory factoryParam)
     {
         return "";

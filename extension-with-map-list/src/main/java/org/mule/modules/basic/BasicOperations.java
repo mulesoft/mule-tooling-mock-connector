@@ -17,7 +17,7 @@ public class BasicOperations {
 	 * @param config config description
 	 * @param mapParameters Map param description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithMap(@Config BasicExtensionConfig config, List<Map<String,Object>> mapParameters, @Expression(ExpressionSupport.REQUIRED) List<Map<String,Object>> requiredMaps, @Content List<Map<String,Object>> contentMaps) {
 			return null;
 	}

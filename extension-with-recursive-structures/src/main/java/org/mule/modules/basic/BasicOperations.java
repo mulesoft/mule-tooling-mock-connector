@@ -14,12 +14,12 @@ public class BasicOperations {
 	 *
 	 * @param pojoParam Recursive pojo parameter
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojo(RecursivePojo pojoParam, RecursiveChainA chainA, RecursiveChainB chainB) {
 			return null;
 	}
 
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojoList(List<RecursivePojo> pojoParams) {
 		return null;
 	}

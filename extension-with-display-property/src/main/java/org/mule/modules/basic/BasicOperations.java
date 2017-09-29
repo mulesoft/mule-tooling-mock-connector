@@ -16,7 +16,7 @@ public class BasicOperations
      * @param param  String param description
      */
     @DisplayName("Custom operation label")
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithString(@Config BasicExtensionConfig config, @DisplayName("Foo Operation Parameter") String param, @DisplayName("SOS") SOSPojo pojoParam, @Example("Example hint") String paramWithExample)
     {
         return param;

@@ -12,7 +12,7 @@ public class BasicOperations {
 	 *
 	 * @param mapParameter Map param description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithMapStringString(@Content Map<String,String>  mapParameter) {
 			return null;
 	}

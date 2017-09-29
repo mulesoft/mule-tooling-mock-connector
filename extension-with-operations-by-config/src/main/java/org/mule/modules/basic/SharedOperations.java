@@ -13,7 +13,7 @@ public class SharedOperations
      * Hello world
      * @param message A message
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public void helloWorld(@Config BaseConfig config, String message){
 
     }

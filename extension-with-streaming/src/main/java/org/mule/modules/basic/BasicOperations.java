@@ -12,7 +12,7 @@ public class BasicOperations {
 	 *
 	 * @param param String param description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public InputStream operationWithStreaming(@Config BasicExtensionConfig config, String param) {
 			return null;
 	}

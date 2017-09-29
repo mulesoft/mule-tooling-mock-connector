@@ -13,7 +13,7 @@ import org.mule.modules.basic.resolver.WithRequiredParametersValueProvider;
 
 import java.util.List;
 
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class SourceWithValuesWithRequiredParameters extends AbstractSource {
 
   @OfValues(WithRequiredParametersValueProvider.class)

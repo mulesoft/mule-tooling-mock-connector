@@ -13,7 +13,7 @@ import org.mule.runtime.extension.api.annotation.values.OfValues;
 import org.mule.modules.basic.ValuesConnection;
 import org.mule.modules.basic.resolver.WithConnectionValueProvider;
 
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class SourceWithConnection extends AbstractSource {
 
   @OfValues(WithConnectionValueProvider.class)

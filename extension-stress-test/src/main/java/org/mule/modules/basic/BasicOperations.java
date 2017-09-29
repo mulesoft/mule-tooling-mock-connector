@@ -9,7 +9,7 @@ public class BasicOperations
     /**
      * Operation With String description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithString(@Config BasicExtensionConfig config, String stringParam0,
                                       String stringParam1,
                                       String stringParam2,
@@ -35,7 +35,7 @@ public class BasicOperations
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithEnum(@Config BasicExtensionConfig config, TestEnum entry0,
                                         TestEnum entry1,
                                       TestEnum entry2,
@@ -61,7 +61,7 @@ public class BasicOperations
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithSimplePojo(@Config BasicExtensionConfig config, SimplePojo simplePojo0,
                                     SimplePojo simplePojo1,
                                     SimplePojo simplePojo2,
@@ -87,7 +87,7 @@ public class BasicOperations
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithPojoMap(@Config BasicExtensionConfig config, PojoWithMap pojoWithMap0,
                                           PojoWithMap pojoWithMap1,
                                           PojoWithMap pojoWithMap2,

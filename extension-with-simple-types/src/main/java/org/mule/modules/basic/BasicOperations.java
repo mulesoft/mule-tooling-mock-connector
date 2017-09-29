@@ -11,7 +11,7 @@ public class BasicOperations
     /**
      * Operation With String description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithString(@Config BasicExtensionConfig config, String stringParam, int intPrimitiveParam, Integer integerParam, boolean booleanPrimitiveParam, Date dateParam, float floatPrimitiveParam, Float floatParam, double doublePrimitiveParam, Double doubleParam)
     {
         return "";

@@ -10,7 +10,7 @@ import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.modules.basic.WithRequiredParameterWithAliasGroup;
 
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class SourceWithRequiredParameterWithAlias extends AbstractSource {
 
   @ParameterGroup(name = "someGroup")

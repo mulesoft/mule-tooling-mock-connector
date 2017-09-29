@@ -10,7 +10,7 @@ public class BasicOperations {
 	 *
 	 * @param config config description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithMimeType(@Config BasicExtensionConfig config) {
 			return "";
 	}

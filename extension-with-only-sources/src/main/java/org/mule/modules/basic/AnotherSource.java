@@ -15,7 +15,7 @@ import org.mule.runtime.extension.api.runtime.source.SourceCallback;
  * Basic Source javadoc description
  */
 @EmitsResponse
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class AnotherSource extends Source<String, BasicAttributes>
 {
 

@@ -16,7 +16,7 @@ public class BasicOperations {
 	 * @param complexPojoAtOperation Complex Pojo at operation description
 	 * @param ingredientAtOperation Ingredient at operation description
 	 */
-	@MediaType(MediaType.APPLICATION_PLAIN)
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 	public String operationWithPojo(@Config BasicExtensionConfig config,@Expression(ExpressionSupport.REQUIRED) ComplexPojo complexPojoAtOperation, @Expression(ExpressionSupport.REQUIRED) Ingredient ingredientAtOperation) {
 			return null;
 	}

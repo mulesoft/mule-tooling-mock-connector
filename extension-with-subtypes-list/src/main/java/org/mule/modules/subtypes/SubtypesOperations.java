@@ -14,19 +14,19 @@ public class SubtypesOperations
     /**
      * Operation With String description
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationBaseTypeList(@Config SubtypesExtensionConfig config, List<BasePojo> pojos)
     {
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithBookList(@Config SubtypesExtensionConfig config, List<Book> books)
     {
         return "";
     }
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithInterfaceList(@Config SubtypesExtensionConfig config, List<IFactory> factories)
     {
         return "";

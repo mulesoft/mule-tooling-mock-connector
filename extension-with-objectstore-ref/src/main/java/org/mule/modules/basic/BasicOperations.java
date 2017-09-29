@@ -11,7 +11,7 @@ public class BasicOperations
      *
      * @return
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithObjectStoreRef(@ObjectStoreReference String objectStoreRefAtOperation, PojoWithRef pojo)
     {
         return "";

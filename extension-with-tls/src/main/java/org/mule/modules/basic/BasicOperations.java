@@ -5,7 +5,7 @@ import org.mule.runtime.extension.api.annotation.param.MediaType;
 public class BasicOperations
 {
 
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String dummyOperation(String param)
     {
         return null;

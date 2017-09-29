@@ -13,7 +13,7 @@ public class BasicOperations
      */
     @OnException(MyErrorExceptionHandler.class)
     @Throws(BadRequestErrorTypeProvider.class)
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationBarRequest(@Config BasicExtensionConfig config, String stringParam) throws CustomException
     {
         return "";
@@ -21,7 +21,7 @@ public class BasicOperations
 
     @OnException(MyErrorExceptionHandler.class)
     @Throws(BadResponseErrorTypeProvider.class)
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationBarResponse(@Config BasicExtensionConfig config, String stringParam) throws CustomException
     {
         return "";
@@ -29,7 +29,7 @@ public class BasicOperations
 
     @OnException(MyErrorExceptionHandler.class)
     @Throws(AllErrorTypeProvider.class)
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationAllErrors(@Config BasicExtensionConfig config, String stringParam) throws CustomException
     {
         return "";

@@ -23,7 +23,7 @@ import java.util.Map;
 
 @MetadataScope(keysResolver = TestMultiLevelKeyResolver.class,
     outputResolver = TestOutputAnyTypeResolver.class)
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class MetadataSourceWithMultilevel extends Source<Map<String, Object>, StringAttributes> {
 
   private static final String ERROR_MESSAGE = "LocationKey field was not injected properly";

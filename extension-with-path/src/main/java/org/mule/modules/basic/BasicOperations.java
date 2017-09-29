@@ -17,7 +17,7 @@ public class BasicOperations
      * @param urlPath
      * @return
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithPaths(@Path(type = DIRECTORY) String directoryPath,
                                       @Path(type = FILE, acceptedFileExtensions = {"txt", "md"}) String filePath,
                                       @Path String anyPath,

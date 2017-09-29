@@ -13,7 +13,7 @@ import org.mule.runtime.extension.api.annotation.values.OfValues;
 import org.mule.modules.basic.config.SimpleConfig;
 import org.mule.modules.basic.resolver.WithConfigValueProvider;
 
-@MediaType(MediaType.APPLICATION_PLAIN)
+@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class SourceWithConfiguration extends AbstractSource {
 
   @OfValues(WithConfigValueProvider.class)

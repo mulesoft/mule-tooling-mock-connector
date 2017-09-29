@@ -11,7 +11,7 @@ public class BasicOperations
      *
      * @return
      */
-    @MediaType(MediaType.APPLICATION_PLAIN)
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithConfigRef(@ConfigReference(name = "http",namespace = "requesterConfig") String configRefAtOperation, PojoWithRef pojo)
     {
         return "";
