@@ -14,6 +14,7 @@ import org.mule.metadata.extension.resolver.TestOutputAnyTypeResolver;
 import org.mule.runtime.api.exception.MuleException;
 import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
 import org.mule.runtime.extension.api.annotation.metadata.MetadataScope;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.runtime.source.Source;
 import org.mule.runtime.extension.api.runtime.source.SourceCallback;
@@ -22,6 +23,7 @@ import java.util.Map;
 
 @MetadataScope(keysResolver = TestMultiLevelKeyResolver.class,
     outputResolver = TestOutputAnyTypeResolver.class)
+@MediaType(MediaType.APPLICATION_PLAIN)
 public class MetadataSourceWithMultilevel extends Source<Map<String, Object>, StringAttributes> {
 
   private static final String ERROR_MESSAGE = "LocationKey field was not injected properly";

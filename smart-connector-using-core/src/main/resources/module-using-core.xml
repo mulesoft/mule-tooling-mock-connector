@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module name="module-using-core"
-        minMuleVersion="4.0.0"
         doc:description="This module relies entirely in runtime provided components (no other Plugin dependencies)"
-
         xmlns="http://www.mulesoft.org/schema/mule/module"
         xmlns:mule="http://www.mulesoft.org/schema/mule/core"
         xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"

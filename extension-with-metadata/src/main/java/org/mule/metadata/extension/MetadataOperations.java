@@ -36,6 +36,7 @@ import org.mule.runtime.extension.api.annotation.metadata.TypeResolver;
 import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.annotation.param.Connection;
 import org.mule.runtime.extension.api.annotation.param.Content;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.annotation.param.Query;
@@ -245,6 +246,7 @@ public class MetadataOperations
     @Query(translator = MetadataExtensionQueryTranslator.class,
             entityResolver = MetadataExtensionEntityResolver.class,
             nativeOutputResolver = NativeQueryOutputResolver.class)
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String doQuery(@MetadataKeyId String query)
     {
         return query;

@@ -1,6 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.api.exception.MuleException;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.runtime.source.Source;
@@ -11,6 +12,7 @@ import java.io.InputStream;
 /**
  * Basic Source with Streamming
  */
+@MediaType(MediaType.APPLICATION_PLAIN)
 public class BasicSource extends Source<InputStream,BasicAttributes>
 {
 

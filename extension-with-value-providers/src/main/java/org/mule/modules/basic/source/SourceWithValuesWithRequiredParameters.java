@@ -6,12 +6,14 @@
  */
 package org.mule.modules.basic.source;
 
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.values.OfValues;
 import org.mule.modules.basic.resolver.WithRequiredParametersValueProvider;
 
 import java.util.List;
 
+@MediaType(MediaType.APPLICATION_PLAIN)
 public class SourceWithValuesWithRequiredParameters extends AbstractSource {
 
   @OfValues(WithRequiredParametersValueProvider.class)

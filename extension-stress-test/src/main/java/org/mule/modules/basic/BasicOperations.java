@@ -1,6 +1,7 @@
 package org.mule.modules.basic;
 
 import org.mule.runtime.extension.api.annotation.param.Config;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 
 public class BasicOperations
 {
@@ -8,6 +9,7 @@ public class BasicOperations
     /**
      * Operation With String description
      */
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithString(@Config BasicExtensionConfig config, String stringParam0,
                                       String stringParam1,
                                       String stringParam2,
@@ -33,6 +35,7 @@ public class BasicOperations
         return "";
     }
 
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithEnum(@Config BasicExtensionConfig config, TestEnum entry0,
                                         TestEnum entry1,
                                       TestEnum entry2,
@@ -58,6 +61,7 @@ public class BasicOperations
         return "";
     }
 
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithSimplePojo(@Config BasicExtensionConfig config, SimplePojo simplePojo0,
                                     SimplePojo simplePojo1,
                                     SimplePojo simplePojo2,
@@ -83,7 +87,7 @@ public class BasicOperations
         return "";
     }
 
-
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithPojoMap(@Config BasicExtensionConfig config, PojoWithMap pojoWithMap0,
                                           PojoWithMap pojoWithMap1,
                                           PojoWithMap pojoWithMap2,

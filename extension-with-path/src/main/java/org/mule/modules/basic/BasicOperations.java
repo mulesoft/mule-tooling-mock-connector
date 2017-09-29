@@ -2,6 +2,7 @@ package org.mule.modules.basic;
 
 import static org.mule.runtime.api.meta.model.display.PathModel.Type.DIRECTORY;
 import static org.mule.runtime.api.meta.model.display.PathModel.Type.FILE;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.display.Path;
 
 public class BasicOperations
@@ -16,6 +17,7 @@ public class BasicOperations
      * @param urlPath
      * @return
      */
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithPaths(@Path(type = DIRECTORY) String directoryPath,
                                       @Path(type = FILE, acceptedFileExtensions = {"txt", "md"}) String filePath,
                                       @Path String anyPath,

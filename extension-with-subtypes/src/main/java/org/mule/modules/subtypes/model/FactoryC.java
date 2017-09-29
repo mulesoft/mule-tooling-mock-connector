@@ -10,4 +10,14 @@ public final class FactoryC implements IFactory
     @Parameter
     @Optional
     private String paramaterC;
+
+    public String getParamaterC()
+    {
+        return paramaterC;
+    }
+
+    public void setParamaterC(String paramaterC)
+    {
+        this.paramaterC = paramaterC;
+    }
 }

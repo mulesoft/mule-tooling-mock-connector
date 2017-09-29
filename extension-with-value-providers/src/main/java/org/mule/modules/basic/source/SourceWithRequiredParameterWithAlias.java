@@ -6,9 +6,11 @@
  */
 package org.mule.modules.basic.source;
 
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.modules.basic.WithRequiredParameterWithAliasGroup;
 
+@MediaType(MediaType.APPLICATION_PLAIN)
 public class SourceWithRequiredParameterWithAlias extends AbstractSource {
 
   @ParameterGroup(name = "someGroup")

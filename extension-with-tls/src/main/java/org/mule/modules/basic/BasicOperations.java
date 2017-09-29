@@ -1,9 +1,14 @@
 package org.mule.modules.basic;
 
-public class BasicOperations {
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 
-	public String dummyOperation(String param) {
-			return null;
-	}
+public class BasicOperations
+{
+
+    @MediaType(MediaType.APPLICATION_PLAIN)
+    public String dummyOperation(String param)
+    {
+        return null;
+    }
 
 }

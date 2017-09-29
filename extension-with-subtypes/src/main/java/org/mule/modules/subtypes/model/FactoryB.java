@@ -8,4 +8,14 @@ public class FactoryB implements IFactory
 {
     @Parameter
     private String paramaterB;
+
+    public String getParamaterB()
+    {
+        return paramaterB;
+    }
+
+    public void setParamaterB(String paramaterB)
+    {
+        this.paramaterB = paramaterB;
+    }
 }

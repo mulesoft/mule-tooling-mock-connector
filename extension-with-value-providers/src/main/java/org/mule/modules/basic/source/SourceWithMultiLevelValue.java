@@ -6,11 +6,13 @@
  */
 package org.mule.modules.basic.source;
 
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.annotation.values.OfValues;
 import org.mule.modules.basic.GroupAsMultiLevelValue;
 import org.mule.modules.basic.resolver.MultiLevelValueProvider;
 
+@MediaType(MediaType.APPLICATION_PLAIN)
 public class SourceWithMultiLevelValue extends AbstractSource {
 
   @OfValues(MultiLevelValueProvider.class)

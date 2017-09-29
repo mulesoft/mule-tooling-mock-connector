@@ -8,4 +8,14 @@ public final class FactoryA implements IFactory
 {
     @Parameter
     private String paramaterA;
+
+    public String getParamaterA()
+    {
+        return paramaterA;
+    }
+
+    public void setParamaterA(String paramaterA)
+    {
+        this.paramaterA = paramaterA;
+    }
 }

@@ -2,6 +2,7 @@ package org.mule.modules.basic;
 
 import org.mule.modules.basic.model.ContainerPojo;
 import org.mule.runtime.extension.api.annotation.param.Config;
+import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 
 public class BasicOperations
@@ -14,6 +15,7 @@ public class BasicOperations
      * @param param  String param description
      */
     @DisplayName("Custom operation label")
+    @MediaType(MediaType.APPLICATION_PLAIN)
     public String operationWithString(@Config BasicExtensionConfig config, String param, ContainerPojo pojoParam)
     {
         return param;
