@@ -6,19 +6,15 @@
  */
 package org.mule.modules.basic.source;
 
+import org.mule.modules.basic.resolver.WithRequiredParametersValueProvider;
 import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.values.OfValues;
-import org.mule.modules.basic.resolver.WithRequiredParametersValueProvider;
 
 import java.util.List;
 
 @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
 public class SourceWithValuesWithRequiredParameters extends AbstractSource {
-
-  @OfValues(WithRequiredParametersValueProvider.class)
-  @Parameter
-  String channels;
 
   @Parameter
   String requiredString;
@@ -31,4 +27,9 @@ public class SourceWithValuesWithRequiredParameters extends AbstractSource {
 
   @Parameter
   List<String> strings;
+
+  @OfValues(WithRequiredParametersValueProvider.class)
+  @Parameter
+  String channels;
+  
 }

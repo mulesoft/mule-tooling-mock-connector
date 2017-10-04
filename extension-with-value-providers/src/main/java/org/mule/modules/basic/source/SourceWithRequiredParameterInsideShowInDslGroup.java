@@ -6,20 +6,21 @@
  */
 package org.mule.modules.basic.source;
 
+import org.mule.modules.basic.GroupWithValuesParameter;
+import org.mule.modules.basic.resolver.WithRequiredParameterFromGroupValueProvider;
 import org.mule.runtime.extension.api.annotation.param.MediaType;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.runtime.extension.api.annotation.values.OfValues;
-import org.mule.modules.basic.GroupWithValuesParameter;
-import org.mule.modules.basic.resolver.WithRequiredParameterFromGroupValueProvider;
 
 @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
-public class SourceWithRequiredParameterInsideShowInDslGroup extends AbstractSource {
+public class SourceWithRequiredParameterInsideShowInDslGroup extends AbstractSource
+{
 
-  @OfValues(WithRequiredParameterFromGroupValueProvider.class)
-  @Parameter
-  String values;
+    @ParameterGroup(name = "ValuesGroup", showInDsl = true)
+    GroupWithValuesParameter optionsParameter;
 
-  @ParameterGroup(name = "ValuesGroup", showInDsl = true)
-  GroupWithValuesParameter optionsParameter;
+    @OfValues(WithRequiredParameterFromGroupValueProvider.class)
+    @Parameter
+    String values;
 }

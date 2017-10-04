@@ -6,9 +6,6 @@
  */
 package org.mule.modules.basic;
 
-import org.mule.runtime.extension.api.annotation.values.OfValues;
-import org.mule.runtime.extension.api.annotation.param.Connection;
-import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
 import org.mule.modules.basic.resolver.MultiLevelValueProvider;
 import org.mule.modules.basic.resolver.SimpleValueProvider;
 import org.mule.modules.basic.resolver.WithConfigValueProvider;
@@ -16,6 +13,9 @@ import org.mule.modules.basic.resolver.WithConnectionValueProvider;
 import org.mule.modules.basic.resolver.WithMuleContextValueProvider;
 import org.mule.modules.basic.resolver.WithRequiredParameterFromGroupValueProvider;
 import org.mule.modules.basic.resolver.WithRequiredParametersValueProvider;
+import org.mule.runtime.extension.api.annotation.param.Connection;
+import org.mule.runtime.extension.api.annotation.param.ParameterGroup;
+import org.mule.runtime.extension.api.annotation.values.OfValues;
 
 import java.util.List;
 
@@ -31,18 +31,18 @@ public class ValuesOperations {
   public void singleValuesEnabledParameterWithConfiguration(@OfValues(WithConfigValueProvider.class) String channels,
                                                             @Connection ValuesConnection connection) {}
 
-  public void singleValuesEnabledParameterWithRequiredParameters(@OfValues(WithRequiredParametersValueProvider.class) String channels,
-                                                                 String requiredString,
+  public void singleValuesEnabledParameterWithRequiredParameters(String requiredString,
                                                                  boolean requiredBoolean,
                                                                  int requiredInteger,
-                                                                 List<String> strings) {}
+                                                                 List<String> strings,
+                                                                 @OfValues(WithRequiredParametersValueProvider.class) String channels) {}
 
   public void singleValuesEnabledParameterInsideParameterGroup(@ParameterGroup(
       name = "ValuesGroup") GroupWithValuesParameter optionsParameter) {}
 
-  public void singleValuesEnabledParameterRequiresValuesOfParameterGroup(@OfValues(WithRequiredParameterFromGroupValueProvider.class) String values,
-                                                                         @ParameterGroup(
-                                                                             name = "ValuesGroup") GroupWithValuesParameter optionsParameter) {}
+  public void singleValuesEnabledParameterRequiresValuesOfParameterGroup(@ParameterGroup(
+                                                                             name = "ValuesGroup") GroupWithValuesParameter optionsParameter,
+                                                                         @OfValues(WithRequiredParameterFromGroupValueProvider.class) String values) {}
 
   public void multiLevelValue(@OfValues(MultiLevelValueProvider.class) @ParameterGroup(
       name = "values") GroupAsMultiLevelValue optionsParameter) {
@@ -56,9 +56,9 @@ public class ValuesOperations {
 
   }
 
-  public void valuesInsideShowInDslGroup(@OfValues(WithRequiredParameterFromGroupValueProvider.class) String values,
-                                         @ParameterGroup(name = "ValuesGroup",
-                                             showInDsl = true) GroupWithValuesParameter optionsParameter) {
+  public void valuesInsideShowInDslGroup(@ParameterGroup(name = "ValuesGroup",
+                                             showInDsl = true) GroupWithValuesParameter optionsParameter,
+                                         @OfValues(WithRequiredParameterFromGroupValueProvider.class) String values) {
 
   }
 }
