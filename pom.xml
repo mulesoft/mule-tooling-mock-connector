@@ -68,6 +68,7 @@
         <module>extension-with-subtypes</module>
         <module>extension-with-subtypes-list</module>
         <module>extension-with-subtypes-and-multiple-providers</module>
+        <module>extension-with-simple-metadata</module>
         <module>extension-with-metadata</module>
         <module>extension-with-recursive-structures</module>
         <module>extension-with-error-mapping</module>

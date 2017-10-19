@@ -18,12 +18,13 @@ import org.mule.modules.basic.resolver.WithRequiredParametersFromConfigValueProv
 public class ConfigWithValueAndRequiredParam {
 
   @Parameter
-  @OfValues(WithRequiredParametersFromConfigValueProvider.class)
-  String channel;
-
-  @Parameter
   String required1;
 
   @Parameter
   String required2;
+
+  @Parameter
+  @OfValues(WithRequiredParametersFromConfigValueProvider.class)
+  String channel;
+
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:simple-metadata="http://www.mulesoft.org/schema/mule/simple-metadata" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/simple-metadata http://www.mulesoft.org/schema/mule/simple-metadata/current/mule-simple-metadata.xsd">
+    <simple-metadata:config name="Pojo_Config" doc:name="Pojo Config"/>
+    <flow name="dummy-flow">
+        <simple-metadata:output-metadata-with-key-id config-ref="Pojo_Config" type="foo"/>
+    </flow>
+</mule>

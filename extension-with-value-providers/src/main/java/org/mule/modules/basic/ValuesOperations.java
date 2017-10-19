@@ -49,6 +49,10 @@ public class ValuesOperations {
 
   }
 
+  public void multiLevelValueNoDefaults(@OfValues(MultiLevelValueProvider.class) @ParameterGroup(
+          name = "values") GroupAsMultiLevelValueNoDefaults optionsParameter) {
+
+  }
   public void singleValuesWithRequiredParameterWithAlias(@ParameterGroup(
       name = "someGroup") WithRequiredParameterWithAliasGroup group) {}
 
