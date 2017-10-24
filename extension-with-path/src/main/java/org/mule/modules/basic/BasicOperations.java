@@ -19,11 +19,20 @@ public class BasicOperations
      */
     @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
     public String operationWithPaths(@Path(type = DIRECTORY) String directoryPath,
-                                      @Path(type = FILE, acceptedFileExtensions = {"txt", "md"}) String filePath,
-                                      @Path String anyPath,
-                                      @Path(acceptsUrls = true) String urlPath)
+                                     @Path(type = FILE, acceptedFileExtensions = {"txt", "md"}) String filePath,
+                                     @Path String anyPath,
+                                     @Path(acceptsUrls = true) String urlPath)
     {
         return "";
     }
 
+    /**
+     * Operation with a pojo that has @Path annotations
+     * e
+     * @param pojoWithPaths
+     */
+    public void operationWithPathPojo(PojoWithPaths pojoWithPaths)
+    {
+
+    }
 }

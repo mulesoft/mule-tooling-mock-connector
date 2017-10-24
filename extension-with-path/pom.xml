@@ -6,7 +6,6 @@
     <artifactId>extension-with-path</artifactId>
     <packaging>mule-extension</packaging>
     <name>Mock Extension With Path</name>
-    <version>1.0.0</version>
     <parent>
       <groupId>org.mule.modules</groupId>
       <artifactId>mock-parent</artifactId>
