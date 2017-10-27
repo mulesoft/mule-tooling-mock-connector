@@ -33,7 +33,7 @@ public class MetadataFailureOperations extends MetadataOperationsParent {
   @OutputResolver(output = TestMetadataResolverRuntimeExceptionFailure.class)
   public Object failWithRuntimeException(@Connection MetadataConnection connection,
                                          @MetadataKeyId(TestMetadataResolverRuntimeExceptionFailure.class) String type,
-                                         @Optional @TypeResolver(TestMetadataResolverRuntimeExceptionFailure.class) Object content) {
+                                         @Optional @Content @TypeResolver(TestMetadataResolverRuntimeExceptionFailure.class) Object content) {
     return null;
   }
 

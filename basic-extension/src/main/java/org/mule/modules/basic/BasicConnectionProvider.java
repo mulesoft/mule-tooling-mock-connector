@@ -31,11 +31,11 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 		return null;
 	}
 
-		public String getProviderParameter() {
-			return providerParameter;
-		}
+	public String getProviderParameter() {
+		return providerParameter;
+	}
 
-		public void setProviderParameter(String providerParameter) {
-			this.providerParameter = providerParameter;
-		}
+	public void setProviderParameter(String providerParameter) {
+		this.providerParameter = providerParameter;
+	}
 }

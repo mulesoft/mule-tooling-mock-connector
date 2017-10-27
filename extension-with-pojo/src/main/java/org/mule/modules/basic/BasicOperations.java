@@ -20,19 +20,7 @@ public class BasicOperations
     {
         return null;
     }
-
-    /**
-     * Operation With One Content Pojo description
-     *
-     * @param config                config description
-     * @param ingredientAtOperation Ingredient at operation description
-     */
-    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
-    public String operationWithOneContent(@Config BasicExtensionConfig config, @Content Ingredient ingredientAtOperation)
-    {
-        return null;
-    }
-
+    
     /**
      * Operation With Pojos description
      *
