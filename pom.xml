@@ -89,6 +89,7 @@
         <module>extension-with-flow-ref</module>
         <module>extension-with-config-ref</module>
         <module>extension-with-objectstore-ref</module>
+        <module>extension-with-stereotypes</module>
     </modules>
 
     <distributionManagement>
