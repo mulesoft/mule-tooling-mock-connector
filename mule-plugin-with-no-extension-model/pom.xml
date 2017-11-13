@@ -6,16 +6,16 @@
     <artifactId>mule-plugin-with-no-extension-model</artifactId>
     <packaging>mule-plugin</packaging>
     <name>Mock Mule Plugin With No Extension Model</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <parent>
         <groupId>org.mule.runtime</groupId>
         <artifactId>mule-modules</artifactId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
     </parent>
 
     <properties>
-        <mule.version>4.0.0-SNAPSHOT</mule.version>
+        <mule.version>4.0.0</mule.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
     </properties>
 
@@ -23,7 +23,7 @@
         <plugins>
             <plugin>
                 <groupId>org.mule.runtime.plugins</groupId>
-                <artifactId>mule-app-plugins-maven-plugin</artifactId>
+                <artifactId>mule-plugin-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <version>${mule.app.plugins.maven.plugin.version}</version>
             </plugin>
