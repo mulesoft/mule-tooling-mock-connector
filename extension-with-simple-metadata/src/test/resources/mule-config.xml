@@ -8,6 +8,6 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/simple-metadata http://www.mulesoft.org/schema/mule/simple-metadata/current/mule-simple-metadata.xsd">
     <simple-metadata:config name="Pojo_Config" doc:name="Pojo Config"/>
     <flow name="dummy-flow">
-        <simple-metadata:output-metadata-with-key-id config-ref="Pojo_Config" type="foo"/>
+        <simple-metadata:content-metadata-with-key-id config-ref="Pojo_Config" type="foo"/>
     </flow>
 </mule>

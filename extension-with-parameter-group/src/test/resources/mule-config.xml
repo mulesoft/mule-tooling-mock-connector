@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/parameter-group http://www.mulesoft.org/sche
     <parameter-group:config name="SimplePojo_Config" ingredientAtConfig="Ingredient1" doc:name="SimplePojo Config">
         <parameter-group:connection ingredientAtProvider="Ingredient"/>
     </parameter-group:config>
-    <parameter-group:config name="SimplePojo_Config1" doc:name="SimplePojo Config">
+    <parameter-group:config name="SimplePojo_Config1" ingredientAtConfig="Ingredient1" doc:name="SimplePojo Config">
         <parameter-group:connection>
             <parameter-group:ingredient-at-provider amount="33" type="33"/>
         </parameter-group:connection>
@@ -25,7 +25,7 @@ http://www.mulesoft.org/schema/mule/parameter-group http://www.mulesoft.org/sche
     </parameter-group:config>
     <flow name="dummy-flow">
         <parameter-group:operation-with-pojo-show-in-dsl config-ref="SimplePojo_Config1" doc:name="SimplePojo">
-            <parameter-group:ingredient-shown-in-d-s-l amount="32" type="12"/>
+            <parameter-group:ingredient-shown-in-dsl amount="32" type="12"/>
         </parameter-group:operation-with-pojo-show-in-dsl>
         <parameter-group:operation-with-pojo config-ref="SimplePojo_Config2" amount="32" type="12" doc:name="SimplePojo"/>
     </flow>

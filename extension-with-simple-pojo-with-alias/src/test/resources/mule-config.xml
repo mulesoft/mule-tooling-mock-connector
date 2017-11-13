@@ -11,7 +11,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     <simple-pojo-with-alias:config name="SimplePojo_Config" ingredientAtConfig="Ingredient1" doc:name="SimplePojo Config">
         <simple-pojo-with-alias:connection ingredientAtProvider="Ingredient"/>
     </simple-pojo-with-alias:config>
-    <simple-pojo-with-alias:config name="SimplePojo_Config1" doc:name="SimplePojo Config">
+    <simple-pojo-with-alias:config name="SimplePojo_Config1" ingredientAtConfig="Ingredient1" doc:name="SimplePojo Config">
         <simple-pojo-with-alias:connection>
             <simple-pojo-with-alias:ingredient-at-provider amount="33" type="33	"/>
         </simple-pojo-with-alias:connection>

@@ -8,6 +8,11 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/pojo-inline http://www.mulesoft.org/schema/mule/pojo-inline/current/mule-pojo-inline.xsd">
     <pojo-inline:config name="Pojo_Config" doc:name="Pojo Config">
         <pojo-inline:connection/>
+        <pojo-inline:complex-pojo-at-config intField="9">
+            <pojo-inline:ingredient amount="15" type="15"/>
+            <pojo-inline:ingredient-no-expression amount="15" type="15"/>
+        </pojo-inline:complex-pojo-at-config>
+        <pojo-inline:ingredient-at-config amount="15" type="15"/>
     </pojo-inline:config>
     <flow name="dummy-flow">
         <pojo-inline:operation-with-pojo-inline config-ref="Pojo_Config" doc:name="Pojo">

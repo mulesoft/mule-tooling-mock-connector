@@ -5,6 +5,5 @@
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/recursive http://www.mulesoft.org/schema/mule/recursive/current/mule-recursive.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
     <flow name="dummy-flow">
-        <recursive:operation-with-pojo/>
     </flow>
 </mule>

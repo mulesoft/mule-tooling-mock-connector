@@ -5,7 +5,7 @@ import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 
 @TypeDsl(allowTopLevelDefinition = true)
-public final class FactoryC implements IFactory
+public class FactoryC implements IFactory
 {
     @Parameter
     @Optional

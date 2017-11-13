@@ -17,6 +17,14 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
                 </map-string-pojo:map-parameter>
             </map-string-pojo:map-parameters>
         </map-string-pojo:connection>
+        <map-string-pojo:map-parameters>
+            <map-string-pojo:map-parameter key="asd">
+                <map-string-pojo:ingredient amount="10" type="10"/>
+            </map-string-pojo:map-parameter>
+            <map-string-pojo:map-parameter key="asd2">
+                <map-string-pojo:ingredient amount="123" type="32"/>
+            </map-string-pojo:map-parameter>
+        </map-string-pojo:map-parameters>
     </map-string-pojo:config>
     <flow name="dummy-flow">
         <map-string-pojo:operation-with-map config-ref="MapStringPojo_Config" doc:name="MapStringPojo">

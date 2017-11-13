@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/pojo-no-expression http://www.mulesoft.org/s
                                      ingredientNoExpression="Ingredient">
         <pojo-no-expression:ingredient amount="10" type="10"/>
     </pojo-no-expression:complex-pojo>
-    <pojo-no-expression:config name="Pojo_Config" doc:name="Pojo Config">
+    <pojo-no-expression:config name="Pojo_Config" complexPojoAtConfig="Complex_Pojo" ingredientAtConfig="Ingredient" doc:name="Pojo Config">
         <pojo-no-expression:connection complexPojoAtProvider="Complex_Pojo1"/>
     </pojo-no-expression:config>
     <pojo-no-expression:complex-pojo name="Complex_Pojo1" intField="90" doc:name="Complex Pojo"
@@ -18,7 +18,7 @@ http://www.mulesoft.org/schema/mule/pojo-no-expression http://www.mulesoft.org/s
         <pojo-no-expression:ingredient amount="10" type="10"/>
     </pojo-no-expression:complex-pojo>
 
-    <pojo-no-expression:config name="Pojo_Config1" doc:name="Pojo Config">
+    <pojo-no-expression:config name="Pojo_Config1" complexPojoAtConfig="Complex_Pojo" ingredientAtConfig="Ingredient" doc:name="Pojo Config">
         <pojo-no-expression:connection ingredientAtProvider="Ingredient">
         </pojo-no-expression:connection>
     </pojo-no-expression:config>

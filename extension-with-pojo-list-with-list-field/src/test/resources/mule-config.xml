@@ -11,6 +11,7 @@ http://www.mulesoft.org/schema/mule/pojo-list-with-list-field http://www.mulesof
     <pojo-list-with-list-field:recipe name="globalRecipe" dishName="123" description="123"/>
     <pojo-list-with-list-field:config name="config">
         <pojo-list-with-list-field:connection recipes="#[payload]"/>
+        <pojo-list-with-list-field:recipes/>
     </pojo-list-with-list-field:config>
     <flow name="dummy-flow">
             <pojo-list-with-list-field:operation-with-pojo-list config-ref="config">

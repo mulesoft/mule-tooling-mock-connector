@@ -10,14 +10,14 @@ http://www.mulesoft.org/schema/mule/pojo http://www.mulesoft.org/schema/mule/poj
     <pojo:complex-pojo name="Complex_Pojo" intField="3" doc:name="Complex Pojo"/>
     <pojo:complex-pojo name="Complex_Pojo2" intField="3" ingredient="Ingredient" doc:name="Complex Pojo"/>
     <pojo:complex-pojo name="Complex_Pojo3" intField="3" ingredient="#[payload]" doc:name="Complex Pojo"/>
-    <pojo:config name="Pojo_Config" doc:name="Pojo Config">
+    <pojo:config name="Pojo_Config" complexPojoAtConfig="Complex_Pojo" ingredientAtConfig="Ingredient" doc:name="Pojo Config">
         <pojo:connection complexPojoAtProvider="Complex_Pojo1"/>
     </pojo:config>
     <pojo:complex-pojo name="Complex_Pojo1" doc:name="Complex Pojo">
         <pojo:ingredient amount="10" type="10"/>
     </pojo:complex-pojo>
     <pojo:ingredient name="Ingredient" amount="11" type="11" doc:name="Ingredient"/>
-    <pojo:config name="Pojo_Config1" doc:name="Pojo Config">
+    <pojo:config name="Pojo_Config1" complexPojoAtConfig="Complex_Pojo" ingredientAtConfig="Ingredient" doc:name="Pojo Config">
         <pojo:connection>
             <pojo:complex-pojo-at-provider ingredient="Ingredient"/>
         </pojo:connection>

@@ -23,6 +23,7 @@ http://www.mulesoft.org/schema/mule/string-list http://www.mulesoft.org/schema/m
                 <string-list:param value="op1"/>
                 <string-list:param value="op2"/>
             </string-list:params>
+            <string-list:user-ids/>
         </string-list:operation-with-string>
     </flow>
 </mule>
