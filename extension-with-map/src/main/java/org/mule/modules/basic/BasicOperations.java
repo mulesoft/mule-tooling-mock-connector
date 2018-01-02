@@ -18,4 +18,8 @@ public class BasicOperations {
 			return null;
 	}
 
+	@MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
+	public String operationWithMapNoExpression(@Config BasicExtensionConfig config, Map<String,Object>  mapParameter) {
+			return null;
+	}
 }

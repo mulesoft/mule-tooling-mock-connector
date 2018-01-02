@@ -7,15 +7,15 @@
     <parent>
         <groupId>org.mule.extensions</groupId>
         <artifactId>mule-modules-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0-SNAPSHOT</version>
     </parent>
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
-    <version>4.0.0</version>
+    <version>4.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <mule.version>4.0.0</mule.version>
+        <mule.version>4.1.0-SNAPSHOT</mule.version>
     </properties>
     <modules>
         <module>external-lib</module>
@@ -90,6 +90,7 @@
         <module>extension-with-config-ref</module>
         <module>extension-with-objectstore-ref</module>
         <module>extension-with-stereotypes</module>
+        <module>extension-with-class-reference</module>
     </modules>
 
     <distributionManagement>
