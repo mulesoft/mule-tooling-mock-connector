@@ -181,7 +181,7 @@ public class MetadataOperations
     }
 
     @OutputResolver(output = TestOutputAnyTypeResolver.class)
-    public Result messageAttributesVoidTypeMetadata()
+    public Result<Object, StringAttributes> messageAttributesVoidTypeMetadata()
     {
         return null;
     }
@@ -212,7 +212,7 @@ public class MetadataOperations
     }
 
     @OutputResolver(output = TestOutputResolverWithoutKeyResolver.class)
-    public List<Result> dynamicListOfMessages(@MetadataKeyId String type)
+    public List<Result<String, StringAttributes>> dynamicListOfMessages(@MetadataKeyId String type)
     {
         return null;
     }

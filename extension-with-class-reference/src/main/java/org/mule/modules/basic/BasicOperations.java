@@ -11,9 +11,25 @@ public class BasicOperations
     /**
      * Operation with class reference
      */
-    public void operationWithClassReference(@ClassValue(extendsOrImplements = "org.mule.modules.basic.MyInterface") String myInterfaceName, @Optional @Expression(ExpressionSupport.NOT_SUPPORTED) PojoWithClassReference pojo)
+    public void operationWithClassReference(@ClassValue(extendsOrImplements = "org.mule.modules.basic.MyInterface") String myInterfaceName,
+                                            @Optional @Expression(ExpressionSupport.NOT_SUPPORTED) PojoWithClassReference pojo)
     {
-
+        try
+        {
+            Class.forName(myInterfaceName).newInstance();
+        }
+        catch (InstantiationException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
     }
 
 }
