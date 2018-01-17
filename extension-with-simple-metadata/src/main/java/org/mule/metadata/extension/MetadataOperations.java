@@ -6,6 +6,8 @@
  */
 package org.mule.metadata.extension;
 
+import org.mule.metadata.extension.resolver.AnotherTestInputResolverWithKeyResolver;
+import org.mule.metadata.extension.resolver.AnotherTestOutputAnyTypeResolver;
 import org.mule.metadata.extension.resolver.TestInputResolverWithKeyResolver;
 import org.mule.metadata.extension.resolver.TestOutputAnyTypeResolver;
 import org.mule.runtime.extension.api.annotation.metadata.MetadataKeyId;
@@ -27,4 +29,11 @@ public class MetadataOperations
         return null;
     }
 
+    @OutputResolver(output = AnotherTestOutputAnyTypeResolver.class)
+    public Object anotherSetOfKeys(@Config Object object, @Connection MetadataConnection connection,
+                                           @MetadataKeyId(AnotherTestInputResolverWithKeyResolver.class) String type,
+                                           @Optional @Content @TypeResolver(AnotherTestInputResolverWithKeyResolver.class) Object content)
+    {
+        return null;
+    }
 }
