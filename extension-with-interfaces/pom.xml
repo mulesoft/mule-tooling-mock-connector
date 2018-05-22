@@ -6,17 +6,19 @@
     <artifactId>extension-with-interfaces</artifactId>
     <packaging>mule-extension</packaging>
     <name>Mock Extension With Interfaces</name>
-
+    <version>4.1.1-SNAPSHOT</version>
+    
     <parent>
       <groupId>org.mule.modules</groupId>
       <artifactId>mock-parent</artifactId>
-      <version>4.1.0</version>
+      <version>4.2.0-SNAPSHOT</version>
     </parent>
 
     <properties>
         <category>Community</category>
         <licensePath>LICENSE.md</licensePath>
     </properties>
+    
     <repositories>
         <repository>
             <id>mulesoft-releases</id>

@@ -12,7 +12,7 @@
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
-    <version>4.1.0</version>
+    <version>4.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
         <mule.version>4.1.0</mule.version>
@@ -91,6 +91,7 @@
         <module>extension-with-objectstore-ref</module>
         <module>extension-with-stereotypes</module>
         <module>extension-with-class-reference</module>
+        <module>extension-with-scopes</module>
     </modules>
 
     <distributionManagement>
