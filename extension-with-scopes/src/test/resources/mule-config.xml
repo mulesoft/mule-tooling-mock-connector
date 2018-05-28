@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scopes="http://www.mulesoft.org/schema/mule/scopes" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/scopes http://www.mulesoft.org/schema/mule/scopes/current/mule-scopes.xsd">
+    <flow name="dummy-flow">
+        <scopes:get-chain doc:name="Get Chain">
+            <logger level="INFO" message="#['get chain']"/>
+            <logger level="INFO" message="#['step 2']"/>
+        </scopes:get-chain>
+    </flow>
+    <flow name="dummy-flow1">
+        <scopes:payload-modifier payload="#['harcoded payload']" attributes="#[null]" doc:name="Payload Modifier">
+            <logger level="INFO" message="#['payload modifier']"/>
+            <logger level="INFO" message="#['step 2']"/>
+        </scopes:payload-modifier>
+        <scopes:execute-anything doc:name="Execute anything">
+            <logger level="INFO" message="#['execute anything']"/>
+            <logger level="INFO" message="#['step 2']"/>
+        </scopes:execute-anything>
+    </flow>
+</mule>
