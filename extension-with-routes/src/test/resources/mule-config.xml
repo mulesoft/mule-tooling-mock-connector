@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:routes="http://www.mulesoft.org/schema/mule/routes"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+               http://www.mulesoft.org/schema/mule/routes http://www.mulesoft.org/schema/mule/routes/current/mule-routes.xsd">
+
+    <flow name="singleRouteRouter">
+        <routes:simple-router>
+            <routes:when message="myString">
+                <set-variable variableName="newPayload" value="#[payload]"/>
+                <set-variable variableName="newAttributes" value="#[attributes]"/>
+            </routes:when>
+        </routes:simple-router>
+    </flow>
+
+    <flow name="concurrentRouteExecutor">
+        <routes:concurrent-route-executor>
+            <routes:when message="myString">
+                <set-variable variableName="newPayload" value="#[payload]"/>
+            </routes:when>
+        </routes:concurrent-route-executor>
+    </flow>
+
+    <flow name="twoRoutesRouter">
+        <routes:two-routes-router processorName="mule:set-payload">
+            <routes:when message="myString" execute="#[vars.executeWhen]">
+                <set-variable variableName="newPayload" value="#[payload]"/>
+                <set-variable variableName="newAttributes" value="#[attributes]"/>
+            </routes:when>
+            <routes:other execute="#[vars.executeOther]">
+                <logger/>
+            </routes:other>
+        </routes:two-routes-router>
+        <logger/>
+    </flow>
+
+    <flow name="twoRoutesRouterNone">
+        <routes:two-routes-router processorName="mule:set-payload">
+            <routes:when message="myString" execute="false">
+                <set-variable variableName="newPayload" value="#[payload]"/>
+            </routes:when>
+        </routes:two-routes-router>
+    </flow>
+
+    <flow name="stereotypedRoutes">
+        <set-payload value="someName"/>
+        <routes:stereotyped-routes>
+            <routes:route-one-with-stereotypes message="myString" execute="true">
+                <routes:echo message="#['hello world']"/>
+            </routes:route-one-with-stereotypes>
+            <routes:second-route-with-other-stereotypes>
+                <routes:echo2 message="#['hello world']"/>
+            </routes:second-route-with-other-stereotypes>
+        </routes:stereotyped-routes>
+    </flow>
+
+    <flow name="munitSpy">
+        <routes:spy processor="mule:set-payload*">
+            <routes:with-attributes>
+                <routes:attribute attributeName="value1" whereValue="1"/>
+                <routes:attribute attributeName="value2" whereValue="2"/>
+            </routes:with-attributes>
+            <routes:before-call-assertions>
+                <set-variable variableName="before" value="true"/>
+            </routes:before-call-assertions>
+            <routes:after-call-assertions>
+                <set-variable variableName="after" value="true"/>
+            </routes:after-call-assertions>
+        </routes:spy>
+    </flow>
+
+    <flow name="munitSpyNoBefore">
+        <routes:spy processor="mule:set-payload*">
+            <routes:with-attributes>
+                <routes:attribute attributeName="value1" whereValue="1"/>
+                <routes:attribute attributeName="value2" whereValue="2"/>
+            </routes:with-attributes>
+            <routes:after-call-assertions>
+                <set-variable variableName="after" value="true"/>
+                <set-payload value="#[payload.value1.whereValue]"/>
+            </routes:after-call-assertions>
+        </routes:spy>
+    </flow>
+
+    <flow name="munitSpyNoAfter">
+        <routes:spy processor="mule:set-payload*">
+            <routes:with-attributes>
+                <routes:attribute attributeName="value1" whereValue="1"/>
+                <routes:attribute attributeName="value2" whereValue="2"/>
+            </routes:with-attributes>
+            <routes:before-call-assertions>
+                <set-variable variableName="before" value="true"/>
+                <set-payload value="#[payload.value2.whereValue]"/>
+            </routes:before-call-assertions>
+        </routes:spy>
+    </flow>
+
+    <flow name="munitSpyNoAttributes">
+        <routes:spy processor="mule:set-payload*"/>
+    </flow>
+
+    <flow name="voidRouter">
+        <routes:void-router>
+            <routes:when message="myString">
+                <set-variable variableName="newAttributes" value="ATTRIBUTES_VAR"/>
+                <set-payload value="MODIFIED"/>
+            </routes:when>
+        </routes:void-router>
+    </flow>
+
+    <flow name="routerField">
+        <routes:router-field expected="#[vars.expected]" newValue="#[vars.newValue]"/>
+    </flow>
+
+</mule>
