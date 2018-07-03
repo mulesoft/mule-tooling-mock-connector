@@ -1,0 +1,33 @@
+@Library('studio-utils@master') _
+//Library code can be found at https://github.com/mulesoft-labs/tooling-jenkins-utils
+
+pipeline {
+    
+   tools {
+        jdk 'JDK8'
+        maven 'M3'
+    }
+    // environment {
+    //     MAVEN_OPTS = '-Xmx1536m -Xms512m -XX:MaxPermSize=512m'
+    // }
+    
+    agent {
+        label 'ubuntu-14.04'
+    }
+
+    stages {
+        stage('Prepation') {
+            steps{
+              cleanWs()
+              git credentialsId: 'git', url: 'https://github.com/mulesoft/mule-tooling-mock-connector.git',  branch: 'mule-4.x'
+          }
+        }
+        
+        stage('Build Mock Connector') {
+            steps {
+                buildWithMaven("clean deploy")
+            }
+        }
+ 
+    }   
+}
