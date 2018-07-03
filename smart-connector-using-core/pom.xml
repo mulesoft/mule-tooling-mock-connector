@@ -5,7 +5,7 @@
 
 	<groupId>org.mule.modules</groupId>
 	<artifactId>smart-connector-using-core</artifactId>
-  <version>4.2.0-SNAPSHOT</version>
+  <version>4.1.1</version>
   <packaging>mule-extension</packaging>
 
 	<name>Smart Connector Using Core</name>
@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>4.2.0-SNAPSHOT</mule.version>
+		<mule.version>4.1.1</mule.version>
 		<mule.extensions.maven.plugin.version>1.2.0-SNAPSHOT</mule.extensions.maven.plugin.version>
     <extension.documentation.maven.plugin.version>1.2.0-SNAPSHOT</extension.documentation.maven.plugin.version>
 	</properties>
