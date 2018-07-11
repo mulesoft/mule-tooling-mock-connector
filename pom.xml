@@ -90,6 +90,7 @@
         <module>extension-with-class-reference</module>
         <module>extension-with-scopes</module>
         <module>extension-with-routes</module>
+        <module>extension-with-metadatakey-no-provider</module>
     </modules>
 
     <distributionManagement>
