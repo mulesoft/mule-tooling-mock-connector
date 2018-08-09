@@ -4,6 +4,7 @@ import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.connection.ConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
+import org.mule.runtime.extension.api.annotation.param.display.Summary;
 
 /**
  * Connection Provider description
@@ -14,6 +15,7 @@ public class BasicConnectionProvider implements ConnectionProvider<DummyConnecti
 	 * Provider parameter description
 	 */
 	@Parameter
+	@Summary("Connection Provider parameter with summary")
 	private String providerParameter;
 
 	@Override
