@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:pojo-with-example="http://www.mulesoft.org/schema/mule/pojo-with-example" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+      http://www.mulesoft.org/schema/mule/pojo-with-example http://www.mulesoft.org/schema/mule/pojo-with-example/current/mule-pojo-with-example.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/pojo-with-example http://www.mulesoft.org/schema/mule/pojo-with-example/current/mule-pojo-with-example.xsd">
+
+    <pojo-with-example:simple-pojo name="Pojo" type="11" doc:name="Pojo"/>
+    <pojo-with-example:config name="Pojo_Config" pojoAtConfig="Pojo" doc:name="Pojo Config">
+        <pojo-with-example:connection>
+            <pojo-with-example:pojo-at-connection type="12"/>
+        </pojo-with-example:connection>
+    </pojo-with-example:config>
+    <flow name="dummy-flow">
+        <pojo-with-example:operation-with-one-pojo config-ref="Pojo_Config" doc:name="Pojo">
+            <pojo-with-example:pojo-at-operation type="15"/>
+        </pojo-with-example:operation-with-one-pojo>
+    </flow>
+</mule>
