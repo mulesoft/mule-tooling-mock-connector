@@ -22,4 +22,10 @@ public class BasicOperations
         return "";
     }
 
+    @MediaType(value = MediaType.APPLICATION_PLAIN, strict = false)
+    public String mockOperationWithKeys(@Config BasicExtensionConfig config, @MetadataKeyId(ConfigurableKeysTypeResolver.class) String key, @Content Object body)
+    {
+        return "";
+    }
+
 }
