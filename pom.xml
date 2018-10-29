@@ -12,7 +12,7 @@
     <groupId>org.mule.modules</groupId>
     <artifactId>mock-parent</artifactId>
     <name>Mock Extensions Parent</name>
-    <version>4.1.1</version>
+    <version>4.1.2</version>
     <packaging>pom</packaging>
     <modules>
         <module>external-lib</module>
@@ -91,6 +91,8 @@
         <module>extension-with-scopes</module>
         <module>extension-with-routes</module>
         <module>extension-with-metadatakey-no-provider</module>
+        <module>extension-with-operations-and-sources-with-examples</module>
+        <module>extension-with-pojo-with-examples</module>
     </modules>
 
     <distributionManagement>

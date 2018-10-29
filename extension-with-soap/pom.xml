@@ -6,7 +6,7 @@
     <artifactId>extension-with-soap</artifactId>
     <packaging>mule-extension</packaging>
     <name>Extension With Soap</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <parent>
       <groupId>com.mulesoft.mule.extensions</groupId>
       <artifactId>mule-modules-soap-parent</artifactId>
