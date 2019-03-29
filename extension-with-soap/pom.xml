@@ -16,6 +16,7 @@
     <properties>
         <category>Community</category>
         <licensePath>LICENSE.md</licensePath>
+        <mule.services.version>1.1.2</mule.services.version>
     </properties>
     <dependencies>
         <!-- mule -->
@@ -53,21 +54,21 @@
         <dependency>
             <groupId>org.mule.services</groupId>
             <artifactId>mule-service-scheduler</artifactId>
-            <version>${mule.api.version}</version>
+            <version>${mule.services.version}</version>
             <scope>provided</scope>
             <classifier>mule-service</classifier>
         </dependency>
         <dependency>
             <groupId>org.mule.services</groupId>
             <artifactId>mule-service-http</artifactId>
-            <version>${mule.api.version}</version>
+            <version>${mule.services.version}</version>
             <scope>provided</scope>
             <classifier>mule-service</classifier>
         </dependency>
         <dependency>
             <groupId>org.mule.services</groupId>
             <artifactId>mule-service-soap</artifactId>
-            <version>${mule.api.version}</version>
+            <version>${mule.services.version}</version>
             <scope>provided</scope>
             <classifier>mule-service</classifier>
         </dependency>
@@ -75,7 +76,7 @@
         <dependency>
             <groupId>org.mule.services</groupId>
             <artifactId>mule-service-soap</artifactId>
-            <version>${mule.api.version}</version>
+            <version>${mule.services.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
