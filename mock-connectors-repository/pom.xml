@@ -9,9 +9,9 @@
 
 	<properties>
 		<tycho.groupid>org.eclipse.tycho</tycho.groupid>
-		<tycho.version>0.16.0</tycho.version>
+		<tycho.version>1.0.0</tycho.version>
 		<tycho-extras.groupid>org.eclipse.tycho.extras</tycho-extras.groupid>
-		<tycho-extras.version>0.16.0</tycho-extras.version>
+		<tycho-extras.version>1.0.0</tycho-extras.version>
 	</properties>
 
 	<build>
@@ -155,7 +155,7 @@
 		</repository>
 		<repository>
 			<id>studio-update-site</id>
-			<url>http://studio-nightly-update.s3.amazonaws.com</url>
+			<url>http://studio.mulesoft.org/r6/updates</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
