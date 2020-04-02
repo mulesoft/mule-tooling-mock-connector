@@ -93,6 +93,7 @@
         <module>extension-with-metadatakey-no-provider</module>
         <module>extension-with-operations-and-sources-with-examples</module>
         <module>extension-with-pojo-with-examples</module>
+        <module>extension-with-config-ref-amqp</module>
     </modules>
 
     <distributionManagement>

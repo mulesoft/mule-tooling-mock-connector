@@ -9,7 +9,7 @@ public class PojoKey
 {
     @Parameter
     @Expression(NOT_SUPPORTED)
-    @MetadataKeyPart(order = 1, providedByKeyResolver = false)
+    @MetadataKeyPart(order = 1)
     private String filter;
 
     @Parameter

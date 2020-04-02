@@ -26,10 +26,10 @@ public class ConfigurableKeysTypeResolver implements TypeKeysResolver {
 
         Set<MetadataKey> keySet = new HashSet<>();
         for (int i = 0; i < size; i++) {
-            String prefix = UUID.randomUUID().toString().substring(0, 5);
+            String prefix = "MK";
             keySet.add(MetadataKeyBuilder.newKey("id" + i + prefix).withDisplayName(prefix + i).build());
         }
-        return null;
+        return keySet;
     }
 
     @Override public String getCategoryName() {
